@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+package texas_code.proto;
+
+enum Color {
+    DIAMONDS = 0;
+    CLUBS = 1;
+    HEARTS = 2;
+    SPADES = 3;
+}
+
+enum Brand {
+    HIGH_CARD = 0;
+    ONE_PAIR = 1;
+    TWO_PAIR = 2;
+    THREE_OF_A_KIND = 3;
+    STRAIGHT = 4;
+    FLUSH = 5;
+    FULL_HOUSE = 6;
+    FOUR_OF_A_KIND = 7;
+    STRAIGHT_FLUSH = 8;
+    ROYAL_STRAIGHT_FLUSH = 9;
+}
+
+enum Action {
+    BET = 0;
+    CALL = 1;
+    FOLD = 2;
+    CHECK = 3;
+    RAISE = 4;
+    RE_RAISE = 5;
+    ALL_IN = 6;
+}
+
+enum Status {
+    PREFLOP = 0;
+    FLOP = 1;
+    TURN = 2;
+    RIVER = 3;
+    SHOWN_DOWN = 4;
+}
+
+message Card {
+    Color color = 1;
+    int32 point = 2;
+}
+
+message Player {
+    int32 id = 1;
+    int64 cash = 2;
+    int64 jetton = 3;
+    int64 bet = 4;      // 本手牌累计投注额
+    int32 position = 5;
+    string account_name= 6;
+}
+
+message JettonAction {
+    Action action = 1;
+    int64 action_jetton = 2;
+}
+
+message PlayerAction {
+    Player player = 1;
+    JettonAction action = 2;
+}
+
+message PlayerHandInfo {
+    Player player = 1;
+    Card card_1 = 2;
+    Card card_2 = 3;
+    Brand nut_hand_brand = 4;
+    repeated Card nut_hand = 5;
+}
