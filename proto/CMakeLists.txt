@@ -21,6 +21,7 @@ add_custom_command(
     OUTPUT ${generated_proto_cpp}
     COMMAND protoc ARGS --cpp_out=../include/texas_code/proto ./definition.proto
     COMMAND protoc ARGS --cpp_out=../include/texas_code/proto ./message.proto
+    COMMAND python ARGS ./mesage_type_generator.py
 )
 
 add_custom_target(${PROJECT_NAME} DEPENDS ${generated_proto_cpp})
