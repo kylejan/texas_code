@@ -18,7 +18,7 @@
 // @@protoc_insertion_point(includes)
 
 namespace texas_code {
-namespace proto {
+namespace protocol {
 
 namespace {
 
@@ -450,48 +450,49 @@ void protobuf_AddDesc_message_2eproto() {
   already_here = true;
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  ::texas_code::proto::protobuf_AddDesc_definition_2eproto();
+  ::texas_code::protocol::protobuf_AddDesc_definition_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\rmessage.proto\022\020texas_code.proto\032\020defin"
-    "ition.proto\":\n\016ConnectRequest\022\022\n\nrequest"
-    "_id\030\001 \001(\003\022\024\n\014account_name\030\002 \001(\t\"V\n\026Conne"
-    "ctSuccessResponse\022\022\n\nrequest_id\030\001 \001(\003\022(\n"
-    "\006player\030\002 \001(\0132\030.texas_code.proto.Player\""
-    "R\n\025ConnectFailedResponse\022\022\n\nrequest_id\030\001"
-    " \001(\003\022\022\n\nerror_code\030\002 \001(\005\022\021\n\terror_msg\030\003 "
-    "\001(\t\"Z\n\rActionRequest\022\022\n\nrequest_id\030\001 \001(\003"
-    "\0225\n\rjetton_action\030\002 \001(\0132\036.texas_code.pro"
-    "to.JettonAction\"+\n\025ActionSuccessResponse"
-    "\022\022\n\nrequest_id\030\001 \001(\003\"M\n\024ActionFailedResp"
-    "onse\022\016\n\006req_id\030\001 \001(\003\022\022\n\nerror_code\030\002 \001(\005"
-    "\022\021\n\terror_msg\030\003 \001(\t\"\320\001\n\017SeatInfoMessage\022"
-    "(\n\006banker\030\001 \001(\0132\030.texas_code.proto.Playe"
-    "r\0220\n\016s_blind_player\030\002 \001(\0132\030.texas_code.p"
-    "roto.Player\0220\n\016b_blind_player\030\003 \001(\0132\030.te"
-    "xas_code.proto.Player\022/\n\rother_players\030\004"
-    " \003(\0132\030.texas_code.proto.Player\"Y\n\014BlindM"
-    "essage\022\022\n\nrequest_id\030\001 \001(\005\022(\n\006player\030\002 \001"
-    "(\0132\030.texas_code.proto.Player\022\013\n\003bet\030\003 \001("
-    "\003\"b\n\020HoldCardsMessage\022&\n\006card_1\030\001 \001(\0132\026."
-    "texas_code.proto.Card\022&\n\006card_2\030\002 \001(\0132\026."
-    "texas_code.proto.Card\"v\n\024InquireActionMe"
-    "ssage\022\022\n\nrequest_id\030\001 \001(\003\0226\n\016player_acti"
-    "ons\030\002 \003(\0132\036.texas_code.proto.PlayerActio"
-    "n\022\022\n\npot_amount\030\003 \001(\003\"\224\001\n\013FlopMessage\022+\n"
-    "\013flop_card_1\030\001 \001(\0132\026.texas_code.proto.Ca"
-    "rd\022+\n\013flop_card_2\030\002 \001(\0132\026.texas_code.pro"
-    "to.Card\022+\n\013flop_card_3\030\003 \001(\0132\026.texas_cod"
-    "e.proto.Card\"8\n\013TurnMessage\022)\n\tturn_card"
-    "\030\001 \001(\0132\026.texas_code.proto.Card\":\n\014RiverM"
-    "essage\022*\n\nriver_card\030\002 \001(\0132\026.texas_code."
-    "proto.Card\"u\n\017ShowDownMessage\022,\n\014public_"
-    "cards\030\001 \003(\0132\026.texas_code.proto.Card\0224\n\nh"
-    "and_infos\030\002 \003(\0132 .texas_code.proto.Playe"
-    "rHandInfo\"K\n\rPotWinMessage\022)\n\007players\030\001 "
-    "\003(\0132\030.texas_code.proto.Player\022\017\n\007pot_win"
-    "\030\002 \003(\003\"%\n\017GameOverMessage\022\022\n\nrequest_id\030"
-    "\001 \001(\003\"!\n\tHeartbeat\022\024\n\014sequence_num\030\001 \001(\003"
-    "b\006proto3", 1568);
+    "\n\rmessage.proto\022\023texas_code.protocol\032\020de"
+    "finition.proto\":\n\016ConnectRequest\022\022\n\nrequ"
+    "est_id\030\001 \001(\003\022\024\n\014account_name\030\002 \001(\t\"Y\n\026Co"
+    "nnectSuccessResponse\022\022\n\nrequest_id\030\001 \001(\003"
+    "\022+\n\006player\030\002 \001(\0132\033.texas_code.protocol.P"
+    "layer\"R\n\025ConnectFailedResponse\022\022\n\nreques"
+    "t_id\030\001 \001(\003\022\022\n\nerror_code\030\002 \001(\005\022\021\n\terror_"
+    "msg\030\003 \001(\t\"]\n\rActionRequest\022\022\n\nrequest_id"
+    "\030\001 \001(\003\0228\n\rjetton_action\030\002 \001(\0132!.texas_co"
+    "de.protocol.JettonAction\"+\n\025ActionSucces"
+    "sResponse\022\022\n\nrequest_id\030\001 \001(\003\"M\n\024ActionF"
+    "ailedResponse\022\016\n\006req_id\030\001 \001(\003\022\022\n\nerror_c"
+    "ode\030\002 \001(\005\022\021\n\terror_msg\030\003 \001(\t\"\334\001\n\017SeatInf"
+    "oMessage\022+\n\006banker\030\001 \001(\0132\033.texas_code.pr"
+    "otocol.Player\0223\n\016s_blind_player\030\002 \001(\0132\033."
+    "texas_code.protocol.Player\0223\n\016b_blind_pl"
+    "ayer\030\003 \001(\0132\033.texas_code.protocol.Player\022"
+    "2\n\rother_players\030\004 \003(\0132\033.texas_code.prot"
+    "ocol.Player\"\\\n\014BlindMessage\022\022\n\nrequest_i"
+    "d\030\001 \001(\005\022+\n\006player\030\002 \001(\0132\033.texas_code.pro"
+    "tocol.Player\022\013\n\003bet\030\003 \001(\003\"h\n\020HoldCardsMe"
+    "ssage\022)\n\006card_1\030\001 \001(\0132\031.texas_code.proto"
+    "col.Card\022)\n\006card_2\030\002 \001(\0132\031.texas_code.pr"
+    "otocol.Card\"y\n\024InquireActionMessage\022\022\n\nr"
+    "equest_id\030\001 \001(\003\0229\n\016player_actions\030\002 \003(\0132"
+    "!.texas_code.protocol.PlayerAction\022\022\n\npo"
+    "t_amount\030\003 \001(\003\"\235\001\n\013FlopMessage\022.\n\013flop_c"
+    "ard_1\030\001 \001(\0132\031.texas_code.protocol.Card\022."
+    "\n\013flop_card_2\030\002 \001(\0132\031.texas_code.protoco"
+    "l.Card\022.\n\013flop_card_3\030\003 \001(\0132\031.texas_code"
+    ".protocol.Card\";\n\013TurnMessage\022,\n\tturn_ca"
+    "rd\030\001 \001(\0132\031.texas_code.protocol.Card\"=\n\014R"
+    "iverMessage\022-\n\nriver_card\030\002 \001(\0132\031.texas_"
+    "code.protocol.Card\"{\n\017ShowDownMessage\022/\n"
+    "\014public_cards\030\001 \003(\0132\031.texas_code.protoco"
+    "l.Card\0227\n\nhand_infos\030\002 \003(\0132#.texas_code."
+    "protocol.PlayerHandInfo\"N\n\rPotWinMessage"
+    "\022,\n\007players\030\001 \003(\0132\033.texas_code.protocol."
+    "Player\022\017\n\007pot_win\030\002 \003(\003\"%\n\017GameOverMessa"
+    "ge\022\022\n\nrequest_id\030\001 \001(\003\"!\n\tHeartbeat\022\024\n\014s"
+    "equence_num\030\001 \001(\003b\006proto3", 1625);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "message.proto", &protobuf_RegisterTypes);
   ConnectRequest::default_instance_ = new ConnectRequest();
@@ -558,7 +559,7 @@ const int ConnectRequest::kAccountNameFieldNumber;
 ConnectRequest::ConnectRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.ConnectRequest)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.ConnectRequest)
 }
 
 void ConnectRequest::InitAsDefaultInstance() {
@@ -570,7 +571,7 @@ ConnectRequest::ConnectRequest(const ConnectRequest& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.ConnectRequest)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.ConnectRequest)
 }
 
 void ConnectRequest::SharedCtor() {
@@ -582,7 +583,7 @@ void ConnectRequest::SharedCtor() {
 }
 
 ConnectRequest::~ConnectRequest() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.ConnectRequest)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.ConnectRequest)
   SharedDtor();
 }
 
@@ -626,7 +627,7 @@ bool ConnectRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.ConnectRequest)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.ConnectRequest)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -655,7 +656,7 @@ bool ConnectRequest::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->account_name().data(), this->account_name().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "texas_code.proto.ConnectRequest.account_name"));
+            "texas_code.protocol.ConnectRequest.account_name"));
         } else {
           goto handle_unusual;
         }
@@ -676,17 +677,17 @@ bool ConnectRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.ConnectRequest)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.ConnectRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.ConnectRequest)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.ConnectRequest)
   return false;
 #undef DO_
 }
 
 void ConnectRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.ConnectRequest)
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.ConnectRequest)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->request_id(), output);
@@ -697,17 +698,17 @@ void ConnectRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->account_name().data(), this->account_name().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "texas_code.proto.ConnectRequest.account_name");
+      "texas_code.protocol.ConnectRequest.account_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->account_name(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.ConnectRequest)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.ConnectRequest)
 }
 
 ::google::protobuf::uint8* ConnectRequest::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.ConnectRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.ConnectRequest)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->request_id(), target);
@@ -718,13 +719,13 @@ void ConnectRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->account_name().data(), this->account_name().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "texas_code.proto.ConnectRequest.account_name");
+      "texas_code.protocol.ConnectRequest.account_name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->account_name(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.ConnectRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.ConnectRequest)
   return target;
 }
 
@@ -818,13 +819,13 @@ void ConnectRequest::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 ConnectRequest::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectRequest.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectRequest.request_id)
   return request_id_;
 }
  void ConnectRequest::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ConnectRequest.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectRequest.request_id)
 }
 
 // optional string account_name = 2;
@@ -832,28 +833,28 @@ void ConnectRequest::clear_account_name() {
   account_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  const ::std::string& ConnectRequest::account_name() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectRequest.account_name)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectRequest.account_name)
   return account_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  void ConnectRequest::set_account_name(const ::std::string& value) {
   
   account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:texas_code.proto.ConnectRequest.account_name)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectRequest.account_name)
 }
  void ConnectRequest::set_account_name(const char* value) {
   
   account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:texas_code.proto.ConnectRequest.account_name)
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ConnectRequest.account_name)
 }
  void ConnectRequest::set_account_name(const char* value, size_t size) {
   
   account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:texas_code.proto.ConnectRequest.account_name)
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ConnectRequest.account_name)
 }
  ::std::string* ConnectRequest::mutable_account_name() {
   
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ConnectRequest.account_name)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ConnectRequest.account_name)
   return account_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  ::std::string* ConnectRequest::release_account_name() {
@@ -867,7 +868,7 @@ void ConnectRequest::clear_account_name() {
     
   }
   account_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_name);
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.ConnectRequest.account_name)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ConnectRequest.account_name)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -882,12 +883,12 @@ const int ConnectSuccessResponse::kPlayerFieldNumber;
 ConnectSuccessResponse::ConnectSuccessResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.ConnectSuccessResponse)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.ConnectSuccessResponse)
 }
 
 void ConnectSuccessResponse::InitAsDefaultInstance() {
   _is_default_instance_ = true;
-  player_ = const_cast< ::texas_code::proto::Player*>(&::texas_code::proto::Player::default_instance());
+  player_ = const_cast< ::texas_code::protocol::Player*>(&::texas_code::protocol::Player::default_instance());
 }
 
 ConnectSuccessResponse::ConnectSuccessResponse(const ConnectSuccessResponse& from)
@@ -895,7 +896,7 @@ ConnectSuccessResponse::ConnectSuccessResponse(const ConnectSuccessResponse& fro
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.ConnectSuccessResponse)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.ConnectSuccessResponse)
 }
 
 void ConnectSuccessResponse::SharedCtor() {
@@ -906,7 +907,7 @@ void ConnectSuccessResponse::SharedCtor() {
 }
 
 ConnectSuccessResponse::~ConnectSuccessResponse() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.ConnectSuccessResponse)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.ConnectSuccessResponse)
   SharedDtor();
 }
 
@@ -951,7 +952,7 @@ bool ConnectSuccessResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.ConnectSuccessResponse)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.ConnectSuccessResponse)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -971,7 +972,7 @@ bool ConnectSuccessResponse::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .texas_code.proto.Player player = 2;
+      // optional .texas_code.protocol.Player player = 2;
       case 2: {
         if (tag == 18) {
          parse_player:
@@ -997,47 +998,47 @@ bool ConnectSuccessResponse::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.ConnectSuccessResponse)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.ConnectSuccessResponse)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.ConnectSuccessResponse)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.ConnectSuccessResponse)
   return false;
 #undef DO_
 }
 
 void ConnectSuccessResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.ConnectSuccessResponse)
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.ConnectSuccessResponse)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->request_id(), output);
   }
 
-  // optional .texas_code.proto.Player player = 2;
+  // optional .texas_code.protocol.Player player = 2;
   if (this->has_player()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->player_, output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.ConnectSuccessResponse)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.ConnectSuccessResponse)
 }
 
 ::google::protobuf::uint8* ConnectSuccessResponse::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.ConnectSuccessResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.ConnectSuccessResponse)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->request_id(), target);
   }
 
-  // optional .texas_code.proto.Player player = 2;
+  // optional .texas_code.protocol.Player player = 2;
   if (this->has_player()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         2, *this->player_, target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.ConnectSuccessResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.ConnectSuccessResponse)
   return target;
 }
 
@@ -1051,7 +1052,7 @@ int ConnectSuccessResponse::ByteSize() const {
         this->request_id());
   }
 
-  // optional .texas_code.proto.Player player = 2;
+  // optional .texas_code.protocol.Player player = 2;
   if (this->has_player()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -1082,7 +1083,7 @@ void ConnectSuccessResponse::MergeFrom(const ConnectSuccessResponse& from) {
     set_request_id(from.request_id());
   }
   if (from.has_player()) {
-    mutable_player()->::texas_code::proto::Player::MergeFrom(from.player());
+    mutable_player()->::texas_code::protocol::Player::MergeFrom(from.player());
   }
 }
 
@@ -1130,16 +1131,16 @@ void ConnectSuccessResponse::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 ConnectSuccessResponse::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectSuccessResponse.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectSuccessResponse.request_id)
   return request_id_;
 }
  void ConnectSuccessResponse::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ConnectSuccessResponse.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectSuccessResponse.request_id)
 }
 
-// optional .texas_code.proto.Player player = 2;
+// optional .texas_code.protocol.Player player = 2;
 bool ConnectSuccessResponse::has_player() const {
   return !_is_default_instance_ && player_ != NULL;
 }
@@ -1147,25 +1148,25 @@ void ConnectSuccessResponse::clear_player() {
   if (GetArenaNoVirtual() == NULL && player_ != NULL) delete player_;
   player_ = NULL;
 }
-const ::texas_code::proto::Player& ConnectSuccessResponse::player() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectSuccessResponse.player)
+const ::texas_code::protocol::Player& ConnectSuccessResponse::player() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectSuccessResponse.player)
   return player_ != NULL ? *player_ : *default_instance_->player_;
 }
-::texas_code::proto::Player* ConnectSuccessResponse::mutable_player() {
+::texas_code::protocol::Player* ConnectSuccessResponse::mutable_player() {
   
   if (player_ == NULL) {
-    player_ = new ::texas_code::proto::Player;
+    player_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ConnectSuccessResponse.player)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ConnectSuccessResponse.player)
   return player_;
 }
-::texas_code::proto::Player* ConnectSuccessResponse::release_player() {
+::texas_code::protocol::Player* ConnectSuccessResponse::release_player() {
   
-  ::texas_code::proto::Player* temp = player_;
+  ::texas_code::protocol::Player* temp = player_;
   player_ = NULL;
   return temp;
 }
-void ConnectSuccessResponse::set_allocated_player(::texas_code::proto::Player* player) {
+void ConnectSuccessResponse::set_allocated_player(::texas_code::protocol::Player* player) {
   delete player_;
   player_ = player;
   if (player) {
@@ -1173,7 +1174,7 @@ void ConnectSuccessResponse::set_allocated_player(::texas_code::proto::Player* p
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.ConnectSuccessResponse.player)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ConnectSuccessResponse.player)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1189,7 +1190,7 @@ const int ConnectFailedResponse::kErrorMsgFieldNumber;
 ConnectFailedResponse::ConnectFailedResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.ConnectFailedResponse)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.ConnectFailedResponse)
 }
 
 void ConnectFailedResponse::InitAsDefaultInstance() {
@@ -1201,7 +1202,7 @@ ConnectFailedResponse::ConnectFailedResponse(const ConnectFailedResponse& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.ConnectFailedResponse)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.ConnectFailedResponse)
 }
 
 void ConnectFailedResponse::SharedCtor() {
@@ -1214,7 +1215,7 @@ void ConnectFailedResponse::SharedCtor() {
 }
 
 ConnectFailedResponse::~ConnectFailedResponse() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.ConnectFailedResponse)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.ConnectFailedResponse)
   SharedDtor();
 }
 
@@ -1259,7 +1260,7 @@ bool ConnectFailedResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.ConnectFailedResponse)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.ConnectFailedResponse)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -1303,7 +1304,7 @@ bool ConnectFailedResponse::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->error_msg().data(), this->error_msg().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "texas_code.proto.ConnectFailedResponse.error_msg"));
+            "texas_code.protocol.ConnectFailedResponse.error_msg"));
         } else {
           goto handle_unusual;
         }
@@ -1324,17 +1325,17 @@ bool ConnectFailedResponse::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.ConnectFailedResponse)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.ConnectFailedResponse)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.ConnectFailedResponse)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.ConnectFailedResponse)
   return false;
 #undef DO_
 }
 
 void ConnectFailedResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.ConnectFailedResponse)
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.ConnectFailedResponse)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->request_id(), output);
@@ -1350,17 +1351,17 @@ void ConnectFailedResponse::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->error_msg().data(), this->error_msg().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "texas_code.proto.ConnectFailedResponse.error_msg");
+      "texas_code.protocol.ConnectFailedResponse.error_msg");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->error_msg(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.ConnectFailedResponse)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.ConnectFailedResponse)
 }
 
 ::google::protobuf::uint8* ConnectFailedResponse::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.ConnectFailedResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.ConnectFailedResponse)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->request_id(), target);
@@ -1376,13 +1377,13 @@ void ConnectFailedResponse::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->error_msg().data(), this->error_msg().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "texas_code.proto.ConnectFailedResponse.error_msg");
+      "texas_code.protocol.ConnectFailedResponse.error_msg");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->error_msg(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.ConnectFailedResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.ConnectFailedResponse)
   return target;
 }
 
@@ -1487,13 +1488,13 @@ void ConnectFailedResponse::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 ConnectFailedResponse::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectFailedResponse.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectFailedResponse.request_id)
   return request_id_;
 }
  void ConnectFailedResponse::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ConnectFailedResponse.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectFailedResponse.request_id)
 }
 
 // optional int32 error_code = 2;
@@ -1501,13 +1502,13 @@ void ConnectFailedResponse::clear_error_code() {
   error_code_ = 0;
 }
  ::google::protobuf::int32 ConnectFailedResponse::error_code() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectFailedResponse.error_code)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectFailedResponse.error_code)
   return error_code_;
 }
  void ConnectFailedResponse::set_error_code(::google::protobuf::int32 value) {
   
   error_code_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ConnectFailedResponse.error_code)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectFailedResponse.error_code)
 }
 
 // optional string error_msg = 3;
@@ -1515,28 +1516,28 @@ void ConnectFailedResponse::clear_error_msg() {
   error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  const ::std::string& ConnectFailedResponse::error_msg() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectFailedResponse.error_msg)
   return error_msg_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  void ConnectFailedResponse::set_error_msg(const ::std::string& value) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:texas_code.proto.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectFailedResponse.error_msg)
 }
  void ConnectFailedResponse::set_error_msg(const char* value) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:texas_code.proto.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ConnectFailedResponse.error_msg)
 }
  void ConnectFailedResponse::set_error_msg(const char* value, size_t size) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:texas_code.proto.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ConnectFailedResponse.error_msg)
 }
  ::std::string* ConnectFailedResponse::mutable_error_msg() {
   
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ConnectFailedResponse.error_msg)
   return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  ::std::string* ConnectFailedResponse::release_error_msg() {
@@ -1550,7 +1551,7 @@ void ConnectFailedResponse::clear_error_msg() {
     
   }
   error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ConnectFailedResponse.error_msg)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1565,12 +1566,12 @@ const int ActionRequest::kJettonActionFieldNumber;
 ActionRequest::ActionRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.ActionRequest)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.ActionRequest)
 }
 
 void ActionRequest::InitAsDefaultInstance() {
   _is_default_instance_ = true;
-  jetton_action_ = const_cast< ::texas_code::proto::JettonAction*>(&::texas_code::proto::JettonAction::default_instance());
+  jetton_action_ = const_cast< ::texas_code::protocol::JettonAction*>(&::texas_code::protocol::JettonAction::default_instance());
 }
 
 ActionRequest::ActionRequest(const ActionRequest& from)
@@ -1578,7 +1579,7 @@ ActionRequest::ActionRequest(const ActionRequest& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.ActionRequest)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.ActionRequest)
 }
 
 void ActionRequest::SharedCtor() {
@@ -1589,7 +1590,7 @@ void ActionRequest::SharedCtor() {
 }
 
 ActionRequest::~ActionRequest() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.ActionRequest)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.ActionRequest)
   SharedDtor();
 }
 
@@ -1634,7 +1635,7 @@ bool ActionRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.ActionRequest)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.ActionRequest)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -1654,7 +1655,7 @@ bool ActionRequest::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .texas_code.proto.JettonAction jetton_action = 2;
+      // optional .texas_code.protocol.JettonAction jetton_action = 2;
       case 2: {
         if (tag == 18) {
          parse_jetton_action:
@@ -1680,47 +1681,47 @@ bool ActionRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.ActionRequest)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.ActionRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.ActionRequest)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.ActionRequest)
   return false;
 #undef DO_
 }
 
 void ActionRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.ActionRequest)
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.ActionRequest)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->request_id(), output);
   }
 
-  // optional .texas_code.proto.JettonAction jetton_action = 2;
+  // optional .texas_code.protocol.JettonAction jetton_action = 2;
   if (this->has_jetton_action()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->jetton_action_, output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.ActionRequest)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.ActionRequest)
 }
 
 ::google::protobuf::uint8* ActionRequest::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.ActionRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.ActionRequest)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->request_id(), target);
   }
 
-  // optional .texas_code.proto.JettonAction jetton_action = 2;
+  // optional .texas_code.protocol.JettonAction jetton_action = 2;
   if (this->has_jetton_action()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         2, *this->jetton_action_, target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.ActionRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.ActionRequest)
   return target;
 }
 
@@ -1734,7 +1735,7 @@ int ActionRequest::ByteSize() const {
         this->request_id());
   }
 
-  // optional .texas_code.proto.JettonAction jetton_action = 2;
+  // optional .texas_code.protocol.JettonAction jetton_action = 2;
   if (this->has_jetton_action()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -1765,7 +1766,7 @@ void ActionRequest::MergeFrom(const ActionRequest& from) {
     set_request_id(from.request_id());
   }
   if (from.has_jetton_action()) {
-    mutable_jetton_action()->::texas_code::proto::JettonAction::MergeFrom(from.jetton_action());
+    mutable_jetton_action()->::texas_code::protocol::JettonAction::MergeFrom(from.jetton_action());
   }
 }
 
@@ -1813,16 +1814,16 @@ void ActionRequest::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 ActionRequest::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ActionRequest.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionRequest.request_id)
   return request_id_;
 }
  void ActionRequest::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ActionRequest.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionRequest.request_id)
 }
 
-// optional .texas_code.proto.JettonAction jetton_action = 2;
+// optional .texas_code.protocol.JettonAction jetton_action = 2;
 bool ActionRequest::has_jetton_action() const {
   return !_is_default_instance_ && jetton_action_ != NULL;
 }
@@ -1830,25 +1831,25 @@ void ActionRequest::clear_jetton_action() {
   if (GetArenaNoVirtual() == NULL && jetton_action_ != NULL) delete jetton_action_;
   jetton_action_ = NULL;
 }
-const ::texas_code::proto::JettonAction& ActionRequest::jetton_action() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ActionRequest.jetton_action)
+const ::texas_code::protocol::JettonAction& ActionRequest::jetton_action() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionRequest.jetton_action)
   return jetton_action_ != NULL ? *jetton_action_ : *default_instance_->jetton_action_;
 }
-::texas_code::proto::JettonAction* ActionRequest::mutable_jetton_action() {
+::texas_code::protocol::JettonAction* ActionRequest::mutable_jetton_action() {
   
   if (jetton_action_ == NULL) {
-    jetton_action_ = new ::texas_code::proto::JettonAction;
+    jetton_action_ = new ::texas_code::protocol::JettonAction;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ActionRequest.jetton_action)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ActionRequest.jetton_action)
   return jetton_action_;
 }
-::texas_code::proto::JettonAction* ActionRequest::release_jetton_action() {
+::texas_code::protocol::JettonAction* ActionRequest::release_jetton_action() {
   
-  ::texas_code::proto::JettonAction* temp = jetton_action_;
+  ::texas_code::protocol::JettonAction* temp = jetton_action_;
   jetton_action_ = NULL;
   return temp;
 }
-void ActionRequest::set_allocated_jetton_action(::texas_code::proto::JettonAction* jetton_action) {
+void ActionRequest::set_allocated_jetton_action(::texas_code::protocol::JettonAction* jetton_action) {
   delete jetton_action_;
   jetton_action_ = jetton_action;
   if (jetton_action) {
@@ -1856,7 +1857,7 @@ void ActionRequest::set_allocated_jetton_action(::texas_code::proto::JettonActio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.ActionRequest.jetton_action)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ActionRequest.jetton_action)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1870,7 +1871,7 @@ const int ActionSuccessResponse::kRequestIdFieldNumber;
 ActionSuccessResponse::ActionSuccessResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.ActionSuccessResponse)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.ActionSuccessResponse)
 }
 
 void ActionSuccessResponse::InitAsDefaultInstance() {
@@ -1882,7 +1883,7 @@ ActionSuccessResponse::ActionSuccessResponse(const ActionSuccessResponse& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.ActionSuccessResponse)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.ActionSuccessResponse)
 }
 
 void ActionSuccessResponse::SharedCtor() {
@@ -1892,7 +1893,7 @@ void ActionSuccessResponse::SharedCtor() {
 }
 
 ActionSuccessResponse::~ActionSuccessResponse() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.ActionSuccessResponse)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.ActionSuccessResponse)
   SharedDtor();
 }
 
@@ -1934,7 +1935,7 @@ bool ActionSuccessResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.ActionSuccessResponse)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.ActionSuccessResponse)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -1967,34 +1968,34 @@ bool ActionSuccessResponse::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.ActionSuccessResponse)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.ActionSuccessResponse)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.ActionSuccessResponse)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.ActionSuccessResponse)
   return false;
 #undef DO_
 }
 
 void ActionSuccessResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.ActionSuccessResponse)
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.ActionSuccessResponse)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->request_id(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.ActionSuccessResponse)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.ActionSuccessResponse)
 }
 
 ::google::protobuf::uint8* ActionSuccessResponse::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.ActionSuccessResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.ActionSuccessResponse)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->request_id(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.ActionSuccessResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.ActionSuccessResponse)
   return target;
 }
 
@@ -2076,13 +2077,13 @@ void ActionSuccessResponse::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 ActionSuccessResponse::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ActionSuccessResponse.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionSuccessResponse.request_id)
   return request_id_;
 }
  void ActionSuccessResponse::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ActionSuccessResponse.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionSuccessResponse.request_id)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2098,7 +2099,7 @@ const int ActionFailedResponse::kErrorMsgFieldNumber;
 ActionFailedResponse::ActionFailedResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.ActionFailedResponse)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.ActionFailedResponse)
 }
 
 void ActionFailedResponse::InitAsDefaultInstance() {
@@ -2110,7 +2111,7 @@ ActionFailedResponse::ActionFailedResponse(const ActionFailedResponse& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.ActionFailedResponse)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.ActionFailedResponse)
 }
 
 void ActionFailedResponse::SharedCtor() {
@@ -2123,7 +2124,7 @@ void ActionFailedResponse::SharedCtor() {
 }
 
 ActionFailedResponse::~ActionFailedResponse() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.ActionFailedResponse)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.ActionFailedResponse)
   SharedDtor();
 }
 
@@ -2168,7 +2169,7 @@ bool ActionFailedResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.ActionFailedResponse)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.ActionFailedResponse)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -2212,7 +2213,7 @@ bool ActionFailedResponse::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->error_msg().data(), this->error_msg().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "texas_code.proto.ActionFailedResponse.error_msg"));
+            "texas_code.protocol.ActionFailedResponse.error_msg"));
         } else {
           goto handle_unusual;
         }
@@ -2233,17 +2234,17 @@ bool ActionFailedResponse::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.ActionFailedResponse)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.ActionFailedResponse)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.ActionFailedResponse)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.ActionFailedResponse)
   return false;
 #undef DO_
 }
 
 void ActionFailedResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.ActionFailedResponse)
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.ActionFailedResponse)
   // optional int64 req_id = 1;
   if (this->req_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->req_id(), output);
@@ -2259,17 +2260,17 @@ void ActionFailedResponse::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->error_msg().data(), this->error_msg().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "texas_code.proto.ActionFailedResponse.error_msg");
+      "texas_code.protocol.ActionFailedResponse.error_msg");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->error_msg(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.ActionFailedResponse)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.ActionFailedResponse)
 }
 
 ::google::protobuf::uint8* ActionFailedResponse::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.ActionFailedResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.ActionFailedResponse)
   // optional int64 req_id = 1;
   if (this->req_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->req_id(), target);
@@ -2285,13 +2286,13 @@ void ActionFailedResponse::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->error_msg().data(), this->error_msg().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "texas_code.proto.ActionFailedResponse.error_msg");
+      "texas_code.protocol.ActionFailedResponse.error_msg");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->error_msg(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.ActionFailedResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.ActionFailedResponse)
   return target;
 }
 
@@ -2396,13 +2397,13 @@ void ActionFailedResponse::clear_req_id() {
   req_id_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 ActionFailedResponse::req_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ActionFailedResponse.req_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionFailedResponse.req_id)
   return req_id_;
 }
  void ActionFailedResponse::set_req_id(::google::protobuf::int64 value) {
   
   req_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ActionFailedResponse.req_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionFailedResponse.req_id)
 }
 
 // optional int32 error_code = 2;
@@ -2410,13 +2411,13 @@ void ActionFailedResponse::clear_error_code() {
   error_code_ = 0;
 }
  ::google::protobuf::int32 ActionFailedResponse::error_code() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ActionFailedResponse.error_code)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionFailedResponse.error_code)
   return error_code_;
 }
  void ActionFailedResponse::set_error_code(::google::protobuf::int32 value) {
   
   error_code_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ActionFailedResponse.error_code)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionFailedResponse.error_code)
 }
 
 // optional string error_msg = 3;
@@ -2424,28 +2425,28 @@ void ActionFailedResponse::clear_error_msg() {
   error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  const ::std::string& ActionFailedResponse::error_msg() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionFailedResponse.error_msg)
   return error_msg_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  void ActionFailedResponse::set_error_msg(const ::std::string& value) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:texas_code.proto.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionFailedResponse.error_msg)
 }
  void ActionFailedResponse::set_error_msg(const char* value) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:texas_code.proto.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ActionFailedResponse.error_msg)
 }
  void ActionFailedResponse::set_error_msg(const char* value, size_t size) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:texas_code.proto.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ActionFailedResponse.error_msg)
 }
  ::std::string* ActionFailedResponse::mutable_error_msg() {
   
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ActionFailedResponse.error_msg)
   return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  ::std::string* ActionFailedResponse::release_error_msg() {
@@ -2459,7 +2460,7 @@ void ActionFailedResponse::clear_error_msg() {
     
   }
   error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ActionFailedResponse.error_msg)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2476,14 +2477,14 @@ const int SeatInfoMessage::kOtherPlayersFieldNumber;
 SeatInfoMessage::SeatInfoMessage()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.SeatInfoMessage)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.SeatInfoMessage)
 }
 
 void SeatInfoMessage::InitAsDefaultInstance() {
   _is_default_instance_ = true;
-  banker_ = const_cast< ::texas_code::proto::Player*>(&::texas_code::proto::Player::default_instance());
-  s_blind_player_ = const_cast< ::texas_code::proto::Player*>(&::texas_code::proto::Player::default_instance());
-  b_blind_player_ = const_cast< ::texas_code::proto::Player*>(&::texas_code::proto::Player::default_instance());
+  banker_ = const_cast< ::texas_code::protocol::Player*>(&::texas_code::protocol::Player::default_instance());
+  s_blind_player_ = const_cast< ::texas_code::protocol::Player*>(&::texas_code::protocol::Player::default_instance());
+  b_blind_player_ = const_cast< ::texas_code::protocol::Player*>(&::texas_code::protocol::Player::default_instance());
 }
 
 SeatInfoMessage::SeatInfoMessage(const SeatInfoMessage& from)
@@ -2491,7 +2492,7 @@ SeatInfoMessage::SeatInfoMessage(const SeatInfoMessage& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.SeatInfoMessage)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.SeatInfoMessage)
 }
 
 void SeatInfoMessage::SharedCtor() {
@@ -2503,7 +2504,7 @@ void SeatInfoMessage::SharedCtor() {
 }
 
 SeatInfoMessage::~SeatInfoMessage() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.SeatInfoMessage)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.SeatInfoMessage)
   SharedDtor();
 }
 
@@ -2554,13 +2555,13 @@ bool SeatInfoMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.SeatInfoMessage)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.SeatInfoMessage)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .texas_code.proto.Player banker = 1;
+      // optional .texas_code.protocol.Player banker = 1;
       case 1: {
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -2572,7 +2573,7 @@ bool SeatInfoMessage::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .texas_code.proto.Player s_blind_player = 2;
+      // optional .texas_code.protocol.Player s_blind_player = 2;
       case 2: {
         if (tag == 18) {
          parse_s_blind_player:
@@ -2585,7 +2586,7 @@ bool SeatInfoMessage::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .texas_code.proto.Player b_blind_player = 3;
+      // optional .texas_code.protocol.Player b_blind_player = 3;
       case 3: {
         if (tag == 26) {
          parse_b_blind_player:
@@ -2598,7 +2599,7 @@ bool SeatInfoMessage::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .texas_code.proto.Player other_players = 4;
+      // repeated .texas_code.protocol.Player other_players = 4;
       case 4: {
         if (tag == 34) {
          parse_other_players:
@@ -2628,104 +2629,104 @@ bool SeatInfoMessage::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.SeatInfoMessage)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.SeatInfoMessage)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.SeatInfoMessage)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.SeatInfoMessage)
   return false;
 #undef DO_
 }
 
 void SeatInfoMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.SeatInfoMessage)
-  // optional .texas_code.proto.Player banker = 1;
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.SeatInfoMessage)
+  // optional .texas_code.protocol.Player banker = 1;
   if (this->has_banker()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->banker_, output);
   }
 
-  // optional .texas_code.proto.Player s_blind_player = 2;
+  // optional .texas_code.protocol.Player s_blind_player = 2;
   if (this->has_s_blind_player()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->s_blind_player_, output);
   }
 
-  // optional .texas_code.proto.Player b_blind_player = 3;
+  // optional .texas_code.protocol.Player b_blind_player = 3;
   if (this->has_b_blind_player()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       3, *this->b_blind_player_, output);
   }
 
-  // repeated .texas_code.proto.Player other_players = 4;
+  // repeated .texas_code.protocol.Player other_players = 4;
   for (unsigned int i = 0, n = this->other_players_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       4, this->other_players(i), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.SeatInfoMessage)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.SeatInfoMessage)
 }
 
 ::google::protobuf::uint8* SeatInfoMessage::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.SeatInfoMessage)
-  // optional .texas_code.proto.Player banker = 1;
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.SeatInfoMessage)
+  // optional .texas_code.protocol.Player banker = 1;
   if (this->has_banker()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         1, *this->banker_, target);
   }
 
-  // optional .texas_code.proto.Player s_blind_player = 2;
+  // optional .texas_code.protocol.Player s_blind_player = 2;
   if (this->has_s_blind_player()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         2, *this->s_blind_player_, target);
   }
 
-  // optional .texas_code.proto.Player b_blind_player = 3;
+  // optional .texas_code.protocol.Player b_blind_player = 3;
   if (this->has_b_blind_player()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         3, *this->b_blind_player_, target);
   }
 
-  // repeated .texas_code.proto.Player other_players = 4;
+  // repeated .texas_code.protocol.Player other_players = 4;
   for (unsigned int i = 0, n = this->other_players_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         4, this->other_players(i), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.SeatInfoMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.SeatInfoMessage)
   return target;
 }
 
 int SeatInfoMessage::ByteSize() const {
   int total_size = 0;
 
-  // optional .texas_code.proto.Player banker = 1;
+  // optional .texas_code.protocol.Player banker = 1;
   if (this->has_banker()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->banker_);
   }
 
-  // optional .texas_code.proto.Player s_blind_player = 2;
+  // optional .texas_code.protocol.Player s_blind_player = 2;
   if (this->has_s_blind_player()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->s_blind_player_);
   }
 
-  // optional .texas_code.proto.Player b_blind_player = 3;
+  // optional .texas_code.protocol.Player b_blind_player = 3;
   if (this->has_b_blind_player()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->b_blind_player_);
   }
 
-  // repeated .texas_code.proto.Player other_players = 4;
+  // repeated .texas_code.protocol.Player other_players = 4;
   total_size += 1 * this->other_players_size();
   for (int i = 0; i < this->other_players_size(); i++) {
     total_size +=
@@ -2755,13 +2756,13 @@ void SeatInfoMessage::MergeFrom(const SeatInfoMessage& from) {
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   other_players_.MergeFrom(from.other_players_);
   if (from.has_banker()) {
-    mutable_banker()->::texas_code::proto::Player::MergeFrom(from.banker());
+    mutable_banker()->::texas_code::protocol::Player::MergeFrom(from.banker());
   }
   if (from.has_s_blind_player()) {
-    mutable_s_blind_player()->::texas_code::proto::Player::MergeFrom(from.s_blind_player());
+    mutable_s_blind_player()->::texas_code::protocol::Player::MergeFrom(from.s_blind_player());
   }
   if (from.has_b_blind_player()) {
-    mutable_b_blind_player()->::texas_code::proto::Player::MergeFrom(from.b_blind_player());
+    mutable_b_blind_player()->::texas_code::protocol::Player::MergeFrom(from.b_blind_player());
   }
 }
 
@@ -2806,7 +2807,7 @@ void SeatInfoMessage::InternalSwap(SeatInfoMessage* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // SeatInfoMessage
 
-// optional .texas_code.proto.Player banker = 1;
+// optional .texas_code.protocol.Player banker = 1;
 bool SeatInfoMessage::has_banker() const {
   return !_is_default_instance_ && banker_ != NULL;
 }
@@ -2814,25 +2815,25 @@ void SeatInfoMessage::clear_banker() {
   if (GetArenaNoVirtual() == NULL && banker_ != NULL) delete banker_;
   banker_ = NULL;
 }
-const ::texas_code::proto::Player& SeatInfoMessage::banker() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.SeatInfoMessage.banker)
+const ::texas_code::protocol::Player& SeatInfoMessage::banker() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.SeatInfoMessage.banker)
   return banker_ != NULL ? *banker_ : *default_instance_->banker_;
 }
-::texas_code::proto::Player* SeatInfoMessage::mutable_banker() {
+::texas_code::protocol::Player* SeatInfoMessage::mutable_banker() {
   
   if (banker_ == NULL) {
-    banker_ = new ::texas_code::proto::Player;
+    banker_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.SeatInfoMessage.banker)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.SeatInfoMessage.banker)
   return banker_;
 }
-::texas_code::proto::Player* SeatInfoMessage::release_banker() {
+::texas_code::protocol::Player* SeatInfoMessage::release_banker() {
   
-  ::texas_code::proto::Player* temp = banker_;
+  ::texas_code::protocol::Player* temp = banker_;
   banker_ = NULL;
   return temp;
 }
-void SeatInfoMessage::set_allocated_banker(::texas_code::proto::Player* banker) {
+void SeatInfoMessage::set_allocated_banker(::texas_code::protocol::Player* banker) {
   delete banker_;
   banker_ = banker;
   if (banker) {
@@ -2840,10 +2841,10 @@ void SeatInfoMessage::set_allocated_banker(::texas_code::proto::Player* banker) 
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.SeatInfoMessage.banker)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.SeatInfoMessage.banker)
 }
 
-// optional .texas_code.proto.Player s_blind_player = 2;
+// optional .texas_code.protocol.Player s_blind_player = 2;
 bool SeatInfoMessage::has_s_blind_player() const {
   return !_is_default_instance_ && s_blind_player_ != NULL;
 }
@@ -2851,25 +2852,25 @@ void SeatInfoMessage::clear_s_blind_player() {
   if (GetArenaNoVirtual() == NULL && s_blind_player_ != NULL) delete s_blind_player_;
   s_blind_player_ = NULL;
 }
-const ::texas_code::proto::Player& SeatInfoMessage::s_blind_player() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.SeatInfoMessage.s_blind_player)
+const ::texas_code::protocol::Player& SeatInfoMessage::s_blind_player() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.SeatInfoMessage.s_blind_player)
   return s_blind_player_ != NULL ? *s_blind_player_ : *default_instance_->s_blind_player_;
 }
-::texas_code::proto::Player* SeatInfoMessage::mutable_s_blind_player() {
+::texas_code::protocol::Player* SeatInfoMessage::mutable_s_blind_player() {
   
   if (s_blind_player_ == NULL) {
-    s_blind_player_ = new ::texas_code::proto::Player;
+    s_blind_player_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.SeatInfoMessage.s_blind_player)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.SeatInfoMessage.s_blind_player)
   return s_blind_player_;
 }
-::texas_code::proto::Player* SeatInfoMessage::release_s_blind_player() {
+::texas_code::protocol::Player* SeatInfoMessage::release_s_blind_player() {
   
-  ::texas_code::proto::Player* temp = s_blind_player_;
+  ::texas_code::protocol::Player* temp = s_blind_player_;
   s_blind_player_ = NULL;
   return temp;
 }
-void SeatInfoMessage::set_allocated_s_blind_player(::texas_code::proto::Player* s_blind_player) {
+void SeatInfoMessage::set_allocated_s_blind_player(::texas_code::protocol::Player* s_blind_player) {
   delete s_blind_player_;
   s_blind_player_ = s_blind_player;
   if (s_blind_player) {
@@ -2877,10 +2878,10 @@ void SeatInfoMessage::set_allocated_s_blind_player(::texas_code::proto::Player* 
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.SeatInfoMessage.s_blind_player)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.SeatInfoMessage.s_blind_player)
 }
 
-// optional .texas_code.proto.Player b_blind_player = 3;
+// optional .texas_code.protocol.Player b_blind_player = 3;
 bool SeatInfoMessage::has_b_blind_player() const {
   return !_is_default_instance_ && b_blind_player_ != NULL;
 }
@@ -2888,25 +2889,25 @@ void SeatInfoMessage::clear_b_blind_player() {
   if (GetArenaNoVirtual() == NULL && b_blind_player_ != NULL) delete b_blind_player_;
   b_blind_player_ = NULL;
 }
-const ::texas_code::proto::Player& SeatInfoMessage::b_blind_player() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.SeatInfoMessage.b_blind_player)
+const ::texas_code::protocol::Player& SeatInfoMessage::b_blind_player() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.SeatInfoMessage.b_blind_player)
   return b_blind_player_ != NULL ? *b_blind_player_ : *default_instance_->b_blind_player_;
 }
-::texas_code::proto::Player* SeatInfoMessage::mutable_b_blind_player() {
+::texas_code::protocol::Player* SeatInfoMessage::mutable_b_blind_player() {
   
   if (b_blind_player_ == NULL) {
-    b_blind_player_ = new ::texas_code::proto::Player;
+    b_blind_player_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.SeatInfoMessage.b_blind_player)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.SeatInfoMessage.b_blind_player)
   return b_blind_player_;
 }
-::texas_code::proto::Player* SeatInfoMessage::release_b_blind_player() {
+::texas_code::protocol::Player* SeatInfoMessage::release_b_blind_player() {
   
-  ::texas_code::proto::Player* temp = b_blind_player_;
+  ::texas_code::protocol::Player* temp = b_blind_player_;
   b_blind_player_ = NULL;
   return temp;
 }
-void SeatInfoMessage::set_allocated_b_blind_player(::texas_code::proto::Player* b_blind_player) {
+void SeatInfoMessage::set_allocated_b_blind_player(::texas_code::protocol::Player* b_blind_player) {
   delete b_blind_player_;
   b_blind_player_ = b_blind_player;
   if (b_blind_player) {
@@ -2914,36 +2915,36 @@ void SeatInfoMessage::set_allocated_b_blind_player(::texas_code::proto::Player* 
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.SeatInfoMessage.b_blind_player)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.SeatInfoMessage.b_blind_player)
 }
 
-// repeated .texas_code.proto.Player other_players = 4;
+// repeated .texas_code.protocol.Player other_players = 4;
 int SeatInfoMessage::other_players_size() const {
   return other_players_.size();
 }
 void SeatInfoMessage::clear_other_players() {
   other_players_.Clear();
 }
-const ::texas_code::proto::Player& SeatInfoMessage::other_players(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.SeatInfoMessage.other_players)
+const ::texas_code::protocol::Player& SeatInfoMessage::other_players(int index) const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.SeatInfoMessage.other_players)
   return other_players_.Get(index);
 }
-::texas_code::proto::Player* SeatInfoMessage::mutable_other_players(int index) {
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.SeatInfoMessage.other_players)
+::texas_code::protocol::Player* SeatInfoMessage::mutable_other_players(int index) {
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.SeatInfoMessage.other_players)
   return other_players_.Mutable(index);
 }
-::texas_code::proto::Player* SeatInfoMessage::add_other_players() {
-  // @@protoc_insertion_point(field_add:texas_code.proto.SeatInfoMessage.other_players)
+::texas_code::protocol::Player* SeatInfoMessage::add_other_players() {
+  // @@protoc_insertion_point(field_add:texas_code.protocol.SeatInfoMessage.other_players)
   return other_players_.Add();
 }
-::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player >*
+::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player >*
 SeatInfoMessage::mutable_other_players() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.SeatInfoMessage.other_players)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.SeatInfoMessage.other_players)
   return &other_players_;
 }
-const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player >&
+const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player >&
 SeatInfoMessage::other_players() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.SeatInfoMessage.other_players)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.SeatInfoMessage.other_players)
   return other_players_;
 }
 
@@ -2960,12 +2961,12 @@ const int BlindMessage::kBetFieldNumber;
 BlindMessage::BlindMessage()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.BlindMessage)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.BlindMessage)
 }
 
 void BlindMessage::InitAsDefaultInstance() {
   _is_default_instance_ = true;
-  player_ = const_cast< ::texas_code::proto::Player*>(&::texas_code::proto::Player::default_instance());
+  player_ = const_cast< ::texas_code::protocol::Player*>(&::texas_code::protocol::Player::default_instance());
 }
 
 BlindMessage::BlindMessage(const BlindMessage& from)
@@ -2973,7 +2974,7 @@ BlindMessage::BlindMessage(const BlindMessage& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.BlindMessage)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.BlindMessage)
 }
 
 void BlindMessage::SharedCtor() {
@@ -2985,7 +2986,7 @@ void BlindMessage::SharedCtor() {
 }
 
 BlindMessage::~BlindMessage() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.BlindMessage)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.BlindMessage)
   SharedDtor();
 }
 
@@ -3042,7 +3043,7 @@ bool BlindMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.BlindMessage)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.BlindMessage)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -3062,7 +3063,7 @@ bool BlindMessage::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .texas_code.proto.Player player = 2;
+      // optional .texas_code.protocol.Player player = 2;
       case 2: {
         if (tag == 18) {
          parse_player:
@@ -3103,23 +3104,23 @@ bool BlindMessage::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.BlindMessage)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.BlindMessage)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.BlindMessage)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.BlindMessage)
   return false;
 #undef DO_
 }
 
 void BlindMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.BlindMessage)
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.BlindMessage)
   // optional int32 request_id = 1;
   if (this->request_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->request_id(), output);
   }
 
-  // optional .texas_code.proto.Player player = 2;
+  // optional .texas_code.protocol.Player player = 2;
   if (this->has_player()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->player_, output);
@@ -3130,18 +3131,18 @@ void BlindMessage::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(3, this->bet(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.BlindMessage)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.BlindMessage)
 }
 
 ::google::protobuf::uint8* BlindMessage::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.BlindMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.BlindMessage)
   // optional int32 request_id = 1;
   if (this->request_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->request_id(), target);
   }
 
-  // optional .texas_code.proto.Player player = 2;
+  // optional .texas_code.protocol.Player player = 2;
   if (this->has_player()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
@@ -3153,7 +3154,7 @@ void BlindMessage::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(3, this->bet(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.BlindMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.BlindMessage)
   return target;
 }
 
@@ -3167,7 +3168,7 @@ int BlindMessage::ByteSize() const {
         this->request_id());
   }
 
-  // optional .texas_code.proto.Player player = 2;
+  // optional .texas_code.protocol.Player player = 2;
   if (this->has_player()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -3205,7 +3206,7 @@ void BlindMessage::MergeFrom(const BlindMessage& from) {
     set_request_id(from.request_id());
   }
   if (from.has_player()) {
-    mutable_player()->::texas_code::proto::Player::MergeFrom(from.player());
+    mutable_player()->::texas_code::protocol::Player::MergeFrom(from.player());
   }
   if (from.bet() != 0) {
     set_bet(from.bet());
@@ -3257,16 +3258,16 @@ void BlindMessage::clear_request_id() {
   request_id_ = 0;
 }
  ::google::protobuf::int32 BlindMessage::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.BlindMessage.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.BlindMessage.request_id)
   return request_id_;
 }
  void BlindMessage::set_request_id(::google::protobuf::int32 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.BlindMessage.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.BlindMessage.request_id)
 }
 
-// optional .texas_code.proto.Player player = 2;
+// optional .texas_code.protocol.Player player = 2;
 bool BlindMessage::has_player() const {
   return !_is_default_instance_ && player_ != NULL;
 }
@@ -3274,25 +3275,25 @@ void BlindMessage::clear_player() {
   if (GetArenaNoVirtual() == NULL && player_ != NULL) delete player_;
   player_ = NULL;
 }
-const ::texas_code::proto::Player& BlindMessage::player() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.BlindMessage.player)
+const ::texas_code::protocol::Player& BlindMessage::player() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.BlindMessage.player)
   return player_ != NULL ? *player_ : *default_instance_->player_;
 }
-::texas_code::proto::Player* BlindMessage::mutable_player() {
+::texas_code::protocol::Player* BlindMessage::mutable_player() {
   
   if (player_ == NULL) {
-    player_ = new ::texas_code::proto::Player;
+    player_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.BlindMessage.player)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.BlindMessage.player)
   return player_;
 }
-::texas_code::proto::Player* BlindMessage::release_player() {
+::texas_code::protocol::Player* BlindMessage::release_player() {
   
-  ::texas_code::proto::Player* temp = player_;
+  ::texas_code::protocol::Player* temp = player_;
   player_ = NULL;
   return temp;
 }
-void BlindMessage::set_allocated_player(::texas_code::proto::Player* player) {
+void BlindMessage::set_allocated_player(::texas_code::protocol::Player* player) {
   delete player_;
   player_ = player;
   if (player) {
@@ -3300,7 +3301,7 @@ void BlindMessage::set_allocated_player(::texas_code::proto::Player* player) {
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.BlindMessage.player)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.BlindMessage.player)
 }
 
 // optional int64 bet = 3;
@@ -3308,13 +3309,13 @@ void BlindMessage::clear_bet() {
   bet_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 BlindMessage::bet() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.BlindMessage.bet)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.BlindMessage.bet)
   return bet_;
 }
  void BlindMessage::set_bet(::google::protobuf::int64 value) {
   
   bet_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.BlindMessage.bet)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.BlindMessage.bet)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3329,13 +3330,13 @@ const int HoldCardsMessage::kCard2FieldNumber;
 HoldCardsMessage::HoldCardsMessage()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.HoldCardsMessage)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.HoldCardsMessage)
 }
 
 void HoldCardsMessage::InitAsDefaultInstance() {
   _is_default_instance_ = true;
-  card_1_ = const_cast< ::texas_code::proto::Card*>(&::texas_code::proto::Card::default_instance());
-  card_2_ = const_cast< ::texas_code::proto::Card*>(&::texas_code::proto::Card::default_instance());
+  card_1_ = const_cast< ::texas_code::protocol::Card*>(&::texas_code::protocol::Card::default_instance());
+  card_2_ = const_cast< ::texas_code::protocol::Card*>(&::texas_code::protocol::Card::default_instance());
 }
 
 HoldCardsMessage::HoldCardsMessage(const HoldCardsMessage& from)
@@ -3343,7 +3344,7 @@ HoldCardsMessage::HoldCardsMessage(const HoldCardsMessage& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.HoldCardsMessage)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.HoldCardsMessage)
 }
 
 void HoldCardsMessage::SharedCtor() {
@@ -3354,7 +3355,7 @@ void HoldCardsMessage::SharedCtor() {
 }
 
 HoldCardsMessage::~HoldCardsMessage() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.HoldCardsMessage)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.HoldCardsMessage)
   SharedDtor();
 }
 
@@ -3401,13 +3402,13 @@ bool HoldCardsMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.HoldCardsMessage)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.HoldCardsMessage)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .texas_code.proto.Card card_1 = 1;
+      // optional .texas_code.protocol.Card card_1 = 1;
       case 1: {
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -3419,7 +3420,7 @@ bool HoldCardsMessage::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .texas_code.proto.Card card_2 = 2;
+      // optional .texas_code.protocol.Card card_2 = 2;
       case 2: {
         if (tag == 18) {
          parse_card_2:
@@ -3445,64 +3446,64 @@ bool HoldCardsMessage::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.HoldCardsMessage)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.HoldCardsMessage)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.HoldCardsMessage)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.HoldCardsMessage)
   return false;
 #undef DO_
 }
 
 void HoldCardsMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.HoldCardsMessage)
-  // optional .texas_code.proto.Card card_1 = 1;
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.HoldCardsMessage)
+  // optional .texas_code.protocol.Card card_1 = 1;
   if (this->has_card_1()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->card_1_, output);
   }
 
-  // optional .texas_code.proto.Card card_2 = 2;
+  // optional .texas_code.protocol.Card card_2 = 2;
   if (this->has_card_2()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->card_2_, output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.HoldCardsMessage)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.HoldCardsMessage)
 }
 
 ::google::protobuf::uint8* HoldCardsMessage::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.HoldCardsMessage)
-  // optional .texas_code.proto.Card card_1 = 1;
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.HoldCardsMessage)
+  // optional .texas_code.protocol.Card card_1 = 1;
   if (this->has_card_1()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         1, *this->card_1_, target);
   }
 
-  // optional .texas_code.proto.Card card_2 = 2;
+  // optional .texas_code.protocol.Card card_2 = 2;
   if (this->has_card_2()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         2, *this->card_2_, target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.HoldCardsMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.HoldCardsMessage)
   return target;
 }
 
 int HoldCardsMessage::ByteSize() const {
   int total_size = 0;
 
-  // optional .texas_code.proto.Card card_1 = 1;
+  // optional .texas_code.protocol.Card card_1 = 1;
   if (this->has_card_1()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->card_1_);
   }
 
-  // optional .texas_code.proto.Card card_2 = 2;
+  // optional .texas_code.protocol.Card card_2 = 2;
   if (this->has_card_2()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -3530,10 +3531,10 @@ void HoldCardsMessage::MergeFrom(const ::google::protobuf::Message& from) {
 void HoldCardsMessage::MergeFrom(const HoldCardsMessage& from) {
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   if (from.has_card_1()) {
-    mutable_card_1()->::texas_code::proto::Card::MergeFrom(from.card_1());
+    mutable_card_1()->::texas_code::protocol::Card::MergeFrom(from.card_1());
   }
   if (from.has_card_2()) {
-    mutable_card_2()->::texas_code::proto::Card::MergeFrom(from.card_2());
+    mutable_card_2()->::texas_code::protocol::Card::MergeFrom(from.card_2());
   }
 }
 
@@ -3576,7 +3577,7 @@ void HoldCardsMessage::InternalSwap(HoldCardsMessage* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // HoldCardsMessage
 
-// optional .texas_code.proto.Card card_1 = 1;
+// optional .texas_code.protocol.Card card_1 = 1;
 bool HoldCardsMessage::has_card_1() const {
   return !_is_default_instance_ && card_1_ != NULL;
 }
@@ -3584,25 +3585,25 @@ void HoldCardsMessage::clear_card_1() {
   if (GetArenaNoVirtual() == NULL && card_1_ != NULL) delete card_1_;
   card_1_ = NULL;
 }
-const ::texas_code::proto::Card& HoldCardsMessage::card_1() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.HoldCardsMessage.card_1)
+const ::texas_code::protocol::Card& HoldCardsMessage::card_1() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.HoldCardsMessage.card_1)
   return card_1_ != NULL ? *card_1_ : *default_instance_->card_1_;
 }
-::texas_code::proto::Card* HoldCardsMessage::mutable_card_1() {
+::texas_code::protocol::Card* HoldCardsMessage::mutable_card_1() {
   
   if (card_1_ == NULL) {
-    card_1_ = new ::texas_code::proto::Card;
+    card_1_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.HoldCardsMessage.card_1)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.HoldCardsMessage.card_1)
   return card_1_;
 }
-::texas_code::proto::Card* HoldCardsMessage::release_card_1() {
+::texas_code::protocol::Card* HoldCardsMessage::release_card_1() {
   
-  ::texas_code::proto::Card* temp = card_1_;
+  ::texas_code::protocol::Card* temp = card_1_;
   card_1_ = NULL;
   return temp;
 }
-void HoldCardsMessage::set_allocated_card_1(::texas_code::proto::Card* card_1) {
+void HoldCardsMessage::set_allocated_card_1(::texas_code::protocol::Card* card_1) {
   delete card_1_;
   card_1_ = card_1;
   if (card_1) {
@@ -3610,10 +3611,10 @@ void HoldCardsMessage::set_allocated_card_1(::texas_code::proto::Card* card_1) {
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.HoldCardsMessage.card_1)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.HoldCardsMessage.card_1)
 }
 
-// optional .texas_code.proto.Card card_2 = 2;
+// optional .texas_code.protocol.Card card_2 = 2;
 bool HoldCardsMessage::has_card_2() const {
   return !_is_default_instance_ && card_2_ != NULL;
 }
@@ -3621,25 +3622,25 @@ void HoldCardsMessage::clear_card_2() {
   if (GetArenaNoVirtual() == NULL && card_2_ != NULL) delete card_2_;
   card_2_ = NULL;
 }
-const ::texas_code::proto::Card& HoldCardsMessage::card_2() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.HoldCardsMessage.card_2)
+const ::texas_code::protocol::Card& HoldCardsMessage::card_2() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.HoldCardsMessage.card_2)
   return card_2_ != NULL ? *card_2_ : *default_instance_->card_2_;
 }
-::texas_code::proto::Card* HoldCardsMessage::mutable_card_2() {
+::texas_code::protocol::Card* HoldCardsMessage::mutable_card_2() {
   
   if (card_2_ == NULL) {
-    card_2_ = new ::texas_code::proto::Card;
+    card_2_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.HoldCardsMessage.card_2)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.HoldCardsMessage.card_2)
   return card_2_;
 }
-::texas_code::proto::Card* HoldCardsMessage::release_card_2() {
+::texas_code::protocol::Card* HoldCardsMessage::release_card_2() {
   
-  ::texas_code::proto::Card* temp = card_2_;
+  ::texas_code::protocol::Card* temp = card_2_;
   card_2_ = NULL;
   return temp;
 }
-void HoldCardsMessage::set_allocated_card_2(::texas_code::proto::Card* card_2) {
+void HoldCardsMessage::set_allocated_card_2(::texas_code::protocol::Card* card_2) {
   delete card_2_;
   card_2_ = card_2;
   if (card_2) {
@@ -3647,7 +3648,7 @@ void HoldCardsMessage::set_allocated_card_2(::texas_code::proto::Card* card_2) {
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.HoldCardsMessage.card_2)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.HoldCardsMessage.card_2)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3663,7 +3664,7 @@ const int InquireActionMessage::kPotAmountFieldNumber;
 InquireActionMessage::InquireActionMessage()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.InquireActionMessage)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.InquireActionMessage)
 }
 
 void InquireActionMessage::InitAsDefaultInstance() {
@@ -3675,7 +3676,7 @@ InquireActionMessage::InquireActionMessage(const InquireActionMessage& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.InquireActionMessage)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.InquireActionMessage)
 }
 
 void InquireActionMessage::SharedCtor() {
@@ -3686,7 +3687,7 @@ void InquireActionMessage::SharedCtor() {
 }
 
 InquireActionMessage::~InquireActionMessage() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.InquireActionMessage)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.InquireActionMessage)
   SharedDtor();
 }
 
@@ -3730,7 +3731,7 @@ bool InquireActionMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.InquireActionMessage)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.InquireActionMessage)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -3750,7 +3751,7 @@ bool InquireActionMessage::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .texas_code.proto.PlayerAction player_actions = 2;
+      // repeated .texas_code.protocol.PlayerAction player_actions = 2;
       case 2: {
         if (tag == 18) {
          parse_player_actions:
@@ -3795,23 +3796,23 @@ bool InquireActionMessage::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.InquireActionMessage)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.InquireActionMessage)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.InquireActionMessage)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.InquireActionMessage)
   return false;
 #undef DO_
 }
 
 void InquireActionMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.InquireActionMessage)
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.InquireActionMessage)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->request_id(), output);
   }
 
-  // repeated .texas_code.proto.PlayerAction player_actions = 2;
+  // repeated .texas_code.protocol.PlayerAction player_actions = 2;
   for (unsigned int i = 0, n = this->player_actions_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, this->player_actions(i), output);
@@ -3822,18 +3823,18 @@ void InquireActionMessage::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(3, this->pot_amount(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.InquireActionMessage)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.InquireActionMessage)
 }
 
 ::google::protobuf::uint8* InquireActionMessage::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.InquireActionMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.InquireActionMessage)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->request_id(), target);
   }
 
-  // repeated .texas_code.proto.PlayerAction player_actions = 2;
+  // repeated .texas_code.protocol.PlayerAction player_actions = 2;
   for (unsigned int i = 0, n = this->player_actions_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
@@ -3845,7 +3846,7 @@ void InquireActionMessage::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(3, this->pot_amount(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.InquireActionMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.InquireActionMessage)
   return target;
 }
 
@@ -3866,7 +3867,7 @@ int InquireActionMessage::ByteSize() const {
         this->pot_amount());
   }
 
-  // repeated .texas_code.proto.PlayerAction player_actions = 2;
+  // repeated .texas_code.protocol.PlayerAction player_actions = 2;
   total_size += 1 * this->player_actions_size();
   for (int i = 0; i < this->player_actions_size(); i++) {
     total_size +=
@@ -3948,42 +3949,42 @@ void InquireActionMessage::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 InquireActionMessage::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.InquireActionMessage.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.InquireActionMessage.request_id)
   return request_id_;
 }
  void InquireActionMessage::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.InquireActionMessage.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.InquireActionMessage.request_id)
 }
 
-// repeated .texas_code.proto.PlayerAction player_actions = 2;
+// repeated .texas_code.protocol.PlayerAction player_actions = 2;
 int InquireActionMessage::player_actions_size() const {
   return player_actions_.size();
 }
 void InquireActionMessage::clear_player_actions() {
   player_actions_.Clear();
 }
-const ::texas_code::proto::PlayerAction& InquireActionMessage::player_actions(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.InquireActionMessage.player_actions)
+const ::texas_code::protocol::PlayerAction& InquireActionMessage::player_actions(int index) const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.InquireActionMessage.player_actions)
   return player_actions_.Get(index);
 }
-::texas_code::proto::PlayerAction* InquireActionMessage::mutable_player_actions(int index) {
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.InquireActionMessage.player_actions)
+::texas_code::protocol::PlayerAction* InquireActionMessage::mutable_player_actions(int index) {
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.InquireActionMessage.player_actions)
   return player_actions_.Mutable(index);
 }
-::texas_code::proto::PlayerAction* InquireActionMessage::add_player_actions() {
-  // @@protoc_insertion_point(field_add:texas_code.proto.InquireActionMessage.player_actions)
+::texas_code::protocol::PlayerAction* InquireActionMessage::add_player_actions() {
+  // @@protoc_insertion_point(field_add:texas_code.protocol.InquireActionMessage.player_actions)
   return player_actions_.Add();
 }
-::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerAction >*
+::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerAction >*
 InquireActionMessage::mutable_player_actions() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.InquireActionMessage.player_actions)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.InquireActionMessage.player_actions)
   return &player_actions_;
 }
-const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerAction >&
+const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerAction >&
 InquireActionMessage::player_actions() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.InquireActionMessage.player_actions)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.InquireActionMessage.player_actions)
   return player_actions_;
 }
 
@@ -3992,13 +3993,13 @@ void InquireActionMessage::clear_pot_amount() {
   pot_amount_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 InquireActionMessage::pot_amount() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.InquireActionMessage.pot_amount)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.InquireActionMessage.pot_amount)
   return pot_amount_;
 }
  void InquireActionMessage::set_pot_amount(::google::protobuf::int64 value) {
   
   pot_amount_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.InquireActionMessage.pot_amount)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.InquireActionMessage.pot_amount)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4014,14 +4015,14 @@ const int FlopMessage::kFlopCard3FieldNumber;
 FlopMessage::FlopMessage()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.FlopMessage)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.FlopMessage)
 }
 
 void FlopMessage::InitAsDefaultInstance() {
   _is_default_instance_ = true;
-  flop_card_1_ = const_cast< ::texas_code::proto::Card*>(&::texas_code::proto::Card::default_instance());
-  flop_card_2_ = const_cast< ::texas_code::proto::Card*>(&::texas_code::proto::Card::default_instance());
-  flop_card_3_ = const_cast< ::texas_code::proto::Card*>(&::texas_code::proto::Card::default_instance());
+  flop_card_1_ = const_cast< ::texas_code::protocol::Card*>(&::texas_code::protocol::Card::default_instance());
+  flop_card_2_ = const_cast< ::texas_code::protocol::Card*>(&::texas_code::protocol::Card::default_instance());
+  flop_card_3_ = const_cast< ::texas_code::protocol::Card*>(&::texas_code::protocol::Card::default_instance());
 }
 
 FlopMessage::FlopMessage(const FlopMessage& from)
@@ -4029,7 +4030,7 @@ FlopMessage::FlopMessage(const FlopMessage& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.FlopMessage)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.FlopMessage)
 }
 
 void FlopMessage::SharedCtor() {
@@ -4041,7 +4042,7 @@ void FlopMessage::SharedCtor() {
 }
 
 FlopMessage::~FlopMessage() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.FlopMessage)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.FlopMessage)
   SharedDtor();
 }
 
@@ -4091,13 +4092,13 @@ bool FlopMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.FlopMessage)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.FlopMessage)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .texas_code.proto.Card flop_card_1 = 1;
+      // optional .texas_code.protocol.Card flop_card_1 = 1;
       case 1: {
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -4109,7 +4110,7 @@ bool FlopMessage::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .texas_code.proto.Card flop_card_2 = 2;
+      // optional .texas_code.protocol.Card flop_card_2 = 2;
       case 2: {
         if (tag == 18) {
          parse_flop_card_2:
@@ -4122,7 +4123,7 @@ bool FlopMessage::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .texas_code.proto.Card flop_card_3 = 3;
+      // optional .texas_code.protocol.Card flop_card_3 = 3;
       case 3: {
         if (tag == 26) {
          parse_flop_card_3:
@@ -4148,84 +4149,84 @@ bool FlopMessage::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.FlopMessage)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.FlopMessage)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.FlopMessage)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.FlopMessage)
   return false;
 #undef DO_
 }
 
 void FlopMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.FlopMessage)
-  // optional .texas_code.proto.Card flop_card_1 = 1;
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.FlopMessage)
+  // optional .texas_code.protocol.Card flop_card_1 = 1;
   if (this->has_flop_card_1()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->flop_card_1_, output);
   }
 
-  // optional .texas_code.proto.Card flop_card_2 = 2;
+  // optional .texas_code.protocol.Card flop_card_2 = 2;
   if (this->has_flop_card_2()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->flop_card_2_, output);
   }
 
-  // optional .texas_code.proto.Card flop_card_3 = 3;
+  // optional .texas_code.protocol.Card flop_card_3 = 3;
   if (this->has_flop_card_3()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       3, *this->flop_card_3_, output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.FlopMessage)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.FlopMessage)
 }
 
 ::google::protobuf::uint8* FlopMessage::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.FlopMessage)
-  // optional .texas_code.proto.Card flop_card_1 = 1;
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.FlopMessage)
+  // optional .texas_code.protocol.Card flop_card_1 = 1;
   if (this->has_flop_card_1()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         1, *this->flop_card_1_, target);
   }
 
-  // optional .texas_code.proto.Card flop_card_2 = 2;
+  // optional .texas_code.protocol.Card flop_card_2 = 2;
   if (this->has_flop_card_2()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         2, *this->flop_card_2_, target);
   }
 
-  // optional .texas_code.proto.Card flop_card_3 = 3;
+  // optional .texas_code.protocol.Card flop_card_3 = 3;
   if (this->has_flop_card_3()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         3, *this->flop_card_3_, target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.FlopMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.FlopMessage)
   return target;
 }
 
 int FlopMessage::ByteSize() const {
   int total_size = 0;
 
-  // optional .texas_code.proto.Card flop_card_1 = 1;
+  // optional .texas_code.protocol.Card flop_card_1 = 1;
   if (this->has_flop_card_1()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->flop_card_1_);
   }
 
-  // optional .texas_code.proto.Card flop_card_2 = 2;
+  // optional .texas_code.protocol.Card flop_card_2 = 2;
   if (this->has_flop_card_2()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->flop_card_2_);
   }
 
-  // optional .texas_code.proto.Card flop_card_3 = 3;
+  // optional .texas_code.protocol.Card flop_card_3 = 3;
   if (this->has_flop_card_3()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -4253,13 +4254,13 @@ void FlopMessage::MergeFrom(const ::google::protobuf::Message& from) {
 void FlopMessage::MergeFrom(const FlopMessage& from) {
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   if (from.has_flop_card_1()) {
-    mutable_flop_card_1()->::texas_code::proto::Card::MergeFrom(from.flop_card_1());
+    mutable_flop_card_1()->::texas_code::protocol::Card::MergeFrom(from.flop_card_1());
   }
   if (from.has_flop_card_2()) {
-    mutable_flop_card_2()->::texas_code::proto::Card::MergeFrom(from.flop_card_2());
+    mutable_flop_card_2()->::texas_code::protocol::Card::MergeFrom(from.flop_card_2());
   }
   if (from.has_flop_card_3()) {
-    mutable_flop_card_3()->::texas_code::proto::Card::MergeFrom(from.flop_card_3());
+    mutable_flop_card_3()->::texas_code::protocol::Card::MergeFrom(from.flop_card_3());
   }
 }
 
@@ -4303,7 +4304,7 @@ void FlopMessage::InternalSwap(FlopMessage* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // FlopMessage
 
-// optional .texas_code.proto.Card flop_card_1 = 1;
+// optional .texas_code.protocol.Card flop_card_1 = 1;
 bool FlopMessage::has_flop_card_1() const {
   return !_is_default_instance_ && flop_card_1_ != NULL;
 }
@@ -4311,25 +4312,25 @@ void FlopMessage::clear_flop_card_1() {
   if (GetArenaNoVirtual() == NULL && flop_card_1_ != NULL) delete flop_card_1_;
   flop_card_1_ = NULL;
 }
-const ::texas_code::proto::Card& FlopMessage::flop_card_1() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.FlopMessage.flop_card_1)
+const ::texas_code::protocol::Card& FlopMessage::flop_card_1() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.FlopMessage.flop_card_1)
   return flop_card_1_ != NULL ? *flop_card_1_ : *default_instance_->flop_card_1_;
 }
-::texas_code::proto::Card* FlopMessage::mutable_flop_card_1() {
+::texas_code::protocol::Card* FlopMessage::mutable_flop_card_1() {
   
   if (flop_card_1_ == NULL) {
-    flop_card_1_ = new ::texas_code::proto::Card;
+    flop_card_1_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.FlopMessage.flop_card_1)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.FlopMessage.flop_card_1)
   return flop_card_1_;
 }
-::texas_code::proto::Card* FlopMessage::release_flop_card_1() {
+::texas_code::protocol::Card* FlopMessage::release_flop_card_1() {
   
-  ::texas_code::proto::Card* temp = flop_card_1_;
+  ::texas_code::protocol::Card* temp = flop_card_1_;
   flop_card_1_ = NULL;
   return temp;
 }
-void FlopMessage::set_allocated_flop_card_1(::texas_code::proto::Card* flop_card_1) {
+void FlopMessage::set_allocated_flop_card_1(::texas_code::protocol::Card* flop_card_1) {
   delete flop_card_1_;
   flop_card_1_ = flop_card_1;
   if (flop_card_1) {
@@ -4337,10 +4338,10 @@ void FlopMessage::set_allocated_flop_card_1(::texas_code::proto::Card* flop_card
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.FlopMessage.flop_card_1)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.FlopMessage.flop_card_1)
 }
 
-// optional .texas_code.proto.Card flop_card_2 = 2;
+// optional .texas_code.protocol.Card flop_card_2 = 2;
 bool FlopMessage::has_flop_card_2() const {
   return !_is_default_instance_ && flop_card_2_ != NULL;
 }
@@ -4348,25 +4349,25 @@ void FlopMessage::clear_flop_card_2() {
   if (GetArenaNoVirtual() == NULL && flop_card_2_ != NULL) delete flop_card_2_;
   flop_card_2_ = NULL;
 }
-const ::texas_code::proto::Card& FlopMessage::flop_card_2() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.FlopMessage.flop_card_2)
+const ::texas_code::protocol::Card& FlopMessage::flop_card_2() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.FlopMessage.flop_card_2)
   return flop_card_2_ != NULL ? *flop_card_2_ : *default_instance_->flop_card_2_;
 }
-::texas_code::proto::Card* FlopMessage::mutable_flop_card_2() {
+::texas_code::protocol::Card* FlopMessage::mutable_flop_card_2() {
   
   if (flop_card_2_ == NULL) {
-    flop_card_2_ = new ::texas_code::proto::Card;
+    flop_card_2_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.FlopMessage.flop_card_2)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.FlopMessage.flop_card_2)
   return flop_card_2_;
 }
-::texas_code::proto::Card* FlopMessage::release_flop_card_2() {
+::texas_code::protocol::Card* FlopMessage::release_flop_card_2() {
   
-  ::texas_code::proto::Card* temp = flop_card_2_;
+  ::texas_code::protocol::Card* temp = flop_card_2_;
   flop_card_2_ = NULL;
   return temp;
 }
-void FlopMessage::set_allocated_flop_card_2(::texas_code::proto::Card* flop_card_2) {
+void FlopMessage::set_allocated_flop_card_2(::texas_code::protocol::Card* flop_card_2) {
   delete flop_card_2_;
   flop_card_2_ = flop_card_2;
   if (flop_card_2) {
@@ -4374,10 +4375,10 @@ void FlopMessage::set_allocated_flop_card_2(::texas_code::proto::Card* flop_card
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.FlopMessage.flop_card_2)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.FlopMessage.flop_card_2)
 }
 
-// optional .texas_code.proto.Card flop_card_3 = 3;
+// optional .texas_code.protocol.Card flop_card_3 = 3;
 bool FlopMessage::has_flop_card_3() const {
   return !_is_default_instance_ && flop_card_3_ != NULL;
 }
@@ -4385,25 +4386,25 @@ void FlopMessage::clear_flop_card_3() {
   if (GetArenaNoVirtual() == NULL && flop_card_3_ != NULL) delete flop_card_3_;
   flop_card_3_ = NULL;
 }
-const ::texas_code::proto::Card& FlopMessage::flop_card_3() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.FlopMessage.flop_card_3)
+const ::texas_code::protocol::Card& FlopMessage::flop_card_3() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.FlopMessage.flop_card_3)
   return flop_card_3_ != NULL ? *flop_card_3_ : *default_instance_->flop_card_3_;
 }
-::texas_code::proto::Card* FlopMessage::mutable_flop_card_3() {
+::texas_code::protocol::Card* FlopMessage::mutable_flop_card_3() {
   
   if (flop_card_3_ == NULL) {
-    flop_card_3_ = new ::texas_code::proto::Card;
+    flop_card_3_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.FlopMessage.flop_card_3)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.FlopMessage.flop_card_3)
   return flop_card_3_;
 }
-::texas_code::proto::Card* FlopMessage::release_flop_card_3() {
+::texas_code::protocol::Card* FlopMessage::release_flop_card_3() {
   
-  ::texas_code::proto::Card* temp = flop_card_3_;
+  ::texas_code::protocol::Card* temp = flop_card_3_;
   flop_card_3_ = NULL;
   return temp;
 }
-void FlopMessage::set_allocated_flop_card_3(::texas_code::proto::Card* flop_card_3) {
+void FlopMessage::set_allocated_flop_card_3(::texas_code::protocol::Card* flop_card_3) {
   delete flop_card_3_;
   flop_card_3_ = flop_card_3;
   if (flop_card_3) {
@@ -4411,7 +4412,7 @@ void FlopMessage::set_allocated_flop_card_3(::texas_code::proto::Card* flop_card
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.FlopMessage.flop_card_3)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.FlopMessage.flop_card_3)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4425,12 +4426,12 @@ const int TurnMessage::kTurnCardFieldNumber;
 TurnMessage::TurnMessage()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.TurnMessage)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.TurnMessage)
 }
 
 void TurnMessage::InitAsDefaultInstance() {
   _is_default_instance_ = true;
-  turn_card_ = const_cast< ::texas_code::proto::Card*>(&::texas_code::proto::Card::default_instance());
+  turn_card_ = const_cast< ::texas_code::protocol::Card*>(&::texas_code::protocol::Card::default_instance());
 }
 
 TurnMessage::TurnMessage(const TurnMessage& from)
@@ -4438,7 +4439,7 @@ TurnMessage::TurnMessage(const TurnMessage& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.TurnMessage)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.TurnMessage)
 }
 
 void TurnMessage::SharedCtor() {
@@ -4448,7 +4449,7 @@ void TurnMessage::SharedCtor() {
 }
 
 TurnMessage::~TurnMessage() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.TurnMessage)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.TurnMessage)
   SharedDtor();
 }
 
@@ -4492,13 +4493,13 @@ bool TurnMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.TurnMessage)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.TurnMessage)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .texas_code.proto.Card turn_card = 1;
+      // optional .texas_code.protocol.Card turn_card = 1;
       case 1: {
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -4523,44 +4524,44 @@ bool TurnMessage::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.TurnMessage)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.TurnMessage)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.TurnMessage)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.TurnMessage)
   return false;
 #undef DO_
 }
 
 void TurnMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.TurnMessage)
-  // optional .texas_code.proto.Card turn_card = 1;
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.TurnMessage)
+  // optional .texas_code.protocol.Card turn_card = 1;
   if (this->has_turn_card()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->turn_card_, output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.TurnMessage)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.TurnMessage)
 }
 
 ::google::protobuf::uint8* TurnMessage::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.TurnMessage)
-  // optional .texas_code.proto.Card turn_card = 1;
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.TurnMessage)
+  // optional .texas_code.protocol.Card turn_card = 1;
   if (this->has_turn_card()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         1, *this->turn_card_, target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.TurnMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.TurnMessage)
   return target;
 }
 
 int TurnMessage::ByteSize() const {
   int total_size = 0;
 
-  // optional .texas_code.proto.Card turn_card = 1;
+  // optional .texas_code.protocol.Card turn_card = 1;
   if (this->has_turn_card()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -4588,7 +4589,7 @@ void TurnMessage::MergeFrom(const ::google::protobuf::Message& from) {
 void TurnMessage::MergeFrom(const TurnMessage& from) {
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   if (from.has_turn_card()) {
-    mutable_turn_card()->::texas_code::proto::Card::MergeFrom(from.turn_card());
+    mutable_turn_card()->::texas_code::protocol::Card::MergeFrom(from.turn_card());
   }
 }
 
@@ -4630,7 +4631,7 @@ void TurnMessage::InternalSwap(TurnMessage* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // TurnMessage
 
-// optional .texas_code.proto.Card turn_card = 1;
+// optional .texas_code.protocol.Card turn_card = 1;
 bool TurnMessage::has_turn_card() const {
   return !_is_default_instance_ && turn_card_ != NULL;
 }
@@ -4638,25 +4639,25 @@ void TurnMessage::clear_turn_card() {
   if (GetArenaNoVirtual() == NULL && turn_card_ != NULL) delete turn_card_;
   turn_card_ = NULL;
 }
-const ::texas_code::proto::Card& TurnMessage::turn_card() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.TurnMessage.turn_card)
+const ::texas_code::protocol::Card& TurnMessage::turn_card() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.TurnMessage.turn_card)
   return turn_card_ != NULL ? *turn_card_ : *default_instance_->turn_card_;
 }
-::texas_code::proto::Card* TurnMessage::mutable_turn_card() {
+::texas_code::protocol::Card* TurnMessage::mutable_turn_card() {
   
   if (turn_card_ == NULL) {
-    turn_card_ = new ::texas_code::proto::Card;
+    turn_card_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.TurnMessage.turn_card)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.TurnMessage.turn_card)
   return turn_card_;
 }
-::texas_code::proto::Card* TurnMessage::release_turn_card() {
+::texas_code::protocol::Card* TurnMessage::release_turn_card() {
   
-  ::texas_code::proto::Card* temp = turn_card_;
+  ::texas_code::protocol::Card* temp = turn_card_;
   turn_card_ = NULL;
   return temp;
 }
-void TurnMessage::set_allocated_turn_card(::texas_code::proto::Card* turn_card) {
+void TurnMessage::set_allocated_turn_card(::texas_code::protocol::Card* turn_card) {
   delete turn_card_;
   turn_card_ = turn_card;
   if (turn_card) {
@@ -4664,7 +4665,7 @@ void TurnMessage::set_allocated_turn_card(::texas_code::proto::Card* turn_card) 
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.TurnMessage.turn_card)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.TurnMessage.turn_card)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4678,12 +4679,12 @@ const int RiverMessage::kRiverCardFieldNumber;
 RiverMessage::RiverMessage()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.RiverMessage)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.RiverMessage)
 }
 
 void RiverMessage::InitAsDefaultInstance() {
   _is_default_instance_ = true;
-  river_card_ = const_cast< ::texas_code::proto::Card*>(&::texas_code::proto::Card::default_instance());
+  river_card_ = const_cast< ::texas_code::protocol::Card*>(&::texas_code::protocol::Card::default_instance());
 }
 
 RiverMessage::RiverMessage(const RiverMessage& from)
@@ -4691,7 +4692,7 @@ RiverMessage::RiverMessage(const RiverMessage& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.RiverMessage)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.RiverMessage)
 }
 
 void RiverMessage::SharedCtor() {
@@ -4701,7 +4702,7 @@ void RiverMessage::SharedCtor() {
 }
 
 RiverMessage::~RiverMessage() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.RiverMessage)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.RiverMessage)
   SharedDtor();
 }
 
@@ -4745,13 +4746,13 @@ bool RiverMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.RiverMessage)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.RiverMessage)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .texas_code.proto.Card river_card = 2;
+      // optional .texas_code.protocol.Card river_card = 2;
       case 2: {
         if (tag == 18) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -4776,44 +4777,44 @@ bool RiverMessage::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.RiverMessage)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.RiverMessage)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.RiverMessage)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.RiverMessage)
   return false;
 #undef DO_
 }
 
 void RiverMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.RiverMessage)
-  // optional .texas_code.proto.Card river_card = 2;
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.RiverMessage)
+  // optional .texas_code.protocol.Card river_card = 2;
   if (this->has_river_card()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->river_card_, output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.RiverMessage)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.RiverMessage)
 }
 
 ::google::protobuf::uint8* RiverMessage::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.RiverMessage)
-  // optional .texas_code.proto.Card river_card = 2;
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.RiverMessage)
+  // optional .texas_code.protocol.Card river_card = 2;
   if (this->has_river_card()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         2, *this->river_card_, target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.RiverMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.RiverMessage)
   return target;
 }
 
 int RiverMessage::ByteSize() const {
   int total_size = 0;
 
-  // optional .texas_code.proto.Card river_card = 2;
+  // optional .texas_code.protocol.Card river_card = 2;
   if (this->has_river_card()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -4841,7 +4842,7 @@ void RiverMessage::MergeFrom(const ::google::protobuf::Message& from) {
 void RiverMessage::MergeFrom(const RiverMessage& from) {
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   if (from.has_river_card()) {
-    mutable_river_card()->::texas_code::proto::Card::MergeFrom(from.river_card());
+    mutable_river_card()->::texas_code::protocol::Card::MergeFrom(from.river_card());
   }
 }
 
@@ -4883,7 +4884,7 @@ void RiverMessage::InternalSwap(RiverMessage* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // RiverMessage
 
-// optional .texas_code.proto.Card river_card = 2;
+// optional .texas_code.protocol.Card river_card = 2;
 bool RiverMessage::has_river_card() const {
   return !_is_default_instance_ && river_card_ != NULL;
 }
@@ -4891,25 +4892,25 @@ void RiverMessage::clear_river_card() {
   if (GetArenaNoVirtual() == NULL && river_card_ != NULL) delete river_card_;
   river_card_ = NULL;
 }
-const ::texas_code::proto::Card& RiverMessage::river_card() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.RiverMessage.river_card)
+const ::texas_code::protocol::Card& RiverMessage::river_card() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.RiverMessage.river_card)
   return river_card_ != NULL ? *river_card_ : *default_instance_->river_card_;
 }
-::texas_code::proto::Card* RiverMessage::mutable_river_card() {
+::texas_code::protocol::Card* RiverMessage::mutable_river_card() {
   
   if (river_card_ == NULL) {
-    river_card_ = new ::texas_code::proto::Card;
+    river_card_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.RiverMessage.river_card)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.RiverMessage.river_card)
   return river_card_;
 }
-::texas_code::proto::Card* RiverMessage::release_river_card() {
+::texas_code::protocol::Card* RiverMessage::release_river_card() {
   
-  ::texas_code::proto::Card* temp = river_card_;
+  ::texas_code::protocol::Card* temp = river_card_;
   river_card_ = NULL;
   return temp;
 }
-void RiverMessage::set_allocated_river_card(::texas_code::proto::Card* river_card) {
+void RiverMessage::set_allocated_river_card(::texas_code::protocol::Card* river_card) {
   delete river_card_;
   river_card_ = river_card;
   if (river_card) {
@@ -4917,7 +4918,7 @@ void RiverMessage::set_allocated_river_card(::texas_code::proto::Card* river_car
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.RiverMessage.river_card)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.RiverMessage.river_card)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4932,7 +4933,7 @@ const int ShowDownMessage::kHandInfosFieldNumber;
 ShowDownMessage::ShowDownMessage()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.ShowDownMessage)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.ShowDownMessage)
 }
 
 void ShowDownMessage::InitAsDefaultInstance() {
@@ -4944,7 +4945,7 @@ ShowDownMessage::ShowDownMessage(const ShowDownMessage& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.ShowDownMessage)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.ShowDownMessage)
 }
 
 void ShowDownMessage::SharedCtor() {
@@ -4953,7 +4954,7 @@ void ShowDownMessage::SharedCtor() {
 }
 
 ShowDownMessage::~ShowDownMessage() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.ShowDownMessage)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.ShowDownMessage)
   SharedDtor();
 }
 
@@ -4996,13 +4997,13 @@ bool ShowDownMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.ShowDownMessage)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.ShowDownMessage)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .texas_code.proto.Card public_cards = 1;
+      // repeated .texas_code.protocol.Card public_cards = 1;
       case 1: {
         if (tag == 10) {
           DO_(input->IncrementRecursionDepth());
@@ -5018,7 +5019,7 @@ bool ShowDownMessage::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .texas_code.proto.PlayerHandInfo hand_infos = 2;
+      // repeated .texas_code.protocol.PlayerHandInfo hand_infos = 2;
       case 2: {
         if (tag == 18) {
           DO_(input->IncrementRecursionDepth());
@@ -5047,57 +5048,57 @@ bool ShowDownMessage::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.ShowDownMessage)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.ShowDownMessage)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.ShowDownMessage)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.ShowDownMessage)
   return false;
 #undef DO_
 }
 
 void ShowDownMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.ShowDownMessage)
-  // repeated .texas_code.proto.Card public_cards = 1;
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.ShowDownMessage)
+  // repeated .texas_code.protocol.Card public_cards = 1;
   for (unsigned int i = 0, n = this->public_cards_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, this->public_cards(i), output);
   }
 
-  // repeated .texas_code.proto.PlayerHandInfo hand_infos = 2;
+  // repeated .texas_code.protocol.PlayerHandInfo hand_infos = 2;
   for (unsigned int i = 0, n = this->hand_infos_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, this->hand_infos(i), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.ShowDownMessage)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.ShowDownMessage)
 }
 
 ::google::protobuf::uint8* ShowDownMessage::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.ShowDownMessage)
-  // repeated .texas_code.proto.Card public_cards = 1;
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.ShowDownMessage)
+  // repeated .texas_code.protocol.Card public_cards = 1;
   for (unsigned int i = 0, n = this->public_cards_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         1, this->public_cards(i), target);
   }
 
-  // repeated .texas_code.proto.PlayerHandInfo hand_infos = 2;
+  // repeated .texas_code.protocol.PlayerHandInfo hand_infos = 2;
   for (unsigned int i = 0, n = this->hand_infos_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         2, this->hand_infos(i), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.ShowDownMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.ShowDownMessage)
   return target;
 }
 
 int ShowDownMessage::ByteSize() const {
   int total_size = 0;
 
-  // repeated .texas_code.proto.Card public_cards = 1;
+  // repeated .texas_code.protocol.Card public_cards = 1;
   total_size += 1 * this->public_cards_size();
   for (int i = 0; i < this->public_cards_size(); i++) {
     total_size +=
@@ -5105,7 +5106,7 @@ int ShowDownMessage::ByteSize() const {
         this->public_cards(i));
   }
 
-  // repeated .texas_code.proto.PlayerHandInfo hand_infos = 2;
+  // repeated .texas_code.protocol.PlayerHandInfo hand_infos = 2;
   total_size += 1 * this->hand_infos_size();
   for (int i = 0; i < this->hand_infos_size(); i++) {
     total_size +=
@@ -5176,63 +5177,63 @@ void ShowDownMessage::InternalSwap(ShowDownMessage* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // ShowDownMessage
 
-// repeated .texas_code.proto.Card public_cards = 1;
+// repeated .texas_code.protocol.Card public_cards = 1;
 int ShowDownMessage::public_cards_size() const {
   return public_cards_.size();
 }
 void ShowDownMessage::clear_public_cards() {
   public_cards_.Clear();
 }
-const ::texas_code::proto::Card& ShowDownMessage::public_cards(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ShowDownMessage.public_cards)
+const ::texas_code::protocol::Card& ShowDownMessage::public_cards(int index) const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ShowDownMessage.public_cards)
   return public_cards_.Get(index);
 }
-::texas_code::proto::Card* ShowDownMessage::mutable_public_cards(int index) {
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ShowDownMessage.public_cards)
+::texas_code::protocol::Card* ShowDownMessage::mutable_public_cards(int index) {
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ShowDownMessage.public_cards)
   return public_cards_.Mutable(index);
 }
-::texas_code::proto::Card* ShowDownMessage::add_public_cards() {
-  // @@protoc_insertion_point(field_add:texas_code.proto.ShowDownMessage.public_cards)
+::texas_code::protocol::Card* ShowDownMessage::add_public_cards() {
+  // @@protoc_insertion_point(field_add:texas_code.protocol.ShowDownMessage.public_cards)
   return public_cards_.Add();
 }
-::google::protobuf::RepeatedPtrField< ::texas_code::proto::Card >*
+::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Card >*
 ShowDownMessage::mutable_public_cards() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.ShowDownMessage.public_cards)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.ShowDownMessage.public_cards)
   return &public_cards_;
 }
-const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Card >&
+const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Card >&
 ShowDownMessage::public_cards() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.ShowDownMessage.public_cards)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.ShowDownMessage.public_cards)
   return public_cards_;
 }
 
-// repeated .texas_code.proto.PlayerHandInfo hand_infos = 2;
+// repeated .texas_code.protocol.PlayerHandInfo hand_infos = 2;
 int ShowDownMessage::hand_infos_size() const {
   return hand_infos_.size();
 }
 void ShowDownMessage::clear_hand_infos() {
   hand_infos_.Clear();
 }
-const ::texas_code::proto::PlayerHandInfo& ShowDownMessage::hand_infos(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ShowDownMessage.hand_infos)
+const ::texas_code::protocol::PlayerHandInfo& ShowDownMessage::hand_infos(int index) const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ShowDownMessage.hand_infos)
   return hand_infos_.Get(index);
 }
-::texas_code::proto::PlayerHandInfo* ShowDownMessage::mutable_hand_infos(int index) {
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ShowDownMessage.hand_infos)
+::texas_code::protocol::PlayerHandInfo* ShowDownMessage::mutable_hand_infos(int index) {
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ShowDownMessage.hand_infos)
   return hand_infos_.Mutable(index);
 }
-::texas_code::proto::PlayerHandInfo* ShowDownMessage::add_hand_infos() {
-  // @@protoc_insertion_point(field_add:texas_code.proto.ShowDownMessage.hand_infos)
+::texas_code::protocol::PlayerHandInfo* ShowDownMessage::add_hand_infos() {
+  // @@protoc_insertion_point(field_add:texas_code.protocol.ShowDownMessage.hand_infos)
   return hand_infos_.Add();
 }
-::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerHandInfo >*
+::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerHandInfo >*
 ShowDownMessage::mutable_hand_infos() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.ShowDownMessage.hand_infos)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.ShowDownMessage.hand_infos)
   return &hand_infos_;
 }
-const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerHandInfo >&
+const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerHandInfo >&
 ShowDownMessage::hand_infos() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.ShowDownMessage.hand_infos)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.ShowDownMessage.hand_infos)
   return hand_infos_;
 }
 
@@ -5248,7 +5249,7 @@ const int PotWinMessage::kPotWinFieldNumber;
 PotWinMessage::PotWinMessage()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.PotWinMessage)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.PotWinMessage)
 }
 
 void PotWinMessage::InitAsDefaultInstance() {
@@ -5260,7 +5261,7 @@ PotWinMessage::PotWinMessage(const PotWinMessage& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.PotWinMessage)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.PotWinMessage)
 }
 
 void PotWinMessage::SharedCtor() {
@@ -5269,7 +5270,7 @@ void PotWinMessage::SharedCtor() {
 }
 
 PotWinMessage::~PotWinMessage() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.PotWinMessage)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.PotWinMessage)
   SharedDtor();
 }
 
@@ -5312,13 +5313,13 @@ bool PotWinMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.PotWinMessage)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.PotWinMessage)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .texas_code.proto.Player players = 1;
+      // repeated .texas_code.protocol.Player players = 1;
       case 1: {
         if (tag == 10) {
           DO_(input->IncrementRecursionDepth());
@@ -5365,18 +5366,18 @@ bool PotWinMessage::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.PotWinMessage)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.PotWinMessage)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.PotWinMessage)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.PotWinMessage)
   return false;
 #undef DO_
 }
 
 void PotWinMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.PotWinMessage)
-  // repeated .texas_code.proto.Player players = 1;
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.PotWinMessage)
+  // repeated .texas_code.protocol.Player players = 1;
   for (unsigned int i = 0, n = this->players_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, this->players(i), output);
@@ -5392,13 +5393,13 @@ void PotWinMessage::SerializeWithCachedSizes(
       this->pot_win(i), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.PotWinMessage)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.PotWinMessage)
 }
 
 ::google::protobuf::uint8* PotWinMessage::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.PotWinMessage)
-  // repeated .texas_code.proto.Player players = 1;
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.PotWinMessage)
+  // repeated .texas_code.protocol.Player players = 1;
   for (unsigned int i = 0, n = this->players_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
@@ -5419,14 +5420,14 @@ void PotWinMessage::SerializeWithCachedSizes(
       WriteInt64NoTagToArray(this->pot_win(i), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.PotWinMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.PotWinMessage)
   return target;
 }
 
 int PotWinMessage::ByteSize() const {
   int total_size = 0;
 
-  // repeated .texas_code.proto.Player players = 1;
+  // repeated .texas_code.protocol.Player players = 1;
   total_size += 1 * this->players_size();
   for (int i = 0; i < this->players_size(); i++) {
     total_size +=
@@ -5514,33 +5515,33 @@ void PotWinMessage::InternalSwap(PotWinMessage* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // PotWinMessage
 
-// repeated .texas_code.proto.Player players = 1;
+// repeated .texas_code.protocol.Player players = 1;
 int PotWinMessage::players_size() const {
   return players_.size();
 }
 void PotWinMessage::clear_players() {
   players_.Clear();
 }
-const ::texas_code::proto::Player& PotWinMessage::players(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.PotWinMessage.players)
+const ::texas_code::protocol::Player& PotWinMessage::players(int index) const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.PotWinMessage.players)
   return players_.Get(index);
 }
-::texas_code::proto::Player* PotWinMessage::mutable_players(int index) {
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.PotWinMessage.players)
+::texas_code::protocol::Player* PotWinMessage::mutable_players(int index) {
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.PotWinMessage.players)
   return players_.Mutable(index);
 }
-::texas_code::proto::Player* PotWinMessage::add_players() {
-  // @@protoc_insertion_point(field_add:texas_code.proto.PotWinMessage.players)
+::texas_code::protocol::Player* PotWinMessage::add_players() {
+  // @@protoc_insertion_point(field_add:texas_code.protocol.PotWinMessage.players)
   return players_.Add();
 }
-::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player >*
+::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player >*
 PotWinMessage::mutable_players() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.PotWinMessage.players)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.PotWinMessage.players)
   return &players_;
 }
-const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player >&
+const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player >&
 PotWinMessage::players() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.PotWinMessage.players)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.PotWinMessage.players)
   return players_;
 }
 
@@ -5552,25 +5553,25 @@ void PotWinMessage::clear_pot_win() {
   pot_win_.Clear();
 }
  ::google::protobuf::int64 PotWinMessage::pot_win(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.PotWinMessage.pot_win)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.PotWinMessage.pot_win)
   return pot_win_.Get(index);
 }
  void PotWinMessage::set_pot_win(int index, ::google::protobuf::int64 value) {
   pot_win_.Set(index, value);
-  // @@protoc_insertion_point(field_set:texas_code.proto.PotWinMessage.pot_win)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.PotWinMessage.pot_win)
 }
  void PotWinMessage::add_pot_win(::google::protobuf::int64 value) {
   pot_win_.Add(value);
-  // @@protoc_insertion_point(field_add:texas_code.proto.PotWinMessage.pot_win)
+  // @@protoc_insertion_point(field_add:texas_code.protocol.PotWinMessage.pot_win)
 }
  const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
 PotWinMessage::pot_win() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.PotWinMessage.pot_win)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.PotWinMessage.pot_win)
   return pot_win_;
 }
  ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
 PotWinMessage::mutable_pot_win() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.PotWinMessage.pot_win)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.PotWinMessage.pot_win)
   return &pot_win_;
 }
 
@@ -5585,7 +5586,7 @@ const int GameOverMessage::kRequestIdFieldNumber;
 GameOverMessage::GameOverMessage()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.GameOverMessage)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.GameOverMessage)
 }
 
 void GameOverMessage::InitAsDefaultInstance() {
@@ -5597,7 +5598,7 @@ GameOverMessage::GameOverMessage(const GameOverMessage& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.GameOverMessage)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.GameOverMessage)
 }
 
 void GameOverMessage::SharedCtor() {
@@ -5607,7 +5608,7 @@ void GameOverMessage::SharedCtor() {
 }
 
 GameOverMessage::~GameOverMessage() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.GameOverMessage)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.GameOverMessage)
   SharedDtor();
 }
 
@@ -5649,7 +5650,7 @@ bool GameOverMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.GameOverMessage)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.GameOverMessage)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -5682,34 +5683,34 @@ bool GameOverMessage::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.GameOverMessage)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.GameOverMessage)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.GameOverMessage)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.GameOverMessage)
   return false;
 #undef DO_
 }
 
 void GameOverMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.GameOverMessage)
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.GameOverMessage)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->request_id(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.GameOverMessage)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.GameOverMessage)
 }
 
 ::google::protobuf::uint8* GameOverMessage::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.GameOverMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.GameOverMessage)
   // optional int64 request_id = 1;
   if (this->request_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->request_id(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.GameOverMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.GameOverMessage)
   return target;
 }
 
@@ -5791,13 +5792,13 @@ void GameOverMessage::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 GameOverMessage::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.GameOverMessage.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.GameOverMessage.request_id)
   return request_id_;
 }
  void GameOverMessage::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.GameOverMessage.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.GameOverMessage.request_id)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -5811,7 +5812,7 @@ const int Heartbeat::kSequenceNumFieldNumber;
 Heartbeat::Heartbeat()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.Heartbeat)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.Heartbeat)
 }
 
 void Heartbeat::InitAsDefaultInstance() {
@@ -5823,7 +5824,7 @@ Heartbeat::Heartbeat(const Heartbeat& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.Heartbeat)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.Heartbeat)
 }
 
 void Heartbeat::SharedCtor() {
@@ -5833,7 +5834,7 @@ void Heartbeat::SharedCtor() {
 }
 
 Heartbeat::~Heartbeat() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.Heartbeat)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.Heartbeat)
   SharedDtor();
 }
 
@@ -5875,7 +5876,7 @@ bool Heartbeat::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.Heartbeat)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.Heartbeat)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -5908,34 +5909,34 @@ bool Heartbeat::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.Heartbeat)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.Heartbeat)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.Heartbeat)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.Heartbeat)
   return false;
 #undef DO_
 }
 
 void Heartbeat::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.Heartbeat)
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.Heartbeat)
   // optional int64 sequence_num = 1;
   if (this->sequence_num() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->sequence_num(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.Heartbeat)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.Heartbeat)
 }
 
 ::google::protobuf::uint8* Heartbeat::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.Heartbeat)
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.Heartbeat)
   // optional int64 sequence_num = 1;
   if (this->sequence_num() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->sequence_num(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.Heartbeat)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.Heartbeat)
   return target;
 }
 
@@ -6017,20 +6018,20 @@ void Heartbeat::clear_sequence_num() {
   sequence_num_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 Heartbeat::sequence_num() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.Heartbeat.sequence_num)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.Heartbeat.sequence_num)
   return sequence_num_;
 }
  void Heartbeat::set_sequence_num(::google::protobuf::int64 value) {
   
   sequence_num_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.Heartbeat.sequence_num)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.Heartbeat.sequence_num)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace proto
+}  // namespace protocol
 }  // namespace texas_code
 
 // @@protoc_insertion_point(global_scope)

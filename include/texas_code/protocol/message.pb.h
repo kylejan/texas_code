@@ -31,7 +31,7 @@
 // @@protoc_insertion_point(includes)
 
 namespace texas_code {
-namespace proto {
+namespace protocol {
 
 // Internal implementation detail -- do not call these.
 void protobuf_AddDesc_message_2eproto();
@@ -131,7 +131,7 @@ class ConnectRequest : public ::google::protobuf::Message {
   ::std::string* release_account_name();
   void set_allocated_account_name(::std::string* account_name);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.ConnectRequest)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.ConnectRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -210,22 +210,22 @@ class ConnectSuccessResponse : public ::google::protobuf::Message {
   ::google::protobuf::int64 request_id() const;
   void set_request_id(::google::protobuf::int64 value);
 
-  // optional .texas_code.proto.Player player = 2;
+  // optional .texas_code.protocol.Player player = 2;
   bool has_player() const;
   void clear_player();
   static const int kPlayerFieldNumber = 2;
-  const ::texas_code::proto::Player& player() const;
-  ::texas_code::proto::Player* mutable_player();
-  ::texas_code::proto::Player* release_player();
-  void set_allocated_player(::texas_code::proto::Player* player);
+  const ::texas_code::protocol::Player& player() const;
+  ::texas_code::protocol::Player* mutable_player();
+  ::texas_code::protocol::Player* release_player();
+  void set_allocated_player(::texas_code::protocol::Player* player);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.ConnectSuccessResponse)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.ConnectSuccessResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
   ::google::protobuf::int64 request_id_;
-  ::texas_code::proto::Player* player_;
+  ::texas_code::protocol::Player* player_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_message_2eproto();
   friend void protobuf_AssignDesc_message_2eproto();
@@ -315,7 +315,7 @@ class ConnectFailedResponse : public ::google::protobuf::Message {
   ::std::string* release_error_msg();
   void set_allocated_error_msg(::std::string* error_msg);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.ConnectFailedResponse)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.ConnectFailedResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -395,22 +395,22 @@ class ActionRequest : public ::google::protobuf::Message {
   ::google::protobuf::int64 request_id() const;
   void set_request_id(::google::protobuf::int64 value);
 
-  // optional .texas_code.proto.JettonAction jetton_action = 2;
+  // optional .texas_code.protocol.JettonAction jetton_action = 2;
   bool has_jetton_action() const;
   void clear_jetton_action();
   static const int kJettonActionFieldNumber = 2;
-  const ::texas_code::proto::JettonAction& jetton_action() const;
-  ::texas_code::proto::JettonAction* mutable_jetton_action();
-  ::texas_code::proto::JettonAction* release_jetton_action();
-  void set_allocated_jetton_action(::texas_code::proto::JettonAction* jetton_action);
+  const ::texas_code::protocol::JettonAction& jetton_action() const;
+  ::texas_code::protocol::JettonAction* mutable_jetton_action();
+  ::texas_code::protocol::JettonAction* release_jetton_action();
+  void set_allocated_jetton_action(::texas_code::protocol::JettonAction* jetton_action);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.ActionRequest)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.ActionRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
   ::google::protobuf::int64 request_id_;
-  ::texas_code::proto::JettonAction* jetton_action_;
+  ::texas_code::protocol::JettonAction* jetton_action_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_message_2eproto();
   friend void protobuf_AssignDesc_message_2eproto();
@@ -483,7 +483,7 @@ class ActionSuccessResponse : public ::google::protobuf::Message {
   ::google::protobuf::int64 request_id() const;
   void set_request_id(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.ActionSuccessResponse)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.ActionSuccessResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -578,7 +578,7 @@ class ActionFailedResponse : public ::google::protobuf::Message {
   ::std::string* release_error_msg();
   void set_allocated_error_msg(::std::string* error_msg);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.ActionFailedResponse)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.ActionFailedResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -652,54 +652,54 @@ class SeatInfoMessage : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // optional .texas_code.proto.Player banker = 1;
+  // optional .texas_code.protocol.Player banker = 1;
   bool has_banker() const;
   void clear_banker();
   static const int kBankerFieldNumber = 1;
-  const ::texas_code::proto::Player& banker() const;
-  ::texas_code::proto::Player* mutable_banker();
-  ::texas_code::proto::Player* release_banker();
-  void set_allocated_banker(::texas_code::proto::Player* banker);
+  const ::texas_code::protocol::Player& banker() const;
+  ::texas_code::protocol::Player* mutable_banker();
+  ::texas_code::protocol::Player* release_banker();
+  void set_allocated_banker(::texas_code::protocol::Player* banker);
 
-  // optional .texas_code.proto.Player s_blind_player = 2;
+  // optional .texas_code.protocol.Player s_blind_player = 2;
   bool has_s_blind_player() const;
   void clear_s_blind_player();
   static const int kSBlindPlayerFieldNumber = 2;
-  const ::texas_code::proto::Player& s_blind_player() const;
-  ::texas_code::proto::Player* mutable_s_blind_player();
-  ::texas_code::proto::Player* release_s_blind_player();
-  void set_allocated_s_blind_player(::texas_code::proto::Player* s_blind_player);
+  const ::texas_code::protocol::Player& s_blind_player() const;
+  ::texas_code::protocol::Player* mutable_s_blind_player();
+  ::texas_code::protocol::Player* release_s_blind_player();
+  void set_allocated_s_blind_player(::texas_code::protocol::Player* s_blind_player);
 
-  // optional .texas_code.proto.Player b_blind_player = 3;
+  // optional .texas_code.protocol.Player b_blind_player = 3;
   bool has_b_blind_player() const;
   void clear_b_blind_player();
   static const int kBBlindPlayerFieldNumber = 3;
-  const ::texas_code::proto::Player& b_blind_player() const;
-  ::texas_code::proto::Player* mutable_b_blind_player();
-  ::texas_code::proto::Player* release_b_blind_player();
-  void set_allocated_b_blind_player(::texas_code::proto::Player* b_blind_player);
+  const ::texas_code::protocol::Player& b_blind_player() const;
+  ::texas_code::protocol::Player* mutable_b_blind_player();
+  ::texas_code::protocol::Player* release_b_blind_player();
+  void set_allocated_b_blind_player(::texas_code::protocol::Player* b_blind_player);
 
-  // repeated .texas_code.proto.Player other_players = 4;
+  // repeated .texas_code.protocol.Player other_players = 4;
   int other_players_size() const;
   void clear_other_players();
   static const int kOtherPlayersFieldNumber = 4;
-  const ::texas_code::proto::Player& other_players(int index) const;
-  ::texas_code::proto::Player* mutable_other_players(int index);
-  ::texas_code::proto::Player* add_other_players();
-  ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player >*
+  const ::texas_code::protocol::Player& other_players(int index) const;
+  ::texas_code::protocol::Player* mutable_other_players(int index);
+  ::texas_code::protocol::Player* add_other_players();
+  ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player >*
       mutable_other_players();
-  const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player >&
+  const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player >&
       other_players() const;
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.SeatInfoMessage)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.SeatInfoMessage)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::texas_code::proto::Player* banker_;
-  ::texas_code::proto::Player* s_blind_player_;
-  ::texas_code::proto::Player* b_blind_player_;
-  ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player > other_players_;
+  ::texas_code::protocol::Player* banker_;
+  ::texas_code::protocol::Player* s_blind_player_;
+  ::texas_code::protocol::Player* b_blind_player_;
+  ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player > other_players_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_message_2eproto();
   friend void protobuf_AssignDesc_message_2eproto();
@@ -772,14 +772,14 @@ class BlindMessage : public ::google::protobuf::Message {
   ::google::protobuf::int32 request_id() const;
   void set_request_id(::google::protobuf::int32 value);
 
-  // optional .texas_code.proto.Player player = 2;
+  // optional .texas_code.protocol.Player player = 2;
   bool has_player() const;
   void clear_player();
   static const int kPlayerFieldNumber = 2;
-  const ::texas_code::proto::Player& player() const;
-  ::texas_code::proto::Player* mutable_player();
-  ::texas_code::proto::Player* release_player();
-  void set_allocated_player(::texas_code::proto::Player* player);
+  const ::texas_code::protocol::Player& player() const;
+  ::texas_code::protocol::Player* mutable_player();
+  ::texas_code::protocol::Player* release_player();
+  void set_allocated_player(::texas_code::protocol::Player* player);
 
   // optional int64 bet = 3;
   void clear_bet();
@@ -787,12 +787,12 @@ class BlindMessage : public ::google::protobuf::Message {
   ::google::protobuf::int64 bet() const;
   void set_bet(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.BlindMessage)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.BlindMessage)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::texas_code::proto::Player* player_;
+  ::texas_code::protocol::Player* player_;
   ::google::protobuf::int64 bet_;
   ::google::protobuf::int32 request_id_;
   mutable int _cached_size_;
@@ -861,31 +861,31 @@ class HoldCardsMessage : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // optional .texas_code.proto.Card card_1 = 1;
+  // optional .texas_code.protocol.Card card_1 = 1;
   bool has_card_1() const;
   void clear_card_1();
   static const int kCard1FieldNumber = 1;
-  const ::texas_code::proto::Card& card_1() const;
-  ::texas_code::proto::Card* mutable_card_1();
-  ::texas_code::proto::Card* release_card_1();
-  void set_allocated_card_1(::texas_code::proto::Card* card_1);
+  const ::texas_code::protocol::Card& card_1() const;
+  ::texas_code::protocol::Card* mutable_card_1();
+  ::texas_code::protocol::Card* release_card_1();
+  void set_allocated_card_1(::texas_code::protocol::Card* card_1);
 
-  // optional .texas_code.proto.Card card_2 = 2;
+  // optional .texas_code.protocol.Card card_2 = 2;
   bool has_card_2() const;
   void clear_card_2();
   static const int kCard2FieldNumber = 2;
-  const ::texas_code::proto::Card& card_2() const;
-  ::texas_code::proto::Card* mutable_card_2();
-  ::texas_code::proto::Card* release_card_2();
-  void set_allocated_card_2(::texas_code::proto::Card* card_2);
+  const ::texas_code::protocol::Card& card_2() const;
+  ::texas_code::protocol::Card* mutable_card_2();
+  ::texas_code::protocol::Card* release_card_2();
+  void set_allocated_card_2(::texas_code::protocol::Card* card_2);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.HoldCardsMessage)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.HoldCardsMessage)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::texas_code::proto::Card* card_1_;
-  ::texas_code::proto::Card* card_2_;
+  ::texas_code::protocol::Card* card_1_;
+  ::texas_code::protocol::Card* card_2_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_message_2eproto();
   friend void protobuf_AssignDesc_message_2eproto();
@@ -958,16 +958,16 @@ class InquireActionMessage : public ::google::protobuf::Message {
   ::google::protobuf::int64 request_id() const;
   void set_request_id(::google::protobuf::int64 value);
 
-  // repeated .texas_code.proto.PlayerAction player_actions = 2;
+  // repeated .texas_code.protocol.PlayerAction player_actions = 2;
   int player_actions_size() const;
   void clear_player_actions();
   static const int kPlayerActionsFieldNumber = 2;
-  const ::texas_code::proto::PlayerAction& player_actions(int index) const;
-  ::texas_code::proto::PlayerAction* mutable_player_actions(int index);
-  ::texas_code::proto::PlayerAction* add_player_actions();
-  ::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerAction >*
+  const ::texas_code::protocol::PlayerAction& player_actions(int index) const;
+  ::texas_code::protocol::PlayerAction* mutable_player_actions(int index);
+  ::texas_code::protocol::PlayerAction* add_player_actions();
+  ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerAction >*
       mutable_player_actions();
-  const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerAction >&
+  const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerAction >&
       player_actions() const;
 
   // optional int64 pot_amount = 3;
@@ -976,13 +976,13 @@ class InquireActionMessage : public ::google::protobuf::Message {
   ::google::protobuf::int64 pot_amount() const;
   void set_pot_amount(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.InquireActionMessage)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.InquireActionMessage)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
   ::google::protobuf::int64 request_id_;
-  ::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerAction > player_actions_;
+  ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerAction > player_actions_;
   ::google::protobuf::int64 pot_amount_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_message_2eproto();
@@ -1050,41 +1050,41 @@ class FlopMessage : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // optional .texas_code.proto.Card flop_card_1 = 1;
+  // optional .texas_code.protocol.Card flop_card_1 = 1;
   bool has_flop_card_1() const;
   void clear_flop_card_1();
   static const int kFlopCard1FieldNumber = 1;
-  const ::texas_code::proto::Card& flop_card_1() const;
-  ::texas_code::proto::Card* mutable_flop_card_1();
-  ::texas_code::proto::Card* release_flop_card_1();
-  void set_allocated_flop_card_1(::texas_code::proto::Card* flop_card_1);
+  const ::texas_code::protocol::Card& flop_card_1() const;
+  ::texas_code::protocol::Card* mutable_flop_card_1();
+  ::texas_code::protocol::Card* release_flop_card_1();
+  void set_allocated_flop_card_1(::texas_code::protocol::Card* flop_card_1);
 
-  // optional .texas_code.proto.Card flop_card_2 = 2;
+  // optional .texas_code.protocol.Card flop_card_2 = 2;
   bool has_flop_card_2() const;
   void clear_flop_card_2();
   static const int kFlopCard2FieldNumber = 2;
-  const ::texas_code::proto::Card& flop_card_2() const;
-  ::texas_code::proto::Card* mutable_flop_card_2();
-  ::texas_code::proto::Card* release_flop_card_2();
-  void set_allocated_flop_card_2(::texas_code::proto::Card* flop_card_2);
+  const ::texas_code::protocol::Card& flop_card_2() const;
+  ::texas_code::protocol::Card* mutable_flop_card_2();
+  ::texas_code::protocol::Card* release_flop_card_2();
+  void set_allocated_flop_card_2(::texas_code::protocol::Card* flop_card_2);
 
-  // optional .texas_code.proto.Card flop_card_3 = 3;
+  // optional .texas_code.protocol.Card flop_card_3 = 3;
   bool has_flop_card_3() const;
   void clear_flop_card_3();
   static const int kFlopCard3FieldNumber = 3;
-  const ::texas_code::proto::Card& flop_card_3() const;
-  ::texas_code::proto::Card* mutable_flop_card_3();
-  ::texas_code::proto::Card* release_flop_card_3();
-  void set_allocated_flop_card_3(::texas_code::proto::Card* flop_card_3);
+  const ::texas_code::protocol::Card& flop_card_3() const;
+  ::texas_code::protocol::Card* mutable_flop_card_3();
+  ::texas_code::protocol::Card* release_flop_card_3();
+  void set_allocated_flop_card_3(::texas_code::protocol::Card* flop_card_3);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.FlopMessage)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.FlopMessage)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::texas_code::proto::Card* flop_card_1_;
-  ::texas_code::proto::Card* flop_card_2_;
-  ::texas_code::proto::Card* flop_card_3_;
+  ::texas_code::protocol::Card* flop_card_1_;
+  ::texas_code::protocol::Card* flop_card_2_;
+  ::texas_code::protocol::Card* flop_card_3_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_message_2eproto();
   friend void protobuf_AssignDesc_message_2eproto();
@@ -1151,21 +1151,21 @@ class TurnMessage : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // optional .texas_code.proto.Card turn_card = 1;
+  // optional .texas_code.protocol.Card turn_card = 1;
   bool has_turn_card() const;
   void clear_turn_card();
   static const int kTurnCardFieldNumber = 1;
-  const ::texas_code::proto::Card& turn_card() const;
-  ::texas_code::proto::Card* mutable_turn_card();
-  ::texas_code::proto::Card* release_turn_card();
-  void set_allocated_turn_card(::texas_code::proto::Card* turn_card);
+  const ::texas_code::protocol::Card& turn_card() const;
+  ::texas_code::protocol::Card* mutable_turn_card();
+  ::texas_code::protocol::Card* release_turn_card();
+  void set_allocated_turn_card(::texas_code::protocol::Card* turn_card);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.TurnMessage)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.TurnMessage)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::texas_code::proto::Card* turn_card_;
+  ::texas_code::protocol::Card* turn_card_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_message_2eproto();
   friend void protobuf_AssignDesc_message_2eproto();
@@ -1232,21 +1232,21 @@ class RiverMessage : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // optional .texas_code.proto.Card river_card = 2;
+  // optional .texas_code.protocol.Card river_card = 2;
   bool has_river_card() const;
   void clear_river_card();
   static const int kRiverCardFieldNumber = 2;
-  const ::texas_code::proto::Card& river_card() const;
-  ::texas_code::proto::Card* mutable_river_card();
-  ::texas_code::proto::Card* release_river_card();
-  void set_allocated_river_card(::texas_code::proto::Card* river_card);
+  const ::texas_code::protocol::Card& river_card() const;
+  ::texas_code::protocol::Card* mutable_river_card();
+  ::texas_code::protocol::Card* release_river_card();
+  void set_allocated_river_card(::texas_code::protocol::Card* river_card);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.RiverMessage)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.RiverMessage)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::texas_code::proto::Card* river_card_;
+  ::texas_code::protocol::Card* river_card_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_message_2eproto();
   friend void protobuf_AssignDesc_message_2eproto();
@@ -1313,37 +1313,37 @@ class ShowDownMessage : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // repeated .texas_code.proto.Card public_cards = 1;
+  // repeated .texas_code.protocol.Card public_cards = 1;
   int public_cards_size() const;
   void clear_public_cards();
   static const int kPublicCardsFieldNumber = 1;
-  const ::texas_code::proto::Card& public_cards(int index) const;
-  ::texas_code::proto::Card* mutable_public_cards(int index);
-  ::texas_code::proto::Card* add_public_cards();
-  ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Card >*
+  const ::texas_code::protocol::Card& public_cards(int index) const;
+  ::texas_code::protocol::Card* mutable_public_cards(int index);
+  ::texas_code::protocol::Card* add_public_cards();
+  ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Card >*
       mutable_public_cards();
-  const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Card >&
+  const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Card >&
       public_cards() const;
 
-  // repeated .texas_code.proto.PlayerHandInfo hand_infos = 2;
+  // repeated .texas_code.protocol.PlayerHandInfo hand_infos = 2;
   int hand_infos_size() const;
   void clear_hand_infos();
   static const int kHandInfosFieldNumber = 2;
-  const ::texas_code::proto::PlayerHandInfo& hand_infos(int index) const;
-  ::texas_code::proto::PlayerHandInfo* mutable_hand_infos(int index);
-  ::texas_code::proto::PlayerHandInfo* add_hand_infos();
-  ::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerHandInfo >*
+  const ::texas_code::protocol::PlayerHandInfo& hand_infos(int index) const;
+  ::texas_code::protocol::PlayerHandInfo* mutable_hand_infos(int index);
+  ::texas_code::protocol::PlayerHandInfo* add_hand_infos();
+  ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerHandInfo >*
       mutable_hand_infos();
-  const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerHandInfo >&
+  const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerHandInfo >&
       hand_infos() const;
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.ShowDownMessage)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.ShowDownMessage)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Card > public_cards_;
-  ::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerHandInfo > hand_infos_;
+  ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Card > public_cards_;
+  ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerHandInfo > hand_infos_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_message_2eproto();
   friend void protobuf_AssignDesc_message_2eproto();
@@ -1410,16 +1410,16 @@ class PotWinMessage : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // repeated .texas_code.proto.Player players = 1;
+  // repeated .texas_code.protocol.Player players = 1;
   int players_size() const;
   void clear_players();
   static const int kPlayersFieldNumber = 1;
-  const ::texas_code::proto::Player& players(int index) const;
-  ::texas_code::proto::Player* mutable_players(int index);
-  ::texas_code::proto::Player* add_players();
-  ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player >*
+  const ::texas_code::protocol::Player& players(int index) const;
+  ::texas_code::protocol::Player* mutable_players(int index);
+  ::texas_code::protocol::Player* add_players();
+  ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player >*
       mutable_players();
-  const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player >&
+  const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player >&
       players() const;
 
   // repeated int64 pot_win = 2;
@@ -1434,12 +1434,12 @@ class PotWinMessage : public ::google::protobuf::Message {
   ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
       mutable_pot_win();
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.PotWinMessage)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.PotWinMessage)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player > players_;
+  ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player > players_;
   ::google::protobuf::RepeatedField< ::google::protobuf::int64 > pot_win_;
   mutable int _pot_win_cached_byte_size_;
   mutable int _cached_size_;
@@ -1514,7 +1514,7 @@ class GameOverMessage : public ::google::protobuf::Message {
   ::google::protobuf::int64 request_id() const;
   void set_request_id(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.GameOverMessage)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.GameOverMessage)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1592,7 +1592,7 @@ class Heartbeat : public ::google::protobuf::Message {
   ::google::protobuf::int64 sequence_num() const;
   void set_sequence_num(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:texas_code.proto.Heartbeat)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.Heartbeat)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1619,13 +1619,13 @@ inline void ConnectRequest::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ConnectRequest::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectRequest.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectRequest.request_id)
   return request_id_;
 }
 inline void ConnectRequest::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ConnectRequest.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectRequest.request_id)
 }
 
 // optional string account_name = 2;
@@ -1633,28 +1633,28 @@ inline void ConnectRequest::clear_account_name() {
   account_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ConnectRequest::account_name() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectRequest.account_name)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectRequest.account_name)
   return account_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void ConnectRequest::set_account_name(const ::std::string& value) {
   
   account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:texas_code.proto.ConnectRequest.account_name)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectRequest.account_name)
 }
 inline void ConnectRequest::set_account_name(const char* value) {
   
   account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:texas_code.proto.ConnectRequest.account_name)
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ConnectRequest.account_name)
 }
 inline void ConnectRequest::set_account_name(const char* value, size_t size) {
   
   account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:texas_code.proto.ConnectRequest.account_name)
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ConnectRequest.account_name)
 }
 inline ::std::string* ConnectRequest::mutable_account_name() {
   
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ConnectRequest.account_name)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ConnectRequest.account_name)
   return account_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ConnectRequest::release_account_name() {
@@ -1668,7 +1668,7 @@ inline void ConnectRequest::set_allocated_account_name(::std::string* account_na
     
   }
   account_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_name);
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.ConnectRequest.account_name)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ConnectRequest.account_name)
 }
 
 // -------------------------------------------------------------------
@@ -1680,16 +1680,16 @@ inline void ConnectSuccessResponse::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ConnectSuccessResponse::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectSuccessResponse.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectSuccessResponse.request_id)
   return request_id_;
 }
 inline void ConnectSuccessResponse::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ConnectSuccessResponse.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectSuccessResponse.request_id)
 }
 
-// optional .texas_code.proto.Player player = 2;
+// optional .texas_code.protocol.Player player = 2;
 inline bool ConnectSuccessResponse::has_player() const {
   return !_is_default_instance_ && player_ != NULL;
 }
@@ -1697,25 +1697,25 @@ inline void ConnectSuccessResponse::clear_player() {
   if (GetArenaNoVirtual() == NULL && player_ != NULL) delete player_;
   player_ = NULL;
 }
-inline const ::texas_code::proto::Player& ConnectSuccessResponse::player() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectSuccessResponse.player)
+inline const ::texas_code::protocol::Player& ConnectSuccessResponse::player() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectSuccessResponse.player)
   return player_ != NULL ? *player_ : *default_instance_->player_;
 }
-inline ::texas_code::proto::Player* ConnectSuccessResponse::mutable_player() {
+inline ::texas_code::protocol::Player* ConnectSuccessResponse::mutable_player() {
   
   if (player_ == NULL) {
-    player_ = new ::texas_code::proto::Player;
+    player_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ConnectSuccessResponse.player)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ConnectSuccessResponse.player)
   return player_;
 }
-inline ::texas_code::proto::Player* ConnectSuccessResponse::release_player() {
+inline ::texas_code::protocol::Player* ConnectSuccessResponse::release_player() {
   
-  ::texas_code::proto::Player* temp = player_;
+  ::texas_code::protocol::Player* temp = player_;
   player_ = NULL;
   return temp;
 }
-inline void ConnectSuccessResponse::set_allocated_player(::texas_code::proto::Player* player) {
+inline void ConnectSuccessResponse::set_allocated_player(::texas_code::protocol::Player* player) {
   delete player_;
   player_ = player;
   if (player) {
@@ -1723,7 +1723,7 @@ inline void ConnectSuccessResponse::set_allocated_player(::texas_code::proto::Pl
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.ConnectSuccessResponse.player)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ConnectSuccessResponse.player)
 }
 
 // -------------------------------------------------------------------
@@ -1735,13 +1735,13 @@ inline void ConnectFailedResponse::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ConnectFailedResponse::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectFailedResponse.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectFailedResponse.request_id)
   return request_id_;
 }
 inline void ConnectFailedResponse::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ConnectFailedResponse.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectFailedResponse.request_id)
 }
 
 // optional int32 error_code = 2;
@@ -1749,13 +1749,13 @@ inline void ConnectFailedResponse::clear_error_code() {
   error_code_ = 0;
 }
 inline ::google::protobuf::int32 ConnectFailedResponse::error_code() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectFailedResponse.error_code)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectFailedResponse.error_code)
   return error_code_;
 }
 inline void ConnectFailedResponse::set_error_code(::google::protobuf::int32 value) {
   
   error_code_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ConnectFailedResponse.error_code)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectFailedResponse.error_code)
 }
 
 // optional string error_msg = 3;
@@ -1763,28 +1763,28 @@ inline void ConnectFailedResponse::clear_error_msg() {
   error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ConnectFailedResponse::error_msg() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectFailedResponse.error_msg)
   return error_msg_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void ConnectFailedResponse::set_error_msg(const ::std::string& value) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:texas_code.proto.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectFailedResponse.error_msg)
 }
 inline void ConnectFailedResponse::set_error_msg(const char* value) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:texas_code.proto.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ConnectFailedResponse.error_msg)
 }
 inline void ConnectFailedResponse::set_error_msg(const char* value, size_t size) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:texas_code.proto.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ConnectFailedResponse.error_msg)
 }
 inline ::std::string* ConnectFailedResponse::mutable_error_msg() {
   
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ConnectFailedResponse.error_msg)
   return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ConnectFailedResponse::release_error_msg() {
@@ -1798,7 +1798,7 @@ inline void ConnectFailedResponse::set_allocated_error_msg(::std::string* error_
     
   }
   error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ConnectFailedResponse.error_msg)
 }
 
 // -------------------------------------------------------------------
@@ -1810,16 +1810,16 @@ inline void ActionRequest::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ActionRequest::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ActionRequest.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionRequest.request_id)
   return request_id_;
 }
 inline void ActionRequest::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ActionRequest.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionRequest.request_id)
 }
 
-// optional .texas_code.proto.JettonAction jetton_action = 2;
+// optional .texas_code.protocol.JettonAction jetton_action = 2;
 inline bool ActionRequest::has_jetton_action() const {
   return !_is_default_instance_ && jetton_action_ != NULL;
 }
@@ -1827,25 +1827,25 @@ inline void ActionRequest::clear_jetton_action() {
   if (GetArenaNoVirtual() == NULL && jetton_action_ != NULL) delete jetton_action_;
   jetton_action_ = NULL;
 }
-inline const ::texas_code::proto::JettonAction& ActionRequest::jetton_action() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ActionRequest.jetton_action)
+inline const ::texas_code::protocol::JettonAction& ActionRequest::jetton_action() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionRequest.jetton_action)
   return jetton_action_ != NULL ? *jetton_action_ : *default_instance_->jetton_action_;
 }
-inline ::texas_code::proto::JettonAction* ActionRequest::mutable_jetton_action() {
+inline ::texas_code::protocol::JettonAction* ActionRequest::mutable_jetton_action() {
   
   if (jetton_action_ == NULL) {
-    jetton_action_ = new ::texas_code::proto::JettonAction;
+    jetton_action_ = new ::texas_code::protocol::JettonAction;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ActionRequest.jetton_action)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ActionRequest.jetton_action)
   return jetton_action_;
 }
-inline ::texas_code::proto::JettonAction* ActionRequest::release_jetton_action() {
+inline ::texas_code::protocol::JettonAction* ActionRequest::release_jetton_action() {
   
-  ::texas_code::proto::JettonAction* temp = jetton_action_;
+  ::texas_code::protocol::JettonAction* temp = jetton_action_;
   jetton_action_ = NULL;
   return temp;
 }
-inline void ActionRequest::set_allocated_jetton_action(::texas_code::proto::JettonAction* jetton_action) {
+inline void ActionRequest::set_allocated_jetton_action(::texas_code::protocol::JettonAction* jetton_action) {
   delete jetton_action_;
   jetton_action_ = jetton_action;
   if (jetton_action) {
@@ -1853,7 +1853,7 @@ inline void ActionRequest::set_allocated_jetton_action(::texas_code::proto::Jett
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.ActionRequest.jetton_action)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ActionRequest.jetton_action)
 }
 
 // -------------------------------------------------------------------
@@ -1865,13 +1865,13 @@ inline void ActionSuccessResponse::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ActionSuccessResponse::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ActionSuccessResponse.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionSuccessResponse.request_id)
   return request_id_;
 }
 inline void ActionSuccessResponse::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ActionSuccessResponse.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionSuccessResponse.request_id)
 }
 
 // -------------------------------------------------------------------
@@ -1883,13 +1883,13 @@ inline void ActionFailedResponse::clear_req_id() {
   req_id_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ActionFailedResponse::req_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ActionFailedResponse.req_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionFailedResponse.req_id)
   return req_id_;
 }
 inline void ActionFailedResponse::set_req_id(::google::protobuf::int64 value) {
   
   req_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ActionFailedResponse.req_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionFailedResponse.req_id)
 }
 
 // optional int32 error_code = 2;
@@ -1897,13 +1897,13 @@ inline void ActionFailedResponse::clear_error_code() {
   error_code_ = 0;
 }
 inline ::google::protobuf::int32 ActionFailedResponse::error_code() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ActionFailedResponse.error_code)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionFailedResponse.error_code)
   return error_code_;
 }
 inline void ActionFailedResponse::set_error_code(::google::protobuf::int32 value) {
   
   error_code_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.ActionFailedResponse.error_code)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionFailedResponse.error_code)
 }
 
 // optional string error_msg = 3;
@@ -1911,28 +1911,28 @@ inline void ActionFailedResponse::clear_error_msg() {
   error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ActionFailedResponse::error_msg() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionFailedResponse.error_msg)
   return error_msg_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void ActionFailedResponse::set_error_msg(const ::std::string& value) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:texas_code.proto.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionFailedResponse.error_msg)
 }
 inline void ActionFailedResponse::set_error_msg(const char* value) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:texas_code.proto.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ActionFailedResponse.error_msg)
 }
 inline void ActionFailedResponse::set_error_msg(const char* value, size_t size) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:texas_code.proto.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ActionFailedResponse.error_msg)
 }
 inline ::std::string* ActionFailedResponse::mutable_error_msg() {
   
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ActionFailedResponse.error_msg)
   return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ActionFailedResponse::release_error_msg() {
@@ -1946,14 +1946,14 @@ inline void ActionFailedResponse::set_allocated_error_msg(::std::string* error_m
     
   }
   error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ActionFailedResponse.error_msg)
 }
 
 // -------------------------------------------------------------------
 
 // SeatInfoMessage
 
-// optional .texas_code.proto.Player banker = 1;
+// optional .texas_code.protocol.Player banker = 1;
 inline bool SeatInfoMessage::has_banker() const {
   return !_is_default_instance_ && banker_ != NULL;
 }
@@ -1961,25 +1961,25 @@ inline void SeatInfoMessage::clear_banker() {
   if (GetArenaNoVirtual() == NULL && banker_ != NULL) delete banker_;
   banker_ = NULL;
 }
-inline const ::texas_code::proto::Player& SeatInfoMessage::banker() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.SeatInfoMessage.banker)
+inline const ::texas_code::protocol::Player& SeatInfoMessage::banker() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.SeatInfoMessage.banker)
   return banker_ != NULL ? *banker_ : *default_instance_->banker_;
 }
-inline ::texas_code::proto::Player* SeatInfoMessage::mutable_banker() {
+inline ::texas_code::protocol::Player* SeatInfoMessage::mutable_banker() {
   
   if (banker_ == NULL) {
-    banker_ = new ::texas_code::proto::Player;
+    banker_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.SeatInfoMessage.banker)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.SeatInfoMessage.banker)
   return banker_;
 }
-inline ::texas_code::proto::Player* SeatInfoMessage::release_banker() {
+inline ::texas_code::protocol::Player* SeatInfoMessage::release_banker() {
   
-  ::texas_code::proto::Player* temp = banker_;
+  ::texas_code::protocol::Player* temp = banker_;
   banker_ = NULL;
   return temp;
 }
-inline void SeatInfoMessage::set_allocated_banker(::texas_code::proto::Player* banker) {
+inline void SeatInfoMessage::set_allocated_banker(::texas_code::protocol::Player* banker) {
   delete banker_;
   banker_ = banker;
   if (banker) {
@@ -1987,10 +1987,10 @@ inline void SeatInfoMessage::set_allocated_banker(::texas_code::proto::Player* b
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.SeatInfoMessage.banker)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.SeatInfoMessage.banker)
 }
 
-// optional .texas_code.proto.Player s_blind_player = 2;
+// optional .texas_code.protocol.Player s_blind_player = 2;
 inline bool SeatInfoMessage::has_s_blind_player() const {
   return !_is_default_instance_ && s_blind_player_ != NULL;
 }
@@ -1998,25 +1998,25 @@ inline void SeatInfoMessage::clear_s_blind_player() {
   if (GetArenaNoVirtual() == NULL && s_blind_player_ != NULL) delete s_blind_player_;
   s_blind_player_ = NULL;
 }
-inline const ::texas_code::proto::Player& SeatInfoMessage::s_blind_player() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.SeatInfoMessage.s_blind_player)
+inline const ::texas_code::protocol::Player& SeatInfoMessage::s_blind_player() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.SeatInfoMessage.s_blind_player)
   return s_blind_player_ != NULL ? *s_blind_player_ : *default_instance_->s_blind_player_;
 }
-inline ::texas_code::proto::Player* SeatInfoMessage::mutable_s_blind_player() {
+inline ::texas_code::protocol::Player* SeatInfoMessage::mutable_s_blind_player() {
   
   if (s_blind_player_ == NULL) {
-    s_blind_player_ = new ::texas_code::proto::Player;
+    s_blind_player_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.SeatInfoMessage.s_blind_player)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.SeatInfoMessage.s_blind_player)
   return s_blind_player_;
 }
-inline ::texas_code::proto::Player* SeatInfoMessage::release_s_blind_player() {
+inline ::texas_code::protocol::Player* SeatInfoMessage::release_s_blind_player() {
   
-  ::texas_code::proto::Player* temp = s_blind_player_;
+  ::texas_code::protocol::Player* temp = s_blind_player_;
   s_blind_player_ = NULL;
   return temp;
 }
-inline void SeatInfoMessage::set_allocated_s_blind_player(::texas_code::proto::Player* s_blind_player) {
+inline void SeatInfoMessage::set_allocated_s_blind_player(::texas_code::protocol::Player* s_blind_player) {
   delete s_blind_player_;
   s_blind_player_ = s_blind_player;
   if (s_blind_player) {
@@ -2024,10 +2024,10 @@ inline void SeatInfoMessage::set_allocated_s_blind_player(::texas_code::proto::P
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.SeatInfoMessage.s_blind_player)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.SeatInfoMessage.s_blind_player)
 }
 
-// optional .texas_code.proto.Player b_blind_player = 3;
+// optional .texas_code.protocol.Player b_blind_player = 3;
 inline bool SeatInfoMessage::has_b_blind_player() const {
   return !_is_default_instance_ && b_blind_player_ != NULL;
 }
@@ -2035,25 +2035,25 @@ inline void SeatInfoMessage::clear_b_blind_player() {
   if (GetArenaNoVirtual() == NULL && b_blind_player_ != NULL) delete b_blind_player_;
   b_blind_player_ = NULL;
 }
-inline const ::texas_code::proto::Player& SeatInfoMessage::b_blind_player() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.SeatInfoMessage.b_blind_player)
+inline const ::texas_code::protocol::Player& SeatInfoMessage::b_blind_player() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.SeatInfoMessage.b_blind_player)
   return b_blind_player_ != NULL ? *b_blind_player_ : *default_instance_->b_blind_player_;
 }
-inline ::texas_code::proto::Player* SeatInfoMessage::mutable_b_blind_player() {
+inline ::texas_code::protocol::Player* SeatInfoMessage::mutable_b_blind_player() {
   
   if (b_blind_player_ == NULL) {
-    b_blind_player_ = new ::texas_code::proto::Player;
+    b_blind_player_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.SeatInfoMessage.b_blind_player)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.SeatInfoMessage.b_blind_player)
   return b_blind_player_;
 }
-inline ::texas_code::proto::Player* SeatInfoMessage::release_b_blind_player() {
+inline ::texas_code::protocol::Player* SeatInfoMessage::release_b_blind_player() {
   
-  ::texas_code::proto::Player* temp = b_blind_player_;
+  ::texas_code::protocol::Player* temp = b_blind_player_;
   b_blind_player_ = NULL;
   return temp;
 }
-inline void SeatInfoMessage::set_allocated_b_blind_player(::texas_code::proto::Player* b_blind_player) {
+inline void SeatInfoMessage::set_allocated_b_blind_player(::texas_code::protocol::Player* b_blind_player) {
   delete b_blind_player_;
   b_blind_player_ = b_blind_player;
   if (b_blind_player) {
@@ -2061,36 +2061,36 @@ inline void SeatInfoMessage::set_allocated_b_blind_player(::texas_code::proto::P
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.SeatInfoMessage.b_blind_player)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.SeatInfoMessage.b_blind_player)
 }
 
-// repeated .texas_code.proto.Player other_players = 4;
+// repeated .texas_code.protocol.Player other_players = 4;
 inline int SeatInfoMessage::other_players_size() const {
   return other_players_.size();
 }
 inline void SeatInfoMessage::clear_other_players() {
   other_players_.Clear();
 }
-inline const ::texas_code::proto::Player& SeatInfoMessage::other_players(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.SeatInfoMessage.other_players)
+inline const ::texas_code::protocol::Player& SeatInfoMessage::other_players(int index) const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.SeatInfoMessage.other_players)
   return other_players_.Get(index);
 }
-inline ::texas_code::proto::Player* SeatInfoMessage::mutable_other_players(int index) {
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.SeatInfoMessage.other_players)
+inline ::texas_code::protocol::Player* SeatInfoMessage::mutable_other_players(int index) {
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.SeatInfoMessage.other_players)
   return other_players_.Mutable(index);
 }
-inline ::texas_code::proto::Player* SeatInfoMessage::add_other_players() {
-  // @@protoc_insertion_point(field_add:texas_code.proto.SeatInfoMessage.other_players)
+inline ::texas_code::protocol::Player* SeatInfoMessage::add_other_players() {
+  // @@protoc_insertion_point(field_add:texas_code.protocol.SeatInfoMessage.other_players)
   return other_players_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player >*
+inline ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player >*
 SeatInfoMessage::mutable_other_players() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.SeatInfoMessage.other_players)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.SeatInfoMessage.other_players)
   return &other_players_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player >&
+inline const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player >&
 SeatInfoMessage::other_players() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.SeatInfoMessage.other_players)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.SeatInfoMessage.other_players)
   return other_players_;
 }
 
@@ -2103,16 +2103,16 @@ inline void BlindMessage::clear_request_id() {
   request_id_ = 0;
 }
 inline ::google::protobuf::int32 BlindMessage::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.BlindMessage.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.BlindMessage.request_id)
   return request_id_;
 }
 inline void BlindMessage::set_request_id(::google::protobuf::int32 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.BlindMessage.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.BlindMessage.request_id)
 }
 
-// optional .texas_code.proto.Player player = 2;
+// optional .texas_code.protocol.Player player = 2;
 inline bool BlindMessage::has_player() const {
   return !_is_default_instance_ && player_ != NULL;
 }
@@ -2120,25 +2120,25 @@ inline void BlindMessage::clear_player() {
   if (GetArenaNoVirtual() == NULL && player_ != NULL) delete player_;
   player_ = NULL;
 }
-inline const ::texas_code::proto::Player& BlindMessage::player() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.BlindMessage.player)
+inline const ::texas_code::protocol::Player& BlindMessage::player() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.BlindMessage.player)
   return player_ != NULL ? *player_ : *default_instance_->player_;
 }
-inline ::texas_code::proto::Player* BlindMessage::mutable_player() {
+inline ::texas_code::protocol::Player* BlindMessage::mutable_player() {
   
   if (player_ == NULL) {
-    player_ = new ::texas_code::proto::Player;
+    player_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.BlindMessage.player)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.BlindMessage.player)
   return player_;
 }
-inline ::texas_code::proto::Player* BlindMessage::release_player() {
+inline ::texas_code::protocol::Player* BlindMessage::release_player() {
   
-  ::texas_code::proto::Player* temp = player_;
+  ::texas_code::protocol::Player* temp = player_;
   player_ = NULL;
   return temp;
 }
-inline void BlindMessage::set_allocated_player(::texas_code::proto::Player* player) {
+inline void BlindMessage::set_allocated_player(::texas_code::protocol::Player* player) {
   delete player_;
   player_ = player;
   if (player) {
@@ -2146,7 +2146,7 @@ inline void BlindMessage::set_allocated_player(::texas_code::proto::Player* play
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.BlindMessage.player)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.BlindMessage.player)
 }
 
 // optional int64 bet = 3;
@@ -2154,20 +2154,20 @@ inline void BlindMessage::clear_bet() {
   bet_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 BlindMessage::bet() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.BlindMessage.bet)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.BlindMessage.bet)
   return bet_;
 }
 inline void BlindMessage::set_bet(::google::protobuf::int64 value) {
   
   bet_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.BlindMessage.bet)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.BlindMessage.bet)
 }
 
 // -------------------------------------------------------------------
 
 // HoldCardsMessage
 
-// optional .texas_code.proto.Card card_1 = 1;
+// optional .texas_code.protocol.Card card_1 = 1;
 inline bool HoldCardsMessage::has_card_1() const {
   return !_is_default_instance_ && card_1_ != NULL;
 }
@@ -2175,25 +2175,25 @@ inline void HoldCardsMessage::clear_card_1() {
   if (GetArenaNoVirtual() == NULL && card_1_ != NULL) delete card_1_;
   card_1_ = NULL;
 }
-inline const ::texas_code::proto::Card& HoldCardsMessage::card_1() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.HoldCardsMessage.card_1)
+inline const ::texas_code::protocol::Card& HoldCardsMessage::card_1() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.HoldCardsMessage.card_1)
   return card_1_ != NULL ? *card_1_ : *default_instance_->card_1_;
 }
-inline ::texas_code::proto::Card* HoldCardsMessage::mutable_card_1() {
+inline ::texas_code::protocol::Card* HoldCardsMessage::mutable_card_1() {
   
   if (card_1_ == NULL) {
-    card_1_ = new ::texas_code::proto::Card;
+    card_1_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.HoldCardsMessage.card_1)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.HoldCardsMessage.card_1)
   return card_1_;
 }
-inline ::texas_code::proto::Card* HoldCardsMessage::release_card_1() {
+inline ::texas_code::protocol::Card* HoldCardsMessage::release_card_1() {
   
-  ::texas_code::proto::Card* temp = card_1_;
+  ::texas_code::protocol::Card* temp = card_1_;
   card_1_ = NULL;
   return temp;
 }
-inline void HoldCardsMessage::set_allocated_card_1(::texas_code::proto::Card* card_1) {
+inline void HoldCardsMessage::set_allocated_card_1(::texas_code::protocol::Card* card_1) {
   delete card_1_;
   card_1_ = card_1;
   if (card_1) {
@@ -2201,10 +2201,10 @@ inline void HoldCardsMessage::set_allocated_card_1(::texas_code::proto::Card* ca
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.HoldCardsMessage.card_1)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.HoldCardsMessage.card_1)
 }
 
-// optional .texas_code.proto.Card card_2 = 2;
+// optional .texas_code.protocol.Card card_2 = 2;
 inline bool HoldCardsMessage::has_card_2() const {
   return !_is_default_instance_ && card_2_ != NULL;
 }
@@ -2212,25 +2212,25 @@ inline void HoldCardsMessage::clear_card_2() {
   if (GetArenaNoVirtual() == NULL && card_2_ != NULL) delete card_2_;
   card_2_ = NULL;
 }
-inline const ::texas_code::proto::Card& HoldCardsMessage::card_2() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.HoldCardsMessage.card_2)
+inline const ::texas_code::protocol::Card& HoldCardsMessage::card_2() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.HoldCardsMessage.card_2)
   return card_2_ != NULL ? *card_2_ : *default_instance_->card_2_;
 }
-inline ::texas_code::proto::Card* HoldCardsMessage::mutable_card_2() {
+inline ::texas_code::protocol::Card* HoldCardsMessage::mutable_card_2() {
   
   if (card_2_ == NULL) {
-    card_2_ = new ::texas_code::proto::Card;
+    card_2_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.HoldCardsMessage.card_2)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.HoldCardsMessage.card_2)
   return card_2_;
 }
-inline ::texas_code::proto::Card* HoldCardsMessage::release_card_2() {
+inline ::texas_code::protocol::Card* HoldCardsMessage::release_card_2() {
   
-  ::texas_code::proto::Card* temp = card_2_;
+  ::texas_code::protocol::Card* temp = card_2_;
   card_2_ = NULL;
   return temp;
 }
-inline void HoldCardsMessage::set_allocated_card_2(::texas_code::proto::Card* card_2) {
+inline void HoldCardsMessage::set_allocated_card_2(::texas_code::protocol::Card* card_2) {
   delete card_2_;
   card_2_ = card_2;
   if (card_2) {
@@ -2238,7 +2238,7 @@ inline void HoldCardsMessage::set_allocated_card_2(::texas_code::proto::Card* ca
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.HoldCardsMessage.card_2)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.HoldCardsMessage.card_2)
 }
 
 // -------------------------------------------------------------------
@@ -2250,42 +2250,42 @@ inline void InquireActionMessage::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 InquireActionMessage::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.InquireActionMessage.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.InquireActionMessage.request_id)
   return request_id_;
 }
 inline void InquireActionMessage::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.InquireActionMessage.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.InquireActionMessage.request_id)
 }
 
-// repeated .texas_code.proto.PlayerAction player_actions = 2;
+// repeated .texas_code.protocol.PlayerAction player_actions = 2;
 inline int InquireActionMessage::player_actions_size() const {
   return player_actions_.size();
 }
 inline void InquireActionMessage::clear_player_actions() {
   player_actions_.Clear();
 }
-inline const ::texas_code::proto::PlayerAction& InquireActionMessage::player_actions(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.InquireActionMessage.player_actions)
+inline const ::texas_code::protocol::PlayerAction& InquireActionMessage::player_actions(int index) const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.InquireActionMessage.player_actions)
   return player_actions_.Get(index);
 }
-inline ::texas_code::proto::PlayerAction* InquireActionMessage::mutable_player_actions(int index) {
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.InquireActionMessage.player_actions)
+inline ::texas_code::protocol::PlayerAction* InquireActionMessage::mutable_player_actions(int index) {
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.InquireActionMessage.player_actions)
   return player_actions_.Mutable(index);
 }
-inline ::texas_code::proto::PlayerAction* InquireActionMessage::add_player_actions() {
-  // @@protoc_insertion_point(field_add:texas_code.proto.InquireActionMessage.player_actions)
+inline ::texas_code::protocol::PlayerAction* InquireActionMessage::add_player_actions() {
+  // @@protoc_insertion_point(field_add:texas_code.protocol.InquireActionMessage.player_actions)
   return player_actions_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerAction >*
+inline ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerAction >*
 InquireActionMessage::mutable_player_actions() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.InquireActionMessage.player_actions)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.InquireActionMessage.player_actions)
   return &player_actions_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerAction >&
+inline const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerAction >&
 InquireActionMessage::player_actions() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.InquireActionMessage.player_actions)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.InquireActionMessage.player_actions)
   return player_actions_;
 }
 
@@ -2294,20 +2294,20 @@ inline void InquireActionMessage::clear_pot_amount() {
   pot_amount_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 InquireActionMessage::pot_amount() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.InquireActionMessage.pot_amount)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.InquireActionMessage.pot_amount)
   return pot_amount_;
 }
 inline void InquireActionMessage::set_pot_amount(::google::protobuf::int64 value) {
   
   pot_amount_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.InquireActionMessage.pot_amount)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.InquireActionMessage.pot_amount)
 }
 
 // -------------------------------------------------------------------
 
 // FlopMessage
 
-// optional .texas_code.proto.Card flop_card_1 = 1;
+// optional .texas_code.protocol.Card flop_card_1 = 1;
 inline bool FlopMessage::has_flop_card_1() const {
   return !_is_default_instance_ && flop_card_1_ != NULL;
 }
@@ -2315,25 +2315,25 @@ inline void FlopMessage::clear_flop_card_1() {
   if (GetArenaNoVirtual() == NULL && flop_card_1_ != NULL) delete flop_card_1_;
   flop_card_1_ = NULL;
 }
-inline const ::texas_code::proto::Card& FlopMessage::flop_card_1() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.FlopMessage.flop_card_1)
+inline const ::texas_code::protocol::Card& FlopMessage::flop_card_1() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.FlopMessage.flop_card_1)
   return flop_card_1_ != NULL ? *flop_card_1_ : *default_instance_->flop_card_1_;
 }
-inline ::texas_code::proto::Card* FlopMessage::mutable_flop_card_1() {
+inline ::texas_code::protocol::Card* FlopMessage::mutable_flop_card_1() {
   
   if (flop_card_1_ == NULL) {
-    flop_card_1_ = new ::texas_code::proto::Card;
+    flop_card_1_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.FlopMessage.flop_card_1)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.FlopMessage.flop_card_1)
   return flop_card_1_;
 }
-inline ::texas_code::proto::Card* FlopMessage::release_flop_card_1() {
+inline ::texas_code::protocol::Card* FlopMessage::release_flop_card_1() {
   
-  ::texas_code::proto::Card* temp = flop_card_1_;
+  ::texas_code::protocol::Card* temp = flop_card_1_;
   flop_card_1_ = NULL;
   return temp;
 }
-inline void FlopMessage::set_allocated_flop_card_1(::texas_code::proto::Card* flop_card_1) {
+inline void FlopMessage::set_allocated_flop_card_1(::texas_code::protocol::Card* flop_card_1) {
   delete flop_card_1_;
   flop_card_1_ = flop_card_1;
   if (flop_card_1) {
@@ -2341,10 +2341,10 @@ inline void FlopMessage::set_allocated_flop_card_1(::texas_code::proto::Card* fl
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.FlopMessage.flop_card_1)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.FlopMessage.flop_card_1)
 }
 
-// optional .texas_code.proto.Card flop_card_2 = 2;
+// optional .texas_code.protocol.Card flop_card_2 = 2;
 inline bool FlopMessage::has_flop_card_2() const {
   return !_is_default_instance_ && flop_card_2_ != NULL;
 }
@@ -2352,25 +2352,25 @@ inline void FlopMessage::clear_flop_card_2() {
   if (GetArenaNoVirtual() == NULL && flop_card_2_ != NULL) delete flop_card_2_;
   flop_card_2_ = NULL;
 }
-inline const ::texas_code::proto::Card& FlopMessage::flop_card_2() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.FlopMessage.flop_card_2)
+inline const ::texas_code::protocol::Card& FlopMessage::flop_card_2() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.FlopMessage.flop_card_2)
   return flop_card_2_ != NULL ? *flop_card_2_ : *default_instance_->flop_card_2_;
 }
-inline ::texas_code::proto::Card* FlopMessage::mutable_flop_card_2() {
+inline ::texas_code::protocol::Card* FlopMessage::mutable_flop_card_2() {
   
   if (flop_card_2_ == NULL) {
-    flop_card_2_ = new ::texas_code::proto::Card;
+    flop_card_2_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.FlopMessage.flop_card_2)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.FlopMessage.flop_card_2)
   return flop_card_2_;
 }
-inline ::texas_code::proto::Card* FlopMessage::release_flop_card_2() {
+inline ::texas_code::protocol::Card* FlopMessage::release_flop_card_2() {
   
-  ::texas_code::proto::Card* temp = flop_card_2_;
+  ::texas_code::protocol::Card* temp = flop_card_2_;
   flop_card_2_ = NULL;
   return temp;
 }
-inline void FlopMessage::set_allocated_flop_card_2(::texas_code::proto::Card* flop_card_2) {
+inline void FlopMessage::set_allocated_flop_card_2(::texas_code::protocol::Card* flop_card_2) {
   delete flop_card_2_;
   flop_card_2_ = flop_card_2;
   if (flop_card_2) {
@@ -2378,10 +2378,10 @@ inline void FlopMessage::set_allocated_flop_card_2(::texas_code::proto::Card* fl
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.FlopMessage.flop_card_2)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.FlopMessage.flop_card_2)
 }
 
-// optional .texas_code.proto.Card flop_card_3 = 3;
+// optional .texas_code.protocol.Card flop_card_3 = 3;
 inline bool FlopMessage::has_flop_card_3() const {
   return !_is_default_instance_ && flop_card_3_ != NULL;
 }
@@ -2389,25 +2389,25 @@ inline void FlopMessage::clear_flop_card_3() {
   if (GetArenaNoVirtual() == NULL && flop_card_3_ != NULL) delete flop_card_3_;
   flop_card_3_ = NULL;
 }
-inline const ::texas_code::proto::Card& FlopMessage::flop_card_3() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.FlopMessage.flop_card_3)
+inline const ::texas_code::protocol::Card& FlopMessage::flop_card_3() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.FlopMessage.flop_card_3)
   return flop_card_3_ != NULL ? *flop_card_3_ : *default_instance_->flop_card_3_;
 }
-inline ::texas_code::proto::Card* FlopMessage::mutable_flop_card_3() {
+inline ::texas_code::protocol::Card* FlopMessage::mutable_flop_card_3() {
   
   if (flop_card_3_ == NULL) {
-    flop_card_3_ = new ::texas_code::proto::Card;
+    flop_card_3_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.FlopMessage.flop_card_3)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.FlopMessage.flop_card_3)
   return flop_card_3_;
 }
-inline ::texas_code::proto::Card* FlopMessage::release_flop_card_3() {
+inline ::texas_code::protocol::Card* FlopMessage::release_flop_card_3() {
   
-  ::texas_code::proto::Card* temp = flop_card_3_;
+  ::texas_code::protocol::Card* temp = flop_card_3_;
   flop_card_3_ = NULL;
   return temp;
 }
-inline void FlopMessage::set_allocated_flop_card_3(::texas_code::proto::Card* flop_card_3) {
+inline void FlopMessage::set_allocated_flop_card_3(::texas_code::protocol::Card* flop_card_3) {
   delete flop_card_3_;
   flop_card_3_ = flop_card_3;
   if (flop_card_3) {
@@ -2415,14 +2415,14 @@ inline void FlopMessage::set_allocated_flop_card_3(::texas_code::proto::Card* fl
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.FlopMessage.flop_card_3)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.FlopMessage.flop_card_3)
 }
 
 // -------------------------------------------------------------------
 
 // TurnMessage
 
-// optional .texas_code.proto.Card turn_card = 1;
+// optional .texas_code.protocol.Card turn_card = 1;
 inline bool TurnMessage::has_turn_card() const {
   return !_is_default_instance_ && turn_card_ != NULL;
 }
@@ -2430,25 +2430,25 @@ inline void TurnMessage::clear_turn_card() {
   if (GetArenaNoVirtual() == NULL && turn_card_ != NULL) delete turn_card_;
   turn_card_ = NULL;
 }
-inline const ::texas_code::proto::Card& TurnMessage::turn_card() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.TurnMessage.turn_card)
+inline const ::texas_code::protocol::Card& TurnMessage::turn_card() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.TurnMessage.turn_card)
   return turn_card_ != NULL ? *turn_card_ : *default_instance_->turn_card_;
 }
-inline ::texas_code::proto::Card* TurnMessage::mutable_turn_card() {
+inline ::texas_code::protocol::Card* TurnMessage::mutable_turn_card() {
   
   if (turn_card_ == NULL) {
-    turn_card_ = new ::texas_code::proto::Card;
+    turn_card_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.TurnMessage.turn_card)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.TurnMessage.turn_card)
   return turn_card_;
 }
-inline ::texas_code::proto::Card* TurnMessage::release_turn_card() {
+inline ::texas_code::protocol::Card* TurnMessage::release_turn_card() {
   
-  ::texas_code::proto::Card* temp = turn_card_;
+  ::texas_code::protocol::Card* temp = turn_card_;
   turn_card_ = NULL;
   return temp;
 }
-inline void TurnMessage::set_allocated_turn_card(::texas_code::proto::Card* turn_card) {
+inline void TurnMessage::set_allocated_turn_card(::texas_code::protocol::Card* turn_card) {
   delete turn_card_;
   turn_card_ = turn_card;
   if (turn_card) {
@@ -2456,14 +2456,14 @@ inline void TurnMessage::set_allocated_turn_card(::texas_code::proto::Card* turn
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.TurnMessage.turn_card)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.TurnMessage.turn_card)
 }
 
 // -------------------------------------------------------------------
 
 // RiverMessage
 
-// optional .texas_code.proto.Card river_card = 2;
+// optional .texas_code.protocol.Card river_card = 2;
 inline bool RiverMessage::has_river_card() const {
   return !_is_default_instance_ && river_card_ != NULL;
 }
@@ -2471,25 +2471,25 @@ inline void RiverMessage::clear_river_card() {
   if (GetArenaNoVirtual() == NULL && river_card_ != NULL) delete river_card_;
   river_card_ = NULL;
 }
-inline const ::texas_code::proto::Card& RiverMessage::river_card() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.RiverMessage.river_card)
+inline const ::texas_code::protocol::Card& RiverMessage::river_card() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.RiverMessage.river_card)
   return river_card_ != NULL ? *river_card_ : *default_instance_->river_card_;
 }
-inline ::texas_code::proto::Card* RiverMessage::mutable_river_card() {
+inline ::texas_code::protocol::Card* RiverMessage::mutable_river_card() {
   
   if (river_card_ == NULL) {
-    river_card_ = new ::texas_code::proto::Card;
+    river_card_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.RiverMessage.river_card)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.RiverMessage.river_card)
   return river_card_;
 }
-inline ::texas_code::proto::Card* RiverMessage::release_river_card() {
+inline ::texas_code::protocol::Card* RiverMessage::release_river_card() {
   
-  ::texas_code::proto::Card* temp = river_card_;
+  ::texas_code::protocol::Card* temp = river_card_;
   river_card_ = NULL;
   return temp;
 }
-inline void RiverMessage::set_allocated_river_card(::texas_code::proto::Card* river_card) {
+inline void RiverMessage::set_allocated_river_card(::texas_code::protocol::Card* river_card) {
   delete river_card_;
   river_card_ = river_card;
   if (river_card) {
@@ -2497,70 +2497,70 @@ inline void RiverMessage::set_allocated_river_card(::texas_code::proto::Card* ri
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.RiverMessage.river_card)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.RiverMessage.river_card)
 }
 
 // -------------------------------------------------------------------
 
 // ShowDownMessage
 
-// repeated .texas_code.proto.Card public_cards = 1;
+// repeated .texas_code.protocol.Card public_cards = 1;
 inline int ShowDownMessage::public_cards_size() const {
   return public_cards_.size();
 }
 inline void ShowDownMessage::clear_public_cards() {
   public_cards_.Clear();
 }
-inline const ::texas_code::proto::Card& ShowDownMessage::public_cards(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ShowDownMessage.public_cards)
+inline const ::texas_code::protocol::Card& ShowDownMessage::public_cards(int index) const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ShowDownMessage.public_cards)
   return public_cards_.Get(index);
 }
-inline ::texas_code::proto::Card* ShowDownMessage::mutable_public_cards(int index) {
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ShowDownMessage.public_cards)
+inline ::texas_code::protocol::Card* ShowDownMessage::mutable_public_cards(int index) {
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ShowDownMessage.public_cards)
   return public_cards_.Mutable(index);
 }
-inline ::texas_code::proto::Card* ShowDownMessage::add_public_cards() {
-  // @@protoc_insertion_point(field_add:texas_code.proto.ShowDownMessage.public_cards)
+inline ::texas_code::protocol::Card* ShowDownMessage::add_public_cards() {
+  // @@protoc_insertion_point(field_add:texas_code.protocol.ShowDownMessage.public_cards)
   return public_cards_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Card >*
+inline ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Card >*
 ShowDownMessage::mutable_public_cards() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.ShowDownMessage.public_cards)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.ShowDownMessage.public_cards)
   return &public_cards_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Card >&
+inline const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Card >&
 ShowDownMessage::public_cards() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.ShowDownMessage.public_cards)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.ShowDownMessage.public_cards)
   return public_cards_;
 }
 
-// repeated .texas_code.proto.PlayerHandInfo hand_infos = 2;
+// repeated .texas_code.protocol.PlayerHandInfo hand_infos = 2;
 inline int ShowDownMessage::hand_infos_size() const {
   return hand_infos_.size();
 }
 inline void ShowDownMessage::clear_hand_infos() {
   hand_infos_.Clear();
 }
-inline const ::texas_code::proto::PlayerHandInfo& ShowDownMessage::hand_infos(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.ShowDownMessage.hand_infos)
+inline const ::texas_code::protocol::PlayerHandInfo& ShowDownMessage::hand_infos(int index) const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ShowDownMessage.hand_infos)
   return hand_infos_.Get(index);
 }
-inline ::texas_code::proto::PlayerHandInfo* ShowDownMessage::mutable_hand_infos(int index) {
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.ShowDownMessage.hand_infos)
+inline ::texas_code::protocol::PlayerHandInfo* ShowDownMessage::mutable_hand_infos(int index) {
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ShowDownMessage.hand_infos)
   return hand_infos_.Mutable(index);
 }
-inline ::texas_code::proto::PlayerHandInfo* ShowDownMessage::add_hand_infos() {
-  // @@protoc_insertion_point(field_add:texas_code.proto.ShowDownMessage.hand_infos)
+inline ::texas_code::protocol::PlayerHandInfo* ShowDownMessage::add_hand_infos() {
+  // @@protoc_insertion_point(field_add:texas_code.protocol.ShowDownMessage.hand_infos)
   return hand_infos_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerHandInfo >*
+inline ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerHandInfo >*
 ShowDownMessage::mutable_hand_infos() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.ShowDownMessage.hand_infos)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.ShowDownMessage.hand_infos)
   return &hand_infos_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::PlayerHandInfo >&
+inline const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::PlayerHandInfo >&
 ShowDownMessage::hand_infos() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.ShowDownMessage.hand_infos)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.ShowDownMessage.hand_infos)
   return hand_infos_;
 }
 
@@ -2568,33 +2568,33 @@ ShowDownMessage::hand_infos() const {
 
 // PotWinMessage
 
-// repeated .texas_code.proto.Player players = 1;
+// repeated .texas_code.protocol.Player players = 1;
 inline int PotWinMessage::players_size() const {
   return players_.size();
 }
 inline void PotWinMessage::clear_players() {
   players_.Clear();
 }
-inline const ::texas_code::proto::Player& PotWinMessage::players(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.PotWinMessage.players)
+inline const ::texas_code::protocol::Player& PotWinMessage::players(int index) const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.PotWinMessage.players)
   return players_.Get(index);
 }
-inline ::texas_code::proto::Player* PotWinMessage::mutable_players(int index) {
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.PotWinMessage.players)
+inline ::texas_code::protocol::Player* PotWinMessage::mutable_players(int index) {
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.PotWinMessage.players)
   return players_.Mutable(index);
 }
-inline ::texas_code::proto::Player* PotWinMessage::add_players() {
-  // @@protoc_insertion_point(field_add:texas_code.proto.PotWinMessage.players)
+inline ::texas_code::protocol::Player* PotWinMessage::add_players() {
+  // @@protoc_insertion_point(field_add:texas_code.protocol.PotWinMessage.players)
   return players_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player >*
+inline ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player >*
 PotWinMessage::mutable_players() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.PotWinMessage.players)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.PotWinMessage.players)
   return &players_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Player >&
+inline const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Player >&
 PotWinMessage::players() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.PotWinMessage.players)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.PotWinMessage.players)
   return players_;
 }
 
@@ -2606,25 +2606,25 @@ inline void PotWinMessage::clear_pot_win() {
   pot_win_.Clear();
 }
 inline ::google::protobuf::int64 PotWinMessage::pot_win(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.PotWinMessage.pot_win)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.PotWinMessage.pot_win)
   return pot_win_.Get(index);
 }
 inline void PotWinMessage::set_pot_win(int index, ::google::protobuf::int64 value) {
   pot_win_.Set(index, value);
-  // @@protoc_insertion_point(field_set:texas_code.proto.PotWinMessage.pot_win)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.PotWinMessage.pot_win)
 }
 inline void PotWinMessage::add_pot_win(::google::protobuf::int64 value) {
   pot_win_.Add(value);
-  // @@protoc_insertion_point(field_add:texas_code.proto.PotWinMessage.pot_win)
+  // @@protoc_insertion_point(field_add:texas_code.protocol.PotWinMessage.pot_win)
 }
 inline const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
 PotWinMessage::pot_win() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.PotWinMessage.pot_win)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.PotWinMessage.pot_win)
   return pot_win_;
 }
 inline ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
 PotWinMessage::mutable_pot_win() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.PotWinMessage.pot_win)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.PotWinMessage.pot_win)
   return &pot_win_;
 }
 
@@ -2637,13 +2637,13 @@ inline void GameOverMessage::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 GameOverMessage::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.GameOverMessage.request_id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.GameOverMessage.request_id)
   return request_id_;
 }
 inline void GameOverMessage::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.GameOverMessage.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.GameOverMessage.request_id)
 }
 
 // -------------------------------------------------------------------
@@ -2655,13 +2655,13 @@ inline void Heartbeat::clear_sequence_num() {
   sequence_num_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 Heartbeat::sequence_num() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.Heartbeat.sequence_num)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.Heartbeat.sequence_num)
   return sequence_num_;
 }
 inline void Heartbeat::set_sequence_num(::google::protobuf::int64 value) {
   
   sequence_num_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.Heartbeat.sequence_num)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.Heartbeat.sequence_num)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2700,7 +2700,7 @@ inline void Heartbeat::set_sequence_num(::google::protobuf::int64 value) {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace proto
+}  // namespace protocol
 }  // namespace texas_code
 
 // @@protoc_insertion_point(global_scope)

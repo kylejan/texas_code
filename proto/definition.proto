@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package texas_code.proto;
+package texas_code.protocol;
 
 enum Color {
     DIAMONDS = 0;

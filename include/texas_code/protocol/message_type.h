@@ -1,0 +1,27 @@
+#pragma once
+
+#include <cstdint>
+
+namespace texas_code { namespace protocol {
+
+	enum class MessageType : std::int32_t {
+
+		ACTION_FAILED_RESPONSE = 0,
+		ACTION_REQUEST = 1,
+		ACTION_SUCCESS_RESPONSE = 2,
+		BLIND_MESSAGE = 3,
+		CONNECT_FAILED_RESPONSE = 4,
+		CONNECT_REQUEST = 5,
+		CONNECT_SUCCESS_RESPONSE = 6,
+		FLOP_MESSAGE = 7,
+		GAME_OVER_MESSAGE = 8,
+		HEARTBEAT = 9,
+		HOLD_CARDS_MESSAGE = 10,
+		INQUIRE_ACTION_MESSAGE = 11,
+		POT_WIN_MESSAGE = 12,
+		RIVER_MESSAGE = 13,
+		SEAT_INFO_MESSAGE = 14,
+		SHOW_DOWN_MESSAGE = 15,
+		TURN_MESSAGE = 16,
+	};
+}}

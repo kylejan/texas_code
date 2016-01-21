@@ -18,7 +18,7 @@
 // @@protoc_insertion_point(includes)
 
 namespace texas_code {
-namespace proto {
+namespace protocol {
 
 namespace {
 
@@ -188,32 +188,33 @@ void protobuf_AddDesc_definition_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\020definition.proto\022\020texas_code.proto\"=\n\004"
-    "Card\022&\n\005color\030\001 \001(\0162\027.texas_code.proto.C"
-    "olor\022\r\n\005point\030\002 \001(\005\"g\n\006Player\022\n\n\002id\030\001 \001("
-    "\005\022\014\n\004cash\030\002 \001(\003\022\016\n\006jetton\030\003 \001(\003\022\013\n\003bet\030\004"
-    " \001(\003\022\020\n\010position\030\005 \001(\005\022\024\n\014account_name\030\006"
-    " \001(\t\"O\n\014JettonAction\022(\n\006action\030\001 \001(\0162\030.t"
-    "exas_code.proto.Action\022\025\n\raction_jetton\030"
-    "\002 \001(\003\"h\n\014PlayerAction\022(\n\006player\030\001 \001(\0132\030."
-    "texas_code.proto.Player\022.\n\006action\030\002 \001(\0132"
-    "\036.texas_code.proto.JettonAction\"\345\001\n\016Play"
-    "erHandInfo\022(\n\006player\030\001 \001(\0132\030.texas_code."
-    "proto.Player\022&\n\006card_1\030\002 \001(\0132\026.texas_cod"
-    "e.proto.Card\022&\n\006card_2\030\003 \001(\0132\026.texas_cod"
-    "e.proto.Card\022/\n\016nut_hand_brand\030\004 \001(\0162\027.t"
-    "exas_code.proto.Brand\022(\n\010nut_hand\030\005 \003(\0132"
-    "\026.texas_code.proto.Card*8\n\005Color\022\014\n\010DIAM"
-    "ONDS\020\000\022\t\n\005CLUBS\020\001\022\n\n\006HEARTS\020\002\022\n\n\006SPADES\020"
-    "\003*\262\001\n\005Brand\022\r\n\tHIGH_CARD\020\000\022\014\n\010ONE_PAIR\020\001"
-    "\022\014\n\010TWO_PAIR\020\002\022\023\n\017THREE_OF_A_KIND\020\003\022\014\n\010S"
-    "TRAIGHT\020\004\022\t\n\005FLUSH\020\005\022\016\n\nFULL_HOUSE\020\006\022\022\n\016"
-    "FOUR_OF_A_KIND\020\007\022\022\n\016STRAIGHT_FLUSH\020\010\022\030\n\024"
-    "ROYAL_STRAIGHT_FLUSH\020\t*U\n\006Action\022\007\n\003BET\020"
-    "\000\022\010\n\004CALL\020\001\022\010\n\004FOLD\020\002\022\t\n\005CHECK\020\003\022\t\n\005RAIS"
-    "E\020\004\022\014\n\010RE_RAISE\020\005\022\n\n\006ALL_IN\020\006*D\n\006Status\022"
-    "\013\n\007PREFLOP\020\000\022\010\n\004FLOP\020\001\022\010\n\004TURN\020\002\022\t\n\005RIVE"
-    "R\020\003\022\016\n\nSHOWN_DOWN\020\004b\006proto3", 1027);
+    "\n\020definition.proto\022\023texas_code.protocol\""
+    "@\n\004Card\022)\n\005color\030\001 \001(\0162\032.texas_code.prot"
+    "ocol.Color\022\r\n\005point\030\002 \001(\005\"g\n\006Player\022\n\n\002i"
+    "d\030\001 \001(\005\022\014\n\004cash\030\002 \001(\003\022\016\n\006jetton\030\003 \001(\003\022\013\n"
+    "\003bet\030\004 \001(\003\022\020\n\010position\030\005 \001(\005\022\024\n\014account_"
+    "name\030\006 \001(\t\"R\n\014JettonAction\022+\n\006action\030\001 \001"
+    "(\0162\033.texas_code.protocol.Action\022\025\n\ractio"
+    "n_jetton\030\002 \001(\003\"n\n\014PlayerAction\022+\n\006player"
+    "\030\001 \001(\0132\033.texas_code.protocol.Player\0221\n\006a"
+    "ction\030\002 \001(\0132!.texas_code.protocol.Jetton"
+    "Action\"\364\001\n\016PlayerHandInfo\022+\n\006player\030\001 \001("
+    "\0132\033.texas_code.protocol.Player\022)\n\006card_1"
+    "\030\002 \001(\0132\031.texas_code.protocol.Card\022)\n\006car"
+    "d_2\030\003 \001(\0132\031.texas_code.protocol.Card\0222\n\016"
+    "nut_hand_brand\030\004 \001(\0162\032.texas_code.protoc"
+    "ol.Brand\022+\n\010nut_hand\030\005 \003(\0132\031.texas_code."
+    "protocol.Card*8\n\005Color\022\014\n\010DIAMONDS\020\000\022\t\n\005"
+    "CLUBS\020\001\022\n\n\006HEARTS\020\002\022\n\n\006SPADES\020\003*\262\001\n\005Bran"
+    "d\022\r\n\tHIGH_CARD\020\000\022\014\n\010ONE_PAIR\020\001\022\014\n\010TWO_PA"
+    "IR\020\002\022\023\n\017THREE_OF_A_KIND\020\003\022\014\n\010STRAIGHT\020\004\022"
+    "\t\n\005FLUSH\020\005\022\016\n\nFULL_HOUSE\020\006\022\022\n\016FOUR_OF_A_"
+    "KIND\020\007\022\022\n\016STRAIGHT_FLUSH\020\010\022\030\n\024ROYAL_STRA"
+    "IGHT_FLUSH\020\t*U\n\006Action\022\007\n\003BET\020\000\022\010\n\004CALL\020"
+    "\001\022\010\n\004FOLD\020\002\022\t\n\005CHECK\020\003\022\t\n\005RAISE\020\004\022\014\n\010RE_"
+    "RAISE\020\005\022\n\n\006ALL_IN\020\006*D\n\006Status\022\013\n\007PREFLOP"
+    "\020\000\022\010\n\004FLOP\020\001\022\010\n\004TURN\020\002\022\t\n\005RIVER\020\003\022\016\n\nSHO"
+    "WN_DOWN\020\004b\006proto3", 1057);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "definition.proto", &protobuf_RegisterTypes);
   Card::default_instance_ = new Card();
@@ -330,7 +331,7 @@ const int Card::kPointFieldNumber;
 Card::Card()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.Card)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.Card)
 }
 
 void Card::InitAsDefaultInstance() {
@@ -342,7 +343,7 @@ Card::Card(const Card& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.Card)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.Card)
 }
 
 void Card::SharedCtor() {
@@ -353,7 +354,7 @@ void Card::SharedCtor() {
 }
 
 Card::~Card() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.Card)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.Card)
   SharedDtor();
 }
 
@@ -407,20 +408,20 @@ bool Card::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.Card)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.Card)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .texas_code.proto.Color color = 1;
+      // optional .texas_code.protocol.Color color = 1;
       case 1: {
         if (tag == 8) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          set_color(static_cast< ::texas_code::proto::Color >(value));
+          set_color(static_cast< ::texas_code::protocol::Color >(value));
         } else {
           goto handle_unusual;
         }
@@ -456,18 +457,18 @@ bool Card::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.Card)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.Card)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.Card)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.Card)
   return false;
 #undef DO_
 }
 
 void Card::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.Card)
-  // optional .texas_code.proto.Color color = 1;
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.Card)
+  // optional .texas_code.protocol.Color color = 1;
   if (this->color() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       1, this->color(), output);
@@ -478,13 +479,13 @@ void Card::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->point(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.Card)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.Card)
 }
 
 ::google::protobuf::uint8* Card::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.Card)
-  // optional .texas_code.proto.Color color = 1;
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.Card)
+  // optional .texas_code.protocol.Color color = 1;
   if (this->color() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       1, this->color(), target);
@@ -495,14 +496,14 @@ void Card::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->point(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.Card)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.Card)
   return target;
 }
 
 int Card::ByteSize() const {
   int total_size = 0;
 
-  // optional .texas_code.proto.Color color = 1;
+  // optional .texas_code.protocol.Color color = 1;
   if (this->color() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->color());
@@ -582,18 +583,18 @@ void Card::InternalSwap(Card* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // Card
 
-// optional .texas_code.proto.Color color = 1;
+// optional .texas_code.protocol.Color color = 1;
 void Card::clear_color() {
   color_ = 0;
 }
- ::texas_code::proto::Color Card::color() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.Card.color)
-  return static_cast< ::texas_code::proto::Color >(color_);
+ ::texas_code::protocol::Color Card::color() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.Card.color)
+  return static_cast< ::texas_code::protocol::Color >(color_);
 }
- void Card::set_color(::texas_code::proto::Color value) {
+ void Card::set_color(::texas_code::protocol::Color value) {
   
   color_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.Card.color)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.Card.color)
 }
 
 // optional int32 point = 2;
@@ -601,13 +602,13 @@ void Card::clear_point() {
   point_ = 0;
 }
  ::google::protobuf::int32 Card::point() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.Card.point)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.Card.point)
   return point_;
 }
  void Card::set_point(::google::protobuf::int32 value) {
   
   point_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.Card.point)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.Card.point)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -626,7 +627,7 @@ const int Player::kAccountNameFieldNumber;
 Player::Player()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.Player)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.Player)
 }
 
 void Player::InitAsDefaultInstance() {
@@ -638,7 +639,7 @@ Player::Player(const Player& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.Player)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.Player)
 }
 
 void Player::SharedCtor() {
@@ -654,7 +655,7 @@ void Player::SharedCtor() {
 }
 
 Player::~Player() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.Player)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.Player)
   SharedDtor();
 }
 
@@ -710,7 +711,7 @@ bool Player::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.Player)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.Player)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -799,7 +800,7 @@ bool Player::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->account_name().data(), this->account_name().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "texas_code.proto.Player.account_name"));
+            "texas_code.protocol.Player.account_name"));
         } else {
           goto handle_unusual;
         }
@@ -820,17 +821,17 @@ bool Player::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.Player)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.Player)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.Player)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.Player)
   return false;
 #undef DO_
 }
 
 void Player::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.Player)
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.Player)
   // optional int32 id = 1;
   if (this->id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->id(), output);
@@ -861,17 +862,17 @@ void Player::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->account_name().data(), this->account_name().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "texas_code.proto.Player.account_name");
+      "texas_code.protocol.Player.account_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       6, this->account_name(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.Player)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.Player)
 }
 
 ::google::protobuf::uint8* Player::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.Player)
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.Player)
   // optional int32 id = 1;
   if (this->id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->id(), target);
@@ -902,13 +903,13 @@ void Player::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->account_name().data(), this->account_name().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "texas_code.proto.Player.account_name");
+      "texas_code.protocol.Player.account_name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         6, this->account_name(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.Player)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.Player)
   return target;
 }
 
@@ -1046,13 +1047,13 @@ void Player::clear_id() {
   id_ = 0;
 }
  ::google::protobuf::int32 Player::id() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.Player.id)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.Player.id)
   return id_;
 }
  void Player::set_id(::google::protobuf::int32 value) {
   
   id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.Player.id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.Player.id)
 }
 
 // optional int64 cash = 2;
@@ -1060,13 +1061,13 @@ void Player::clear_cash() {
   cash_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 Player::cash() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.Player.cash)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.Player.cash)
   return cash_;
 }
  void Player::set_cash(::google::protobuf::int64 value) {
   
   cash_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.Player.cash)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.Player.cash)
 }
 
 // optional int64 jetton = 3;
@@ -1074,13 +1075,13 @@ void Player::clear_jetton() {
   jetton_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 Player::jetton() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.Player.jetton)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.Player.jetton)
   return jetton_;
 }
  void Player::set_jetton(::google::protobuf::int64 value) {
   
   jetton_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.Player.jetton)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.Player.jetton)
 }
 
 // optional int64 bet = 4;
@@ -1088,13 +1089,13 @@ void Player::clear_bet() {
   bet_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 Player::bet() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.Player.bet)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.Player.bet)
   return bet_;
 }
  void Player::set_bet(::google::protobuf::int64 value) {
   
   bet_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.Player.bet)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.Player.bet)
 }
 
 // optional int32 position = 5;
@@ -1102,13 +1103,13 @@ void Player::clear_position() {
   position_ = 0;
 }
  ::google::protobuf::int32 Player::position() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.Player.position)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.Player.position)
   return position_;
 }
  void Player::set_position(::google::protobuf::int32 value) {
   
   position_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.Player.position)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.Player.position)
 }
 
 // optional string account_name = 6;
@@ -1116,28 +1117,28 @@ void Player::clear_account_name() {
   account_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  const ::std::string& Player::account_name() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.Player.account_name)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.Player.account_name)
   return account_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  void Player::set_account_name(const ::std::string& value) {
   
   account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:texas_code.proto.Player.account_name)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.Player.account_name)
 }
  void Player::set_account_name(const char* value) {
   
   account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:texas_code.proto.Player.account_name)
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.Player.account_name)
 }
  void Player::set_account_name(const char* value, size_t size) {
   
   account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:texas_code.proto.Player.account_name)
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.Player.account_name)
 }
  ::std::string* Player::mutable_account_name() {
   
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.Player.account_name)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.Player.account_name)
   return account_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  ::std::string* Player::release_account_name() {
@@ -1151,7 +1152,7 @@ void Player::clear_account_name() {
     
   }
   account_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_name);
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.Player.account_name)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.Player.account_name)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1166,7 +1167,7 @@ const int JettonAction::kActionJettonFieldNumber;
 JettonAction::JettonAction()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.JettonAction)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.JettonAction)
 }
 
 void JettonAction::InitAsDefaultInstance() {
@@ -1178,7 +1179,7 @@ JettonAction::JettonAction(const JettonAction& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.JettonAction)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.JettonAction)
 }
 
 void JettonAction::SharedCtor() {
@@ -1189,7 +1190,7 @@ void JettonAction::SharedCtor() {
 }
 
 JettonAction::~JettonAction() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.JettonAction)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.JettonAction)
   SharedDtor();
 }
 
@@ -1243,20 +1244,20 @@ bool JettonAction::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.JettonAction)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.JettonAction)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .texas_code.proto.Action action = 1;
+      // optional .texas_code.protocol.Action action = 1;
       case 1: {
         if (tag == 8) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          set_action(static_cast< ::texas_code::proto::Action >(value));
+          set_action(static_cast< ::texas_code::protocol::Action >(value));
         } else {
           goto handle_unusual;
         }
@@ -1292,18 +1293,18 @@ bool JettonAction::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.JettonAction)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.JettonAction)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.JettonAction)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.JettonAction)
   return false;
 #undef DO_
 }
 
 void JettonAction::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.JettonAction)
-  // optional .texas_code.proto.Action action = 1;
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.JettonAction)
+  // optional .texas_code.protocol.Action action = 1;
   if (this->action() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       1, this->action(), output);
@@ -1314,13 +1315,13 @@ void JettonAction::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->action_jetton(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.JettonAction)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.JettonAction)
 }
 
 ::google::protobuf::uint8* JettonAction::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.JettonAction)
-  // optional .texas_code.proto.Action action = 1;
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.JettonAction)
+  // optional .texas_code.protocol.Action action = 1;
   if (this->action() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       1, this->action(), target);
@@ -1331,14 +1332,14 @@ void JettonAction::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->action_jetton(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.JettonAction)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.JettonAction)
   return target;
 }
 
 int JettonAction::ByteSize() const {
   int total_size = 0;
 
-  // optional .texas_code.proto.Action action = 1;
+  // optional .texas_code.protocol.Action action = 1;
   if (this->action() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->action());
@@ -1418,18 +1419,18 @@ void JettonAction::InternalSwap(JettonAction* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // JettonAction
 
-// optional .texas_code.proto.Action action = 1;
+// optional .texas_code.protocol.Action action = 1;
 void JettonAction::clear_action() {
   action_ = 0;
 }
- ::texas_code::proto::Action JettonAction::action() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.JettonAction.action)
-  return static_cast< ::texas_code::proto::Action >(action_);
+ ::texas_code::protocol::Action JettonAction::action() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.JettonAction.action)
+  return static_cast< ::texas_code::protocol::Action >(action_);
 }
- void JettonAction::set_action(::texas_code::proto::Action value) {
+ void JettonAction::set_action(::texas_code::protocol::Action value) {
   
   action_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.JettonAction.action)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.JettonAction.action)
 }
 
 // optional int64 action_jetton = 2;
@@ -1437,13 +1438,13 @@ void JettonAction::clear_action_jetton() {
   action_jetton_ = GOOGLE_LONGLONG(0);
 }
  ::google::protobuf::int64 JettonAction::action_jetton() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.JettonAction.action_jetton)
+  // @@protoc_insertion_point(field_get:texas_code.protocol.JettonAction.action_jetton)
   return action_jetton_;
 }
  void JettonAction::set_action_jetton(::google::protobuf::int64 value) {
   
   action_jetton_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.JettonAction.action_jetton)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.JettonAction.action_jetton)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1458,13 +1459,13 @@ const int PlayerAction::kActionFieldNumber;
 PlayerAction::PlayerAction()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.PlayerAction)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.PlayerAction)
 }
 
 void PlayerAction::InitAsDefaultInstance() {
   _is_default_instance_ = true;
-  player_ = const_cast< ::texas_code::proto::Player*>(&::texas_code::proto::Player::default_instance());
-  action_ = const_cast< ::texas_code::proto::JettonAction*>(&::texas_code::proto::JettonAction::default_instance());
+  player_ = const_cast< ::texas_code::protocol::Player*>(&::texas_code::protocol::Player::default_instance());
+  action_ = const_cast< ::texas_code::protocol::JettonAction*>(&::texas_code::protocol::JettonAction::default_instance());
 }
 
 PlayerAction::PlayerAction(const PlayerAction& from)
@@ -1472,7 +1473,7 @@ PlayerAction::PlayerAction(const PlayerAction& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.PlayerAction)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.PlayerAction)
 }
 
 void PlayerAction::SharedCtor() {
@@ -1483,7 +1484,7 @@ void PlayerAction::SharedCtor() {
 }
 
 PlayerAction::~PlayerAction() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.PlayerAction)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.PlayerAction)
   SharedDtor();
 }
 
@@ -1530,13 +1531,13 @@ bool PlayerAction::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.PlayerAction)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.PlayerAction)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .texas_code.proto.Player player = 1;
+      // optional .texas_code.protocol.Player player = 1;
       case 1: {
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -1548,7 +1549,7 @@ bool PlayerAction::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .texas_code.proto.JettonAction action = 2;
+      // optional .texas_code.protocol.JettonAction action = 2;
       case 2: {
         if (tag == 18) {
          parse_action:
@@ -1574,64 +1575,64 @@ bool PlayerAction::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.PlayerAction)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.PlayerAction)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.PlayerAction)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.PlayerAction)
   return false;
 #undef DO_
 }
 
 void PlayerAction::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.PlayerAction)
-  // optional .texas_code.proto.Player player = 1;
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.PlayerAction)
+  // optional .texas_code.protocol.Player player = 1;
   if (this->has_player()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->player_, output);
   }
 
-  // optional .texas_code.proto.JettonAction action = 2;
+  // optional .texas_code.protocol.JettonAction action = 2;
   if (this->has_action()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->action_, output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.PlayerAction)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.PlayerAction)
 }
 
 ::google::protobuf::uint8* PlayerAction::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.PlayerAction)
-  // optional .texas_code.proto.Player player = 1;
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.PlayerAction)
+  // optional .texas_code.protocol.Player player = 1;
   if (this->has_player()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         1, *this->player_, target);
   }
 
-  // optional .texas_code.proto.JettonAction action = 2;
+  // optional .texas_code.protocol.JettonAction action = 2;
   if (this->has_action()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         2, *this->action_, target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.PlayerAction)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.PlayerAction)
   return target;
 }
 
 int PlayerAction::ByteSize() const {
   int total_size = 0;
 
-  // optional .texas_code.proto.Player player = 1;
+  // optional .texas_code.protocol.Player player = 1;
   if (this->has_player()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->player_);
   }
 
-  // optional .texas_code.proto.JettonAction action = 2;
+  // optional .texas_code.protocol.JettonAction action = 2;
   if (this->has_action()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -1659,10 +1660,10 @@ void PlayerAction::MergeFrom(const ::google::protobuf::Message& from) {
 void PlayerAction::MergeFrom(const PlayerAction& from) {
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   if (from.has_player()) {
-    mutable_player()->::texas_code::proto::Player::MergeFrom(from.player());
+    mutable_player()->::texas_code::protocol::Player::MergeFrom(from.player());
   }
   if (from.has_action()) {
-    mutable_action()->::texas_code::proto::JettonAction::MergeFrom(from.action());
+    mutable_action()->::texas_code::protocol::JettonAction::MergeFrom(from.action());
   }
 }
 
@@ -1705,7 +1706,7 @@ void PlayerAction::InternalSwap(PlayerAction* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // PlayerAction
 
-// optional .texas_code.proto.Player player = 1;
+// optional .texas_code.protocol.Player player = 1;
 bool PlayerAction::has_player() const {
   return !_is_default_instance_ && player_ != NULL;
 }
@@ -1713,25 +1714,25 @@ void PlayerAction::clear_player() {
   if (GetArenaNoVirtual() == NULL && player_ != NULL) delete player_;
   player_ = NULL;
 }
-const ::texas_code::proto::Player& PlayerAction::player() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.PlayerAction.player)
+const ::texas_code::protocol::Player& PlayerAction::player() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.PlayerAction.player)
   return player_ != NULL ? *player_ : *default_instance_->player_;
 }
-::texas_code::proto::Player* PlayerAction::mutable_player() {
+::texas_code::protocol::Player* PlayerAction::mutable_player() {
   
   if (player_ == NULL) {
-    player_ = new ::texas_code::proto::Player;
+    player_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.PlayerAction.player)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.PlayerAction.player)
   return player_;
 }
-::texas_code::proto::Player* PlayerAction::release_player() {
+::texas_code::protocol::Player* PlayerAction::release_player() {
   
-  ::texas_code::proto::Player* temp = player_;
+  ::texas_code::protocol::Player* temp = player_;
   player_ = NULL;
   return temp;
 }
-void PlayerAction::set_allocated_player(::texas_code::proto::Player* player) {
+void PlayerAction::set_allocated_player(::texas_code::protocol::Player* player) {
   delete player_;
   player_ = player;
   if (player) {
@@ -1739,10 +1740,10 @@ void PlayerAction::set_allocated_player(::texas_code::proto::Player* player) {
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.PlayerAction.player)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.PlayerAction.player)
 }
 
-// optional .texas_code.proto.JettonAction action = 2;
+// optional .texas_code.protocol.JettonAction action = 2;
 bool PlayerAction::has_action() const {
   return !_is_default_instance_ && action_ != NULL;
 }
@@ -1750,25 +1751,25 @@ void PlayerAction::clear_action() {
   if (GetArenaNoVirtual() == NULL && action_ != NULL) delete action_;
   action_ = NULL;
 }
-const ::texas_code::proto::JettonAction& PlayerAction::action() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.PlayerAction.action)
+const ::texas_code::protocol::JettonAction& PlayerAction::action() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.PlayerAction.action)
   return action_ != NULL ? *action_ : *default_instance_->action_;
 }
-::texas_code::proto::JettonAction* PlayerAction::mutable_action() {
+::texas_code::protocol::JettonAction* PlayerAction::mutable_action() {
   
   if (action_ == NULL) {
-    action_ = new ::texas_code::proto::JettonAction;
+    action_ = new ::texas_code::protocol::JettonAction;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.PlayerAction.action)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.PlayerAction.action)
   return action_;
 }
-::texas_code::proto::JettonAction* PlayerAction::release_action() {
+::texas_code::protocol::JettonAction* PlayerAction::release_action() {
   
-  ::texas_code::proto::JettonAction* temp = action_;
+  ::texas_code::protocol::JettonAction* temp = action_;
   action_ = NULL;
   return temp;
 }
-void PlayerAction::set_allocated_action(::texas_code::proto::JettonAction* action) {
+void PlayerAction::set_allocated_action(::texas_code::protocol::JettonAction* action) {
   delete action_;
   action_ = action;
   if (action) {
@@ -1776,7 +1777,7 @@ void PlayerAction::set_allocated_action(::texas_code::proto::JettonAction* actio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.PlayerAction.action)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.PlayerAction.action)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1794,14 +1795,14 @@ const int PlayerHandInfo::kNutHandFieldNumber;
 PlayerHandInfo::PlayerHandInfo()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:texas_code.proto.PlayerHandInfo)
+  // @@protoc_insertion_point(constructor:texas_code.protocol.PlayerHandInfo)
 }
 
 void PlayerHandInfo::InitAsDefaultInstance() {
   _is_default_instance_ = true;
-  player_ = const_cast< ::texas_code::proto::Player*>(&::texas_code::proto::Player::default_instance());
-  card_1_ = const_cast< ::texas_code::proto::Card*>(&::texas_code::proto::Card::default_instance());
-  card_2_ = const_cast< ::texas_code::proto::Card*>(&::texas_code::proto::Card::default_instance());
+  player_ = const_cast< ::texas_code::protocol::Player*>(&::texas_code::protocol::Player::default_instance());
+  card_1_ = const_cast< ::texas_code::protocol::Card*>(&::texas_code::protocol::Card::default_instance());
+  card_2_ = const_cast< ::texas_code::protocol::Card*>(&::texas_code::protocol::Card::default_instance());
 }
 
 PlayerHandInfo::PlayerHandInfo(const PlayerHandInfo& from)
@@ -1809,7 +1810,7 @@ PlayerHandInfo::PlayerHandInfo(const PlayerHandInfo& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:texas_code.proto.PlayerHandInfo)
+  // @@protoc_insertion_point(copy_constructor:texas_code.protocol.PlayerHandInfo)
 }
 
 void PlayerHandInfo::SharedCtor() {
@@ -1822,7 +1823,7 @@ void PlayerHandInfo::SharedCtor() {
 }
 
 PlayerHandInfo::~PlayerHandInfo() {
-  // @@protoc_insertion_point(destructor:texas_code.proto.PlayerHandInfo)
+  // @@protoc_insertion_point(destructor:texas_code.protocol.PlayerHandInfo)
   SharedDtor();
 }
 
@@ -1874,13 +1875,13 @@ bool PlayerHandInfo::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:texas_code.proto.PlayerHandInfo)
+  // @@protoc_insertion_point(parse_start:texas_code.protocol.PlayerHandInfo)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .texas_code.proto.Player player = 1;
+      // optional .texas_code.protocol.Player player = 1;
       case 1: {
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -1892,7 +1893,7 @@ bool PlayerHandInfo::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .texas_code.proto.Card card_1 = 2;
+      // optional .texas_code.protocol.Card card_1 = 2;
       case 2: {
         if (tag == 18) {
          parse_card_1:
@@ -1905,7 +1906,7 @@ bool PlayerHandInfo::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .texas_code.proto.Card card_2 = 3;
+      // optional .texas_code.protocol.Card card_2 = 3;
       case 3: {
         if (tag == 26) {
          parse_card_2:
@@ -1918,7 +1919,7 @@ bool PlayerHandInfo::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .texas_code.proto.Brand nut_hand_brand = 4;
+      // optional .texas_code.protocol.Brand nut_hand_brand = 4;
       case 4: {
         if (tag == 32) {
          parse_nut_hand_brand:
@@ -1926,7 +1927,7 @@ bool PlayerHandInfo::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          set_nut_hand_brand(static_cast< ::texas_code::proto::Brand >(value));
+          set_nut_hand_brand(static_cast< ::texas_code::protocol::Brand >(value));
         } else {
           goto handle_unusual;
         }
@@ -1934,7 +1935,7 @@ bool PlayerHandInfo::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .texas_code.proto.Card nut_hand = 5;
+      // repeated .texas_code.protocol.Card nut_hand = 5;
       case 5: {
         if (tag == 42) {
          parse_nut_hand:
@@ -1964,122 +1965,122 @@ bool PlayerHandInfo::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:texas_code.proto.PlayerHandInfo)
+  // @@protoc_insertion_point(parse_success:texas_code.protocol.PlayerHandInfo)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:texas_code.proto.PlayerHandInfo)
+  // @@protoc_insertion_point(parse_failure:texas_code.protocol.PlayerHandInfo)
   return false;
 #undef DO_
 }
 
 void PlayerHandInfo::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:texas_code.proto.PlayerHandInfo)
-  // optional .texas_code.proto.Player player = 1;
+  // @@protoc_insertion_point(serialize_start:texas_code.protocol.PlayerHandInfo)
+  // optional .texas_code.protocol.Player player = 1;
   if (this->has_player()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->player_, output);
   }
 
-  // optional .texas_code.proto.Card card_1 = 2;
+  // optional .texas_code.protocol.Card card_1 = 2;
   if (this->has_card_1()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->card_1_, output);
   }
 
-  // optional .texas_code.proto.Card card_2 = 3;
+  // optional .texas_code.protocol.Card card_2 = 3;
   if (this->has_card_2()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       3, *this->card_2_, output);
   }
 
-  // optional .texas_code.proto.Brand nut_hand_brand = 4;
+  // optional .texas_code.protocol.Brand nut_hand_brand = 4;
   if (this->nut_hand_brand() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       4, this->nut_hand_brand(), output);
   }
 
-  // repeated .texas_code.proto.Card nut_hand = 5;
+  // repeated .texas_code.protocol.Card nut_hand = 5;
   for (unsigned int i = 0, n = this->nut_hand_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       5, this->nut_hand(i), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:texas_code.proto.PlayerHandInfo)
+  // @@protoc_insertion_point(serialize_end:texas_code.protocol.PlayerHandInfo)
 }
 
 ::google::protobuf::uint8* PlayerHandInfo::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:texas_code.proto.PlayerHandInfo)
-  // optional .texas_code.proto.Player player = 1;
+  // @@protoc_insertion_point(serialize_to_array_start:texas_code.protocol.PlayerHandInfo)
+  // optional .texas_code.protocol.Player player = 1;
   if (this->has_player()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         1, *this->player_, target);
   }
 
-  // optional .texas_code.proto.Card card_1 = 2;
+  // optional .texas_code.protocol.Card card_1 = 2;
   if (this->has_card_1()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         2, *this->card_1_, target);
   }
 
-  // optional .texas_code.proto.Card card_2 = 3;
+  // optional .texas_code.protocol.Card card_2 = 3;
   if (this->has_card_2()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         3, *this->card_2_, target);
   }
 
-  // optional .texas_code.proto.Brand nut_hand_brand = 4;
+  // optional .texas_code.protocol.Brand nut_hand_brand = 4;
   if (this->nut_hand_brand() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       4, this->nut_hand_brand(), target);
   }
 
-  // repeated .texas_code.proto.Card nut_hand = 5;
+  // repeated .texas_code.protocol.Card nut_hand = 5;
   for (unsigned int i = 0, n = this->nut_hand_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         5, this->nut_hand(i), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:texas_code.proto.PlayerHandInfo)
+  // @@protoc_insertion_point(serialize_to_array_end:texas_code.protocol.PlayerHandInfo)
   return target;
 }
 
 int PlayerHandInfo::ByteSize() const {
   int total_size = 0;
 
-  // optional .texas_code.proto.Player player = 1;
+  // optional .texas_code.protocol.Player player = 1;
   if (this->has_player()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->player_);
   }
 
-  // optional .texas_code.proto.Card card_1 = 2;
+  // optional .texas_code.protocol.Card card_1 = 2;
   if (this->has_card_1()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->card_1_);
   }
 
-  // optional .texas_code.proto.Card card_2 = 3;
+  // optional .texas_code.protocol.Card card_2 = 3;
   if (this->has_card_2()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->card_2_);
   }
 
-  // optional .texas_code.proto.Brand nut_hand_brand = 4;
+  // optional .texas_code.protocol.Brand nut_hand_brand = 4;
   if (this->nut_hand_brand() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->nut_hand_brand());
   }
 
-  // repeated .texas_code.proto.Card nut_hand = 5;
+  // repeated .texas_code.protocol.Card nut_hand = 5;
   total_size += 1 * this->nut_hand_size();
   for (int i = 0; i < this->nut_hand_size(); i++) {
     total_size +=
@@ -2109,13 +2110,13 @@ void PlayerHandInfo::MergeFrom(const PlayerHandInfo& from) {
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   nut_hand_.MergeFrom(from.nut_hand_);
   if (from.has_player()) {
-    mutable_player()->::texas_code::proto::Player::MergeFrom(from.player());
+    mutable_player()->::texas_code::protocol::Player::MergeFrom(from.player());
   }
   if (from.has_card_1()) {
-    mutable_card_1()->::texas_code::proto::Card::MergeFrom(from.card_1());
+    mutable_card_1()->::texas_code::protocol::Card::MergeFrom(from.card_1());
   }
   if (from.has_card_2()) {
-    mutable_card_2()->::texas_code::proto::Card::MergeFrom(from.card_2());
+    mutable_card_2()->::texas_code::protocol::Card::MergeFrom(from.card_2());
   }
   if (from.nut_hand_brand() != 0) {
     set_nut_hand_brand(from.nut_hand_brand());
@@ -2164,7 +2165,7 @@ void PlayerHandInfo::InternalSwap(PlayerHandInfo* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // PlayerHandInfo
 
-// optional .texas_code.proto.Player player = 1;
+// optional .texas_code.protocol.Player player = 1;
 bool PlayerHandInfo::has_player() const {
   return !_is_default_instance_ && player_ != NULL;
 }
@@ -2172,25 +2173,25 @@ void PlayerHandInfo::clear_player() {
   if (GetArenaNoVirtual() == NULL && player_ != NULL) delete player_;
   player_ = NULL;
 }
-const ::texas_code::proto::Player& PlayerHandInfo::player() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.PlayerHandInfo.player)
+const ::texas_code::protocol::Player& PlayerHandInfo::player() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.PlayerHandInfo.player)
   return player_ != NULL ? *player_ : *default_instance_->player_;
 }
-::texas_code::proto::Player* PlayerHandInfo::mutable_player() {
+::texas_code::protocol::Player* PlayerHandInfo::mutable_player() {
   
   if (player_ == NULL) {
-    player_ = new ::texas_code::proto::Player;
+    player_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.PlayerHandInfo.player)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.PlayerHandInfo.player)
   return player_;
 }
-::texas_code::proto::Player* PlayerHandInfo::release_player() {
+::texas_code::protocol::Player* PlayerHandInfo::release_player() {
   
-  ::texas_code::proto::Player* temp = player_;
+  ::texas_code::protocol::Player* temp = player_;
   player_ = NULL;
   return temp;
 }
-void PlayerHandInfo::set_allocated_player(::texas_code::proto::Player* player) {
+void PlayerHandInfo::set_allocated_player(::texas_code::protocol::Player* player) {
   delete player_;
   player_ = player;
   if (player) {
@@ -2198,10 +2199,10 @@ void PlayerHandInfo::set_allocated_player(::texas_code::proto::Player* player) {
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.PlayerHandInfo.player)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.PlayerHandInfo.player)
 }
 
-// optional .texas_code.proto.Card card_1 = 2;
+// optional .texas_code.protocol.Card card_1 = 2;
 bool PlayerHandInfo::has_card_1() const {
   return !_is_default_instance_ && card_1_ != NULL;
 }
@@ -2209,25 +2210,25 @@ void PlayerHandInfo::clear_card_1() {
   if (GetArenaNoVirtual() == NULL && card_1_ != NULL) delete card_1_;
   card_1_ = NULL;
 }
-const ::texas_code::proto::Card& PlayerHandInfo::card_1() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.PlayerHandInfo.card_1)
+const ::texas_code::protocol::Card& PlayerHandInfo::card_1() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.PlayerHandInfo.card_1)
   return card_1_ != NULL ? *card_1_ : *default_instance_->card_1_;
 }
-::texas_code::proto::Card* PlayerHandInfo::mutable_card_1() {
+::texas_code::protocol::Card* PlayerHandInfo::mutable_card_1() {
   
   if (card_1_ == NULL) {
-    card_1_ = new ::texas_code::proto::Card;
+    card_1_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.PlayerHandInfo.card_1)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.PlayerHandInfo.card_1)
   return card_1_;
 }
-::texas_code::proto::Card* PlayerHandInfo::release_card_1() {
+::texas_code::protocol::Card* PlayerHandInfo::release_card_1() {
   
-  ::texas_code::proto::Card* temp = card_1_;
+  ::texas_code::protocol::Card* temp = card_1_;
   card_1_ = NULL;
   return temp;
 }
-void PlayerHandInfo::set_allocated_card_1(::texas_code::proto::Card* card_1) {
+void PlayerHandInfo::set_allocated_card_1(::texas_code::protocol::Card* card_1) {
   delete card_1_;
   card_1_ = card_1;
   if (card_1) {
@@ -2235,10 +2236,10 @@ void PlayerHandInfo::set_allocated_card_1(::texas_code::proto::Card* card_1) {
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.PlayerHandInfo.card_1)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.PlayerHandInfo.card_1)
 }
 
-// optional .texas_code.proto.Card card_2 = 3;
+// optional .texas_code.protocol.Card card_2 = 3;
 bool PlayerHandInfo::has_card_2() const {
   return !_is_default_instance_ && card_2_ != NULL;
 }
@@ -2246,25 +2247,25 @@ void PlayerHandInfo::clear_card_2() {
   if (GetArenaNoVirtual() == NULL && card_2_ != NULL) delete card_2_;
   card_2_ = NULL;
 }
-const ::texas_code::proto::Card& PlayerHandInfo::card_2() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.PlayerHandInfo.card_2)
+const ::texas_code::protocol::Card& PlayerHandInfo::card_2() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.PlayerHandInfo.card_2)
   return card_2_ != NULL ? *card_2_ : *default_instance_->card_2_;
 }
-::texas_code::proto::Card* PlayerHandInfo::mutable_card_2() {
+::texas_code::protocol::Card* PlayerHandInfo::mutable_card_2() {
   
   if (card_2_ == NULL) {
-    card_2_ = new ::texas_code::proto::Card;
+    card_2_ = new ::texas_code::protocol::Card;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.PlayerHandInfo.card_2)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.PlayerHandInfo.card_2)
   return card_2_;
 }
-::texas_code::proto::Card* PlayerHandInfo::release_card_2() {
+::texas_code::protocol::Card* PlayerHandInfo::release_card_2() {
   
-  ::texas_code::proto::Card* temp = card_2_;
+  ::texas_code::protocol::Card* temp = card_2_;
   card_2_ = NULL;
   return temp;
 }
-void PlayerHandInfo::set_allocated_card_2(::texas_code::proto::Card* card_2) {
+void PlayerHandInfo::set_allocated_card_2(::texas_code::protocol::Card* card_2) {
   delete card_2_;
   card_2_ = card_2;
   if (card_2) {
@@ -2272,50 +2273,50 @@ void PlayerHandInfo::set_allocated_card_2(::texas_code::proto::Card* card_2) {
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.proto.PlayerHandInfo.card_2)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.PlayerHandInfo.card_2)
 }
 
-// optional .texas_code.proto.Brand nut_hand_brand = 4;
+// optional .texas_code.protocol.Brand nut_hand_brand = 4;
 void PlayerHandInfo::clear_nut_hand_brand() {
   nut_hand_brand_ = 0;
 }
- ::texas_code::proto::Brand PlayerHandInfo::nut_hand_brand() const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.PlayerHandInfo.nut_hand_brand)
-  return static_cast< ::texas_code::proto::Brand >(nut_hand_brand_);
+ ::texas_code::protocol::Brand PlayerHandInfo::nut_hand_brand() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.PlayerHandInfo.nut_hand_brand)
+  return static_cast< ::texas_code::protocol::Brand >(nut_hand_brand_);
 }
- void PlayerHandInfo::set_nut_hand_brand(::texas_code::proto::Brand value) {
+ void PlayerHandInfo::set_nut_hand_brand(::texas_code::protocol::Brand value) {
   
   nut_hand_brand_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.proto.PlayerHandInfo.nut_hand_brand)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.PlayerHandInfo.nut_hand_brand)
 }
 
-// repeated .texas_code.proto.Card nut_hand = 5;
+// repeated .texas_code.protocol.Card nut_hand = 5;
 int PlayerHandInfo::nut_hand_size() const {
   return nut_hand_.size();
 }
 void PlayerHandInfo::clear_nut_hand() {
   nut_hand_.Clear();
 }
-const ::texas_code::proto::Card& PlayerHandInfo::nut_hand(int index) const {
-  // @@protoc_insertion_point(field_get:texas_code.proto.PlayerHandInfo.nut_hand)
+const ::texas_code::protocol::Card& PlayerHandInfo::nut_hand(int index) const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.PlayerHandInfo.nut_hand)
   return nut_hand_.Get(index);
 }
-::texas_code::proto::Card* PlayerHandInfo::mutable_nut_hand(int index) {
-  // @@protoc_insertion_point(field_mutable:texas_code.proto.PlayerHandInfo.nut_hand)
+::texas_code::protocol::Card* PlayerHandInfo::mutable_nut_hand(int index) {
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.PlayerHandInfo.nut_hand)
   return nut_hand_.Mutable(index);
 }
-::texas_code::proto::Card* PlayerHandInfo::add_nut_hand() {
-  // @@protoc_insertion_point(field_add:texas_code.proto.PlayerHandInfo.nut_hand)
+::texas_code::protocol::Card* PlayerHandInfo::add_nut_hand() {
+  // @@protoc_insertion_point(field_add:texas_code.protocol.PlayerHandInfo.nut_hand)
   return nut_hand_.Add();
 }
-::google::protobuf::RepeatedPtrField< ::texas_code::proto::Card >*
+::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Card >*
 PlayerHandInfo::mutable_nut_hand() {
-  // @@protoc_insertion_point(field_mutable_list:texas_code.proto.PlayerHandInfo.nut_hand)
+  // @@protoc_insertion_point(field_mutable_list:texas_code.protocol.PlayerHandInfo.nut_hand)
   return &nut_hand_;
 }
-const ::google::protobuf::RepeatedPtrField< ::texas_code::proto::Card >&
+const ::google::protobuf::RepeatedPtrField< ::texas_code::protocol::Card >&
 PlayerHandInfo::nut_hand() const {
-  // @@protoc_insertion_point(field_list:texas_code.proto.PlayerHandInfo.nut_hand)
+  // @@protoc_insertion_point(field_list:texas_code.protocol.PlayerHandInfo.nut_hand)
   return nut_hand_;
 }
 
@@ -2323,7 +2324,7 @@ PlayerHandInfo::nut_hand() const {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace proto
+}  // namespace protocol
 }  // namespace texas_code
 
 // @@protoc_insertion_point(global_scope)

@@ -18,12 +18,12 @@ for line in message_file_handler:
 message_types.sort()
 message_enums = [(x, message_types.index(x)) for x in message_types]
 
-message_type_file = '../include/texas_code/proto/message_type.h'
+message_type_file = '../include/texas_code/protocol/message_type.h'
 message_type_file_handler = open(message_type_file, 'w')
 
 message_type_file_handler.write('#pragma once\n\n')
 message_type_file_handler.write('#include <cstdint>\n\n')
-message_type_file_handler.write('namespace texas_code { namespace proto {\n\n')
+message_type_file_handler.write('namespace texas_code { namespace protocol {\n\n')
 message_type_file_handler.write('\tenum class MessageType : std::int32_t {\n\n')
 
 for enum in message_enums:
