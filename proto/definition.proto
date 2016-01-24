@@ -2,6 +2,11 @@ syntax = "proto3";
 
 package texas_code.protocol;
 
+enum ErrorCode {
+    OK = 0;
+    FAILED = 1;
+}
+
 enum Color {
     DIAMONDS = 0;
     CLUBS = 1;

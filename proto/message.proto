@@ -9,30 +9,24 @@ message ConnectRequest {
     string account_name = 2;
 }
 
-message ConnectSuccessResponse {
+message ConnectResponse {
     int64 request_id = 1;
     Player player = 2;
-}
-
-message ConnectFailedResponse {
-    int64 request_id = 1;
-    int32 error_code = 2;
-    string error_msg = 3;
+    int32 error_code = 3;
+    string error_msg = 4;
 }
 
 message ActionRequest {
     int64 request_id = 1;
     JettonAction jetton_action = 2;
+    string account_name = 3;
 }
 
-message ActionSuccessResponse {
+message ActionResponse {
     int64 request_id = 1;
-}
-
-message ActionFailedResponse {
-    int64 req_id = 1;
-    int32 error_code = 2;
-    string error_msg = 3;
+    string account_name = 2;
+    int32 error_code = 3;
+    string error_msg = 4;
 }
 
 message SeatInfoMessage {
@@ -51,6 +45,7 @@ message BlindMessage {
 message HoldCardsMessage {
     Card card_1 = 1;
     Card card_2 = 2;
+    string account_name = 3;
 }
 
 message InquireActionMessage {
@@ -71,6 +66,23 @@ message TurnMessage {
 
 message RiverMessage {
     Card river_card = 2;
+}
+
+message InquireShowDownMessage {
+    int64 request_id = 1;
+}
+
+message ShowDownRequest {
+    int64 request_id = 1;
+    bool is_agree = 2;
+    string account_name = 3;
+}
+
+message ShowDownResponse {
+    int64 request_id = 1;
+    string account_name = 2;
+    int32 error_code = 3;
+    string error_msg = 4;
 }
 
 message ShowDownMessage {

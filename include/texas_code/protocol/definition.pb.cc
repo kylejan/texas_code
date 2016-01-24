@@ -37,6 +37,7 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* PlayerHandInfo_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   PlayerHandInfo_reflection_ = NULL;
+const ::google::protobuf::EnumDescriptor* ErrorCode_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* Color_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* Brand_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* Action_descriptor_ = NULL;
@@ -138,10 +139,11 @@ void protobuf_AssignDesc_definition_2eproto() {
       sizeof(PlayerHandInfo),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PlayerHandInfo, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PlayerHandInfo, _is_default_instance_));
-  Color_descriptor_ = file->enum_type(0);
-  Brand_descriptor_ = file->enum_type(1);
-  Action_descriptor_ = file->enum_type(2);
-  Status_descriptor_ = file->enum_type(3);
+  ErrorCode_descriptor_ = file->enum_type(0);
+  Color_descriptor_ = file->enum_type(1);
+  Brand_descriptor_ = file->enum_type(2);
+  Action_descriptor_ = file->enum_type(3);
+  Status_descriptor_ = file->enum_type(4);
 }
 
 namespace {
@@ -204,17 +206,18 @@ void protobuf_AddDesc_definition_2eproto() {
     "d_2\030\003 \001(\0132\031.texas_code.protocol.Card\0222\n\016"
     "nut_hand_brand\030\004 \001(\0162\032.texas_code.protoc"
     "ol.Brand\022+\n\010nut_hand\030\005 \003(\0132\031.texas_code."
-    "protocol.Card*8\n\005Color\022\014\n\010DIAMONDS\020\000\022\t\n\005"
-    "CLUBS\020\001\022\n\n\006HEARTS\020\002\022\n\n\006SPADES\020\003*\262\001\n\005Bran"
-    "d\022\r\n\tHIGH_CARD\020\000\022\014\n\010ONE_PAIR\020\001\022\014\n\010TWO_PA"
-    "IR\020\002\022\023\n\017THREE_OF_A_KIND\020\003\022\014\n\010STRAIGHT\020\004\022"
-    "\t\n\005FLUSH\020\005\022\016\n\nFULL_HOUSE\020\006\022\022\n\016FOUR_OF_A_"
-    "KIND\020\007\022\022\n\016STRAIGHT_FLUSH\020\010\022\030\n\024ROYAL_STRA"
-    "IGHT_FLUSH\020\t*U\n\006Action\022\007\n\003BET\020\000\022\010\n\004CALL\020"
-    "\001\022\010\n\004FOLD\020\002\022\t\n\005CHECK\020\003\022\t\n\005RAISE\020\004\022\014\n\010RE_"
-    "RAISE\020\005\022\n\n\006ALL_IN\020\006*D\n\006Status\022\013\n\007PREFLOP"
-    "\020\000\022\010\n\004FLOP\020\001\022\010\n\004TURN\020\002\022\t\n\005RIVER\020\003\022\016\n\nSHO"
-    "WN_DOWN\020\004b\006proto3", 1057);
+    "protocol.Card*\037\n\tErrorCode\022\006\n\002OK\020\000\022\n\n\006FA"
+    "ILED\020\001*8\n\005Color\022\014\n\010DIAMONDS\020\000\022\t\n\005CLUBS\020\001"
+    "\022\n\n\006HEARTS\020\002\022\n\n\006SPADES\020\003*\262\001\n\005Brand\022\r\n\tHI"
+    "GH_CARD\020\000\022\014\n\010ONE_PAIR\020\001\022\014\n\010TWO_PAIR\020\002\022\023\n"
+    "\017THREE_OF_A_KIND\020\003\022\014\n\010STRAIGHT\020\004\022\t\n\005FLUS"
+    "H\020\005\022\016\n\nFULL_HOUSE\020\006\022\022\n\016FOUR_OF_A_KIND\020\007\022"
+    "\022\n\016STRAIGHT_FLUSH\020\010\022\030\n\024ROYAL_STRAIGHT_FL"
+    "USH\020\t*U\n\006Action\022\007\n\003BET\020\000\022\010\n\004CALL\020\001\022\010\n\004FO"
+    "LD\020\002\022\t\n\005CHECK\020\003\022\t\n\005RAISE\020\004\022\014\n\010RE_RAISE\020\005"
+    "\022\n\n\006ALL_IN\020\006*D\n\006Status\022\013\n\007PREFLOP\020\000\022\010\n\004F"
+    "LOP\020\001\022\010\n\004TURN\020\002\022\t\n\005RIVER\020\003\022\016\n\nSHOWN_DOWN"
+    "\020\004b\006proto3", 1090);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "definition.proto", &protobuf_RegisterTypes);
   Card::default_instance_ = new Card();
@@ -236,6 +239,20 @@ struct StaticDescriptorInitializer_definition_2eproto {
     protobuf_AddDesc_definition_2eproto();
   }
 } static_descriptor_initializer_definition_2eproto_;
+const ::google::protobuf::EnumDescriptor* ErrorCode_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ErrorCode_descriptor_;
+}
+bool ErrorCode_IsValid(int value) {
+  switch(value) {
+    case 0:
+    case 1:
+      return true;
+    default:
+      return false;
+  }
+}
+
 const ::google::protobuf::EnumDescriptor* Color_descriptor() {
   protobuf_AssignDescriptorsOnce();
   return Color_descriptor_;

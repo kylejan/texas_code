@@ -19,46 +19,31 @@ using namespace protocol;
 
 class Messenger {
 public:
-    Messenger(const std::string& rpc_endpoint, const std::string& pub_endpoint)
-        : rpc_endpoint_{rpc_endpoint}
-        , pub_endpoint_{pub_endpoint}
-        , context_{1}
-        , rpc_socket_{context_, ZMQ_REP}
-        , pub_socket_{context_, ZMQ_PUB} {
+    Messenger() = delete;
+    Messenger(const std::string& rpc_endpoint, const std::string& pub_endpoint);
 
-        rpc_socket_.bind(rpc_endpoint_);
-        pub_socket_.bind(pub_endpoint_);
-    }
+    inline void run();
+    inline void socket_rpc_recv();
+    inline void socket_rpc_reply(RawMessage* raw_message);
+    inline void socket_pub_send(RawMessage* raw_message);
 
-    void run() {
-        socket_rpc_recv();
-    }
+    virtual void dispatch_pb_message(Heartbeat*) = 0;
+    virtual void dispatch_pb_message(ConnectRequest*) = 0;
+    virtual void dispatch_pb_message(ActionRequest*) = 0;
+    virtual void dispatch_pb_message(ShowDownRequest*) = 0;
 
-    void socket_rpc_recv() {
-        while (true) {
-            zmq::message_t request;
-            rpc_socket_.recv(&request);
-            RawMessage raw_message(&request);
-
-            std::unique_lock<std::mutex> lock(mutex_);
-            is_wait_ = true;
-            cv_.wait(lock, [this] { return is_wait_.load() == false; });
-        }
-    }
-
-    void socket_rpc_reply(RawMessage* raw_message) {
-        zmq::message_t message = raw_message->pack_zmq_msg();
-        rpc_socket_.send(message);
-        is_wait_ = false;
-        cv_.notify_one();
-    }
-
-    void socket_pub_send(RawMessage* raw_message) {
-        zmq::message_t message = raw_message->pack_zmq_msg();
-        pub_socket_.send(message);
-    }
+    virtual ~Messenger() {}
 
 private:
+    template <typename type>
+    void dispatch(RawMessage* raw_message) {
+        auto message = new type();
+        message->ParseFromString(raw_message->msg_body);
+        dispatch_pb_message(message);
+    }
+
+    void handle_recv_message(RawMessage* raw_message);
+
     zmq::context_t context_;
     zmq::socket_t rpc_socket_;
     zmq::socket_t pub_socket_;

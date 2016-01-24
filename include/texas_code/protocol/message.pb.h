@@ -38,22 +38,23 @@ void protobuf_AddDesc_message_2eproto();
 void protobuf_AssignDesc_message_2eproto();
 void protobuf_ShutdownFile_message_2eproto();
 
-class ActionFailedResponse;
 class ActionRequest;
-class ActionSuccessResponse;
+class ActionResponse;
 class BlindMessage;
-class ConnectFailedResponse;
 class ConnectRequest;
-class ConnectSuccessResponse;
+class ConnectResponse;
 class FlopMessage;
 class GameOverMessage;
 class Heartbeat;
 class HoldCardsMessage;
 class InquireActionMessage;
+class InquireShowDownMessage;
 class PotWinMessage;
 class RiverMessage;
 class SeatInfoMessage;
 class ShowDownMessage;
+class ShowDownRequest;
+class ShowDownResponse;
 class TurnMessage;
 
 // ===================================================================
@@ -148,32 +149,32 @@ class ConnectRequest : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class ConnectSuccessResponse : public ::google::protobuf::Message {
+class ConnectResponse : public ::google::protobuf::Message {
  public:
-  ConnectSuccessResponse();
-  virtual ~ConnectSuccessResponse();
+  ConnectResponse();
+  virtual ~ConnectResponse();
 
-  ConnectSuccessResponse(const ConnectSuccessResponse& from);
+  ConnectResponse(const ConnectResponse& from);
 
-  inline ConnectSuccessResponse& operator=(const ConnectSuccessResponse& from) {
+  inline ConnectResponse& operator=(const ConnectResponse& from) {
     CopyFrom(from);
     return *this;
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const ConnectSuccessResponse& default_instance();
+  static const ConnectResponse& default_instance();
 
-  void Swap(ConnectSuccessResponse* other);
+  void Swap(ConnectResponse* other);
 
   // implements Message ----------------------------------------------
 
-  inline ConnectSuccessResponse* New() const { return New(NULL); }
+  inline ConnectResponse* New() const { return New(NULL); }
 
-  ConnectSuccessResponse* New(::google::protobuf::Arena* arena) const;
+  ConnectResponse* New(::google::protobuf::Arena* arena) const;
   void CopyFrom(const ::google::protobuf::Message& from);
   void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const ConnectSuccessResponse& from);
-  void MergeFrom(const ConnectSuccessResponse& from);
+  void CopyFrom(const ConnectResponse& from);
+  void MergeFrom(const ConnectResponse& from);
   void Clear();
   bool IsInitialized() const;
 
@@ -188,7 +189,7 @@ class ConnectSuccessResponse : public ::google::protobuf::Message {
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(ConnectSuccessResponse* other);
+  void InternalSwap(ConnectResponse* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -219,94 +220,15 @@ class ConnectSuccessResponse : public ::google::protobuf::Message {
   ::texas_code::protocol::Player* release_player();
   void set_allocated_player(::texas_code::protocol::Player* player);
 
-  // @@protoc_insertion_point(class_scope:texas_code.protocol.ConnectSuccessResponse)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  bool _is_default_instance_;
-  ::google::protobuf::int64 request_id_;
-  ::texas_code::protocol::Player* player_;
-  mutable int _cached_size_;
-  friend void  protobuf_AddDesc_message_2eproto();
-  friend void protobuf_AssignDesc_message_2eproto();
-  friend void protobuf_ShutdownFile_message_2eproto();
-
-  void InitAsDefaultInstance();
-  static ConnectSuccessResponse* default_instance_;
-};
-// -------------------------------------------------------------------
-
-class ConnectFailedResponse : public ::google::protobuf::Message {
- public:
-  ConnectFailedResponse();
-  virtual ~ConnectFailedResponse();
-
-  ConnectFailedResponse(const ConnectFailedResponse& from);
-
-  inline ConnectFailedResponse& operator=(const ConnectFailedResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const ConnectFailedResponse& default_instance();
-
-  void Swap(ConnectFailedResponse* other);
-
-  // implements Message ----------------------------------------------
-
-  inline ConnectFailedResponse* New() const { return New(NULL); }
-
-  ConnectFailedResponse* New(::google::protobuf::Arena* arena) const;
-  void CopyFrom(const ::google::protobuf::Message& from);
-  void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const ConnectFailedResponse& from);
-  void MergeFrom(const ConnectFailedResponse& from);
-  void Clear();
-  bool IsInitialized() const;
-
-  int ByteSize() const;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input);
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-  int GetCachedSize() const { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(ConnectFailedResponse* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return _internal_metadata_.arena();
-  }
-  inline void* MaybeArenaPtr() const {
-    return _internal_metadata_.raw_arena_ptr();
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // optional int64 request_id = 1;
-  void clear_request_id();
-  static const int kRequestIdFieldNumber = 1;
-  ::google::protobuf::int64 request_id() const;
-  void set_request_id(::google::protobuf::int64 value);
-
-  // optional int32 error_code = 2;
+  // optional int32 error_code = 3;
   void clear_error_code();
-  static const int kErrorCodeFieldNumber = 2;
+  static const int kErrorCodeFieldNumber = 3;
   ::google::protobuf::int32 error_code() const;
   void set_error_code(::google::protobuf::int32 value);
 
-  // optional string error_msg = 3;
+  // optional string error_msg = 4;
   void clear_error_msg();
-  static const int kErrorMsgFieldNumber = 3;
+  static const int kErrorMsgFieldNumber = 4;
   const ::std::string& error_msg() const;
   void set_error_msg(const ::std::string& value);
   void set_error_msg(const char* value);
@@ -315,12 +237,13 @@ class ConnectFailedResponse : public ::google::protobuf::Message {
   ::std::string* release_error_msg();
   void set_allocated_error_msg(::std::string* error_msg);
 
-  // @@protoc_insertion_point(class_scope:texas_code.protocol.ConnectFailedResponse)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.ConnectResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
   ::google::protobuf::int64 request_id_;
+  ::texas_code::protocol::Player* player_;
   ::google::protobuf::internal::ArenaStringPtr error_msg_;
   ::google::protobuf::int32 error_code_;
   mutable int _cached_size_;
@@ -329,7 +252,7 @@ class ConnectFailedResponse : public ::google::protobuf::Message {
   friend void protobuf_ShutdownFile_message_2eproto();
 
   void InitAsDefaultInstance();
-  static ConnectFailedResponse* default_instance_;
+  static ConnectResponse* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -404,6 +327,17 @@ class ActionRequest : public ::google::protobuf::Message {
   ::texas_code::protocol::JettonAction* release_jetton_action();
   void set_allocated_jetton_action(::texas_code::protocol::JettonAction* jetton_action);
 
+  // optional string account_name = 3;
+  void clear_account_name();
+  static const int kAccountNameFieldNumber = 3;
+  const ::std::string& account_name() const;
+  void set_account_name(const ::std::string& value);
+  void set_account_name(const char* value);
+  void set_account_name(const char* value, size_t size);
+  ::std::string* mutable_account_name();
+  ::std::string* release_account_name();
+  void set_allocated_account_name(::std::string* account_name);
+
   // @@protoc_insertion_point(class_scope:texas_code.protocol.ActionRequest)
  private:
 
@@ -411,6 +345,7 @@ class ActionRequest : public ::google::protobuf::Message {
   bool _is_default_instance_;
   ::google::protobuf::int64 request_id_;
   ::texas_code::protocol::JettonAction* jetton_action_;
+  ::google::protobuf::internal::ArenaStringPtr account_name_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_message_2eproto();
   friend void protobuf_AssignDesc_message_2eproto();
@@ -421,32 +356,32 @@ class ActionRequest : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class ActionSuccessResponse : public ::google::protobuf::Message {
+class ActionResponse : public ::google::protobuf::Message {
  public:
-  ActionSuccessResponse();
-  virtual ~ActionSuccessResponse();
+  ActionResponse();
+  virtual ~ActionResponse();
 
-  ActionSuccessResponse(const ActionSuccessResponse& from);
+  ActionResponse(const ActionResponse& from);
 
-  inline ActionSuccessResponse& operator=(const ActionSuccessResponse& from) {
+  inline ActionResponse& operator=(const ActionResponse& from) {
     CopyFrom(from);
     return *this;
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const ActionSuccessResponse& default_instance();
+  static const ActionResponse& default_instance();
 
-  void Swap(ActionSuccessResponse* other);
+  void Swap(ActionResponse* other);
 
   // implements Message ----------------------------------------------
 
-  inline ActionSuccessResponse* New() const { return New(NULL); }
+  inline ActionResponse* New() const { return New(NULL); }
 
-  ActionSuccessResponse* New(::google::protobuf::Arena* arena) const;
+  ActionResponse* New(::google::protobuf::Arena* arena) const;
   void CopyFrom(const ::google::protobuf::Message& from);
   void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const ActionSuccessResponse& from);
-  void MergeFrom(const ActionSuccessResponse& from);
+  void CopyFrom(const ActionResponse& from);
+  void MergeFrom(const ActionResponse& from);
   void Clear();
   bool IsInitialized() const;
 
@@ -461,7 +396,7 @@ class ActionSuccessResponse : public ::google::protobuf::Message {
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(ActionSuccessResponse* other);
+  void InternalSwap(ActionResponse* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -483,93 +418,26 @@ class ActionSuccessResponse : public ::google::protobuf::Message {
   ::google::protobuf::int64 request_id() const;
   void set_request_id(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:texas_code.protocol.ActionSuccessResponse)
- private:
+  // optional string account_name = 2;
+  void clear_account_name();
+  static const int kAccountNameFieldNumber = 2;
+  const ::std::string& account_name() const;
+  void set_account_name(const ::std::string& value);
+  void set_account_name(const char* value);
+  void set_account_name(const char* value, size_t size);
+  ::std::string* mutable_account_name();
+  ::std::string* release_account_name();
+  void set_allocated_account_name(::std::string* account_name);
 
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  bool _is_default_instance_;
-  ::google::protobuf::int64 request_id_;
-  mutable int _cached_size_;
-  friend void  protobuf_AddDesc_message_2eproto();
-  friend void protobuf_AssignDesc_message_2eproto();
-  friend void protobuf_ShutdownFile_message_2eproto();
-
-  void InitAsDefaultInstance();
-  static ActionSuccessResponse* default_instance_;
-};
-// -------------------------------------------------------------------
-
-class ActionFailedResponse : public ::google::protobuf::Message {
- public:
-  ActionFailedResponse();
-  virtual ~ActionFailedResponse();
-
-  ActionFailedResponse(const ActionFailedResponse& from);
-
-  inline ActionFailedResponse& operator=(const ActionFailedResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const ActionFailedResponse& default_instance();
-
-  void Swap(ActionFailedResponse* other);
-
-  // implements Message ----------------------------------------------
-
-  inline ActionFailedResponse* New() const { return New(NULL); }
-
-  ActionFailedResponse* New(::google::protobuf::Arena* arena) const;
-  void CopyFrom(const ::google::protobuf::Message& from);
-  void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const ActionFailedResponse& from);
-  void MergeFrom(const ActionFailedResponse& from);
-  void Clear();
-  bool IsInitialized() const;
-
-  int ByteSize() const;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input);
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-  int GetCachedSize() const { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(ActionFailedResponse* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return _internal_metadata_.arena();
-  }
-  inline void* MaybeArenaPtr() const {
-    return _internal_metadata_.raw_arena_ptr();
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // optional int64 req_id = 1;
-  void clear_req_id();
-  static const int kReqIdFieldNumber = 1;
-  ::google::protobuf::int64 req_id() const;
-  void set_req_id(::google::protobuf::int64 value);
-
-  // optional int32 error_code = 2;
+  // optional int32 error_code = 3;
   void clear_error_code();
-  static const int kErrorCodeFieldNumber = 2;
+  static const int kErrorCodeFieldNumber = 3;
   ::google::protobuf::int32 error_code() const;
   void set_error_code(::google::protobuf::int32 value);
 
-  // optional string error_msg = 3;
+  // optional string error_msg = 4;
   void clear_error_msg();
-  static const int kErrorMsgFieldNumber = 3;
+  static const int kErrorMsgFieldNumber = 4;
   const ::std::string& error_msg() const;
   void set_error_msg(const ::std::string& value);
   void set_error_msg(const char* value);
@@ -578,12 +446,13 @@ class ActionFailedResponse : public ::google::protobuf::Message {
   ::std::string* release_error_msg();
   void set_allocated_error_msg(::std::string* error_msg);
 
-  // @@protoc_insertion_point(class_scope:texas_code.protocol.ActionFailedResponse)
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.ActionResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::int64 req_id_;
+  ::google::protobuf::int64 request_id_;
+  ::google::protobuf::internal::ArenaStringPtr account_name_;
   ::google::protobuf::internal::ArenaStringPtr error_msg_;
   ::google::protobuf::int32 error_code_;
   mutable int _cached_size_;
@@ -592,7 +461,7 @@ class ActionFailedResponse : public ::google::protobuf::Message {
   friend void protobuf_ShutdownFile_message_2eproto();
 
   void InitAsDefaultInstance();
-  static ActionFailedResponse* default_instance_;
+  static ActionResponse* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -879,6 +748,17 @@ class HoldCardsMessage : public ::google::protobuf::Message {
   ::texas_code::protocol::Card* release_card_2();
   void set_allocated_card_2(::texas_code::protocol::Card* card_2);
 
+  // optional string account_name = 3;
+  void clear_account_name();
+  static const int kAccountNameFieldNumber = 3;
+  const ::std::string& account_name() const;
+  void set_account_name(const ::std::string& value);
+  void set_account_name(const char* value);
+  void set_account_name(const char* value, size_t size);
+  ::std::string* mutable_account_name();
+  ::std::string* release_account_name();
+  void set_allocated_account_name(::std::string* account_name);
+
   // @@protoc_insertion_point(class_scope:texas_code.protocol.HoldCardsMessage)
  private:
 
@@ -886,6 +766,7 @@ class HoldCardsMessage : public ::google::protobuf::Message {
   bool _is_default_instance_;
   ::texas_code::protocol::Card* card_1_;
   ::texas_code::protocol::Card* card_2_;
+  ::google::protobuf::internal::ArenaStringPtr account_name_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_message_2eproto();
   friend void protobuf_AssignDesc_message_2eproto();
@@ -1254,6 +1135,290 @@ class RiverMessage : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static RiverMessage* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class InquireShowDownMessage : public ::google::protobuf::Message {
+ public:
+  InquireShowDownMessage();
+  virtual ~InquireShowDownMessage();
+
+  InquireShowDownMessage(const InquireShowDownMessage& from);
+
+  inline InquireShowDownMessage& operator=(const InquireShowDownMessage& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const InquireShowDownMessage& default_instance();
+
+  void Swap(InquireShowDownMessage* other);
+
+  // implements Message ----------------------------------------------
+
+  inline InquireShowDownMessage* New() const { return New(NULL); }
+
+  InquireShowDownMessage* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const InquireShowDownMessage& from);
+  void MergeFrom(const InquireShowDownMessage& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(InquireShowDownMessage* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int64 request_id = 1;
+  void clear_request_id();
+  static const int kRequestIdFieldNumber = 1;
+  ::google::protobuf::int64 request_id() const;
+  void set_request_id(::google::protobuf::int64 value);
+
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.InquireShowDownMessage)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::int64 request_id_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_message_2eproto();
+  friend void protobuf_AssignDesc_message_2eproto();
+  friend void protobuf_ShutdownFile_message_2eproto();
+
+  void InitAsDefaultInstance();
+  static InquireShowDownMessage* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class ShowDownRequest : public ::google::protobuf::Message {
+ public:
+  ShowDownRequest();
+  virtual ~ShowDownRequest();
+
+  ShowDownRequest(const ShowDownRequest& from);
+
+  inline ShowDownRequest& operator=(const ShowDownRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ShowDownRequest& default_instance();
+
+  void Swap(ShowDownRequest* other);
+
+  // implements Message ----------------------------------------------
+
+  inline ShowDownRequest* New() const { return New(NULL); }
+
+  ShowDownRequest* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ShowDownRequest& from);
+  void MergeFrom(const ShowDownRequest& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(ShowDownRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int64 request_id = 1;
+  void clear_request_id();
+  static const int kRequestIdFieldNumber = 1;
+  ::google::protobuf::int64 request_id() const;
+  void set_request_id(::google::protobuf::int64 value);
+
+  // optional bool is_agree = 2;
+  void clear_is_agree();
+  static const int kIsAgreeFieldNumber = 2;
+  bool is_agree() const;
+  void set_is_agree(bool value);
+
+  // optional string account_name = 3;
+  void clear_account_name();
+  static const int kAccountNameFieldNumber = 3;
+  const ::std::string& account_name() const;
+  void set_account_name(const ::std::string& value);
+  void set_account_name(const char* value);
+  void set_account_name(const char* value, size_t size);
+  ::std::string* mutable_account_name();
+  ::std::string* release_account_name();
+  void set_allocated_account_name(::std::string* account_name);
+
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.ShowDownRequest)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::int64 request_id_;
+  ::google::protobuf::internal::ArenaStringPtr account_name_;
+  bool is_agree_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_message_2eproto();
+  friend void protobuf_AssignDesc_message_2eproto();
+  friend void protobuf_ShutdownFile_message_2eproto();
+
+  void InitAsDefaultInstance();
+  static ShowDownRequest* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class ShowDownResponse : public ::google::protobuf::Message {
+ public:
+  ShowDownResponse();
+  virtual ~ShowDownResponse();
+
+  ShowDownResponse(const ShowDownResponse& from);
+
+  inline ShowDownResponse& operator=(const ShowDownResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ShowDownResponse& default_instance();
+
+  void Swap(ShowDownResponse* other);
+
+  // implements Message ----------------------------------------------
+
+  inline ShowDownResponse* New() const { return New(NULL); }
+
+  ShowDownResponse* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ShowDownResponse& from);
+  void MergeFrom(const ShowDownResponse& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(ShowDownResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int64 request_id = 1;
+  void clear_request_id();
+  static const int kRequestIdFieldNumber = 1;
+  ::google::protobuf::int64 request_id() const;
+  void set_request_id(::google::protobuf::int64 value);
+
+  // optional string account_name = 2;
+  void clear_account_name();
+  static const int kAccountNameFieldNumber = 2;
+  const ::std::string& account_name() const;
+  void set_account_name(const ::std::string& value);
+  void set_account_name(const char* value);
+  void set_account_name(const char* value, size_t size);
+  ::std::string* mutable_account_name();
+  ::std::string* release_account_name();
+  void set_allocated_account_name(::std::string* account_name);
+
+  // optional int32 error_code = 3;
+  void clear_error_code();
+  static const int kErrorCodeFieldNumber = 3;
+  ::google::protobuf::int32 error_code() const;
+  void set_error_code(::google::protobuf::int32 value);
+
+  // optional string error_msg = 4;
+  void clear_error_msg();
+  static const int kErrorMsgFieldNumber = 4;
+  const ::std::string& error_msg() const;
+  void set_error_msg(const ::std::string& value);
+  void set_error_msg(const char* value);
+  void set_error_msg(const char* value, size_t size);
+  ::std::string* mutable_error_msg();
+  ::std::string* release_error_msg();
+  void set_allocated_error_msg(::std::string* error_msg);
+
+  // @@protoc_insertion_point(class_scope:texas_code.protocol.ShowDownResponse)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::int64 request_id_;
+  ::google::protobuf::internal::ArenaStringPtr account_name_;
+  ::google::protobuf::internal::ArenaStringPtr error_msg_;
+  ::google::protobuf::int32 error_code_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_message_2eproto();
+  friend void protobuf_AssignDesc_message_2eproto();
+  friend void protobuf_ShutdownFile_message_2eproto();
+
+  void InitAsDefaultInstance();
+  static ShowDownResponse* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -1673,49 +1838,49 @@ inline void ConnectRequest::set_allocated_account_name(::std::string* account_na
 
 // -------------------------------------------------------------------
 
-// ConnectSuccessResponse
+// ConnectResponse
 
 // optional int64 request_id = 1;
-inline void ConnectSuccessResponse::clear_request_id() {
+inline void ConnectResponse::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
-inline ::google::protobuf::int64 ConnectSuccessResponse::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectSuccessResponse.request_id)
+inline ::google::protobuf::int64 ConnectResponse::request_id() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectResponse.request_id)
   return request_id_;
 }
-inline void ConnectSuccessResponse::set_request_id(::google::protobuf::int64 value) {
+inline void ConnectResponse::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectSuccessResponse.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectResponse.request_id)
 }
 
 // optional .texas_code.protocol.Player player = 2;
-inline bool ConnectSuccessResponse::has_player() const {
+inline bool ConnectResponse::has_player() const {
   return !_is_default_instance_ && player_ != NULL;
 }
-inline void ConnectSuccessResponse::clear_player() {
+inline void ConnectResponse::clear_player() {
   if (GetArenaNoVirtual() == NULL && player_ != NULL) delete player_;
   player_ = NULL;
 }
-inline const ::texas_code::protocol::Player& ConnectSuccessResponse::player() const {
-  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectSuccessResponse.player)
+inline const ::texas_code::protocol::Player& ConnectResponse::player() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectResponse.player)
   return player_ != NULL ? *player_ : *default_instance_->player_;
 }
-inline ::texas_code::protocol::Player* ConnectSuccessResponse::mutable_player() {
+inline ::texas_code::protocol::Player* ConnectResponse::mutable_player() {
   
   if (player_ == NULL) {
     player_ = new ::texas_code::protocol::Player;
   }
-  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ConnectSuccessResponse.player)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ConnectResponse.player)
   return player_;
 }
-inline ::texas_code::protocol::Player* ConnectSuccessResponse::release_player() {
+inline ::texas_code::protocol::Player* ConnectResponse::release_player() {
   
   ::texas_code::protocol::Player* temp = player_;
   player_ = NULL;
   return temp;
 }
-inline void ConnectSuccessResponse::set_allocated_player(::texas_code::protocol::Player* player) {
+inline void ConnectResponse::set_allocated_player(::texas_code::protocol::Player* player) {
   delete player_;
   player_ = player;
   if (player) {
@@ -1723,82 +1888,64 @@ inline void ConnectSuccessResponse::set_allocated_player(::texas_code::protocol:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ConnectSuccessResponse.player)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ConnectResponse.player)
 }
 
-// -------------------------------------------------------------------
-
-// ConnectFailedResponse
-
-// optional int64 request_id = 1;
-inline void ConnectFailedResponse::clear_request_id() {
-  request_id_ = GOOGLE_LONGLONG(0);
-}
-inline ::google::protobuf::int64 ConnectFailedResponse::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectFailedResponse.request_id)
-  return request_id_;
-}
-inline void ConnectFailedResponse::set_request_id(::google::protobuf::int64 value) {
-  
-  request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectFailedResponse.request_id)
-}
-
-// optional int32 error_code = 2;
-inline void ConnectFailedResponse::clear_error_code() {
+// optional int32 error_code = 3;
+inline void ConnectResponse::clear_error_code() {
   error_code_ = 0;
 }
-inline ::google::protobuf::int32 ConnectFailedResponse::error_code() const {
-  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectFailedResponse.error_code)
+inline ::google::protobuf::int32 ConnectResponse::error_code() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectResponse.error_code)
   return error_code_;
 }
-inline void ConnectFailedResponse::set_error_code(::google::protobuf::int32 value) {
+inline void ConnectResponse::set_error_code(::google::protobuf::int32 value) {
   
   error_code_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectFailedResponse.error_code)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectResponse.error_code)
 }
 
-// optional string error_msg = 3;
-inline void ConnectFailedResponse::clear_error_msg() {
+// optional string error_msg = 4;
+inline void ConnectResponse::clear_error_msg() {
   error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& ConnectFailedResponse::error_msg() const {
-  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectFailedResponse.error_msg)
+inline const ::std::string& ConnectResponse::error_msg() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ConnectResponse.error_msg)
   return error_msg_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ConnectFailedResponse::set_error_msg(const ::std::string& value) {
+inline void ConnectResponse::set_error_msg(const ::std::string& value) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ConnectResponse.error_msg)
 }
-inline void ConnectFailedResponse::set_error_msg(const char* value) {
+inline void ConnectResponse::set_error_msg(const char* value) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ConnectResponse.error_msg)
 }
-inline void ConnectFailedResponse::set_error_msg(const char* value, size_t size) {
+inline void ConnectResponse::set_error_msg(const char* value, size_t size) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ConnectResponse.error_msg)
 }
-inline ::std::string* ConnectFailedResponse::mutable_error_msg() {
+inline ::std::string* ConnectResponse::mutable_error_msg() {
   
-  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ConnectResponse.error_msg)
   return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* ConnectFailedResponse::release_error_msg() {
+inline ::std::string* ConnectResponse::release_error_msg() {
   
   return error_msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ConnectFailedResponse::set_allocated_error_msg(::std::string* error_msg) {
+inline void ConnectResponse::set_allocated_error_msg(::std::string* error_msg) {
   if (error_msg != NULL) {
     
   } else {
     
   }
   error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
-  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ConnectFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ConnectResponse.error_msg)
 }
 
 // -------------------------------------------------------------------
@@ -1856,97 +2003,165 @@ inline void ActionRequest::set_allocated_jetton_action(::texas_code::protocol::J
   // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ActionRequest.jetton_action)
 }
 
+// optional string account_name = 3;
+inline void ActionRequest::clear_account_name() {
+  account_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ActionRequest::account_name() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionRequest.account_name)
+  return account_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ActionRequest::set_account_name(const ::std::string& value) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionRequest.account_name)
+}
+inline void ActionRequest::set_account_name(const char* value) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ActionRequest.account_name)
+}
+inline void ActionRequest::set_account_name(const char* value, size_t size) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ActionRequest.account_name)
+}
+inline ::std::string* ActionRequest::mutable_account_name() {
+  
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ActionRequest.account_name)
+  return account_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ActionRequest::release_account_name() {
+  
+  return account_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ActionRequest::set_allocated_account_name(::std::string* account_name) {
+  if (account_name != NULL) {
+    
+  } else {
+    
+  }
+  account_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_name);
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ActionRequest.account_name)
+}
+
 // -------------------------------------------------------------------
 
-// ActionSuccessResponse
+// ActionResponse
 
 // optional int64 request_id = 1;
-inline void ActionSuccessResponse::clear_request_id() {
+inline void ActionResponse::clear_request_id() {
   request_id_ = GOOGLE_LONGLONG(0);
 }
-inline ::google::protobuf::int64 ActionSuccessResponse::request_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionSuccessResponse.request_id)
+inline ::google::protobuf::int64 ActionResponse::request_id() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionResponse.request_id)
   return request_id_;
 }
-inline void ActionSuccessResponse::set_request_id(::google::protobuf::int64 value) {
+inline void ActionResponse::set_request_id(::google::protobuf::int64 value) {
   
   request_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionSuccessResponse.request_id)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionResponse.request_id)
 }
 
-// -------------------------------------------------------------------
-
-// ActionFailedResponse
-
-// optional int64 req_id = 1;
-inline void ActionFailedResponse::clear_req_id() {
-  req_id_ = GOOGLE_LONGLONG(0);
+// optional string account_name = 2;
+inline void ActionResponse::clear_account_name() {
+  account_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::google::protobuf::int64 ActionFailedResponse::req_id() const {
-  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionFailedResponse.req_id)
-  return req_id_;
+inline const ::std::string& ActionResponse::account_name() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionResponse.account_name)
+  return account_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ActionFailedResponse::set_req_id(::google::protobuf::int64 value) {
+inline void ActionResponse::set_account_name(const ::std::string& value) {
   
-  req_id_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionFailedResponse.req_id)
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionResponse.account_name)
+}
+inline void ActionResponse::set_account_name(const char* value) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ActionResponse.account_name)
+}
+inline void ActionResponse::set_account_name(const char* value, size_t size) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ActionResponse.account_name)
+}
+inline ::std::string* ActionResponse::mutable_account_name() {
+  
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ActionResponse.account_name)
+  return account_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ActionResponse::release_account_name() {
+  
+  return account_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ActionResponse::set_allocated_account_name(::std::string* account_name) {
+  if (account_name != NULL) {
+    
+  } else {
+    
+  }
+  account_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_name);
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ActionResponse.account_name)
 }
 
-// optional int32 error_code = 2;
-inline void ActionFailedResponse::clear_error_code() {
+// optional int32 error_code = 3;
+inline void ActionResponse::clear_error_code() {
   error_code_ = 0;
 }
-inline ::google::protobuf::int32 ActionFailedResponse::error_code() const {
-  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionFailedResponse.error_code)
+inline ::google::protobuf::int32 ActionResponse::error_code() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionResponse.error_code)
   return error_code_;
 }
-inline void ActionFailedResponse::set_error_code(::google::protobuf::int32 value) {
+inline void ActionResponse::set_error_code(::google::protobuf::int32 value) {
   
   error_code_ = value;
-  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionFailedResponse.error_code)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionResponse.error_code)
 }
 
-// optional string error_msg = 3;
-inline void ActionFailedResponse::clear_error_msg() {
+// optional string error_msg = 4;
+inline void ActionResponse::clear_error_msg() {
   error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& ActionFailedResponse::error_msg() const {
-  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionFailedResponse.error_msg)
+inline const ::std::string& ActionResponse::error_msg() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ActionResponse.error_msg)
   return error_msg_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ActionFailedResponse::set_error_msg(const ::std::string& value) {
+inline void ActionResponse::set_error_msg(const ::std::string& value) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ActionResponse.error_msg)
 }
-inline void ActionFailedResponse::set_error_msg(const char* value) {
+inline void ActionResponse::set_error_msg(const char* value) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ActionResponse.error_msg)
 }
-inline void ActionFailedResponse::set_error_msg(const char* value, size_t size) {
+inline void ActionResponse::set_error_msg(const char* value, size_t size) {
   
   error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ActionResponse.error_msg)
 }
-inline ::std::string* ActionFailedResponse::mutable_error_msg() {
+inline ::std::string* ActionResponse::mutable_error_msg() {
   
-  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ActionResponse.error_msg)
   return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* ActionFailedResponse::release_error_msg() {
+inline ::std::string* ActionResponse::release_error_msg() {
   
   return error_msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ActionFailedResponse::set_allocated_error_msg(::std::string* error_msg) {
+inline void ActionResponse::set_allocated_error_msg(::std::string* error_msg) {
   if (error_msg != NULL) {
     
   } else {
     
   }
   error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
-  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ActionFailedResponse.error_msg)
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ActionResponse.error_msg)
 }
 
 // -------------------------------------------------------------------
@@ -2241,6 +2456,49 @@ inline void HoldCardsMessage::set_allocated_card_2(::texas_code::protocol::Card*
   // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.HoldCardsMessage.card_2)
 }
 
+// optional string account_name = 3;
+inline void HoldCardsMessage::clear_account_name() {
+  account_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& HoldCardsMessage::account_name() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.HoldCardsMessage.account_name)
+  return account_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void HoldCardsMessage::set_account_name(const ::std::string& value) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:texas_code.protocol.HoldCardsMessage.account_name)
+}
+inline void HoldCardsMessage::set_account_name(const char* value) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.HoldCardsMessage.account_name)
+}
+inline void HoldCardsMessage::set_account_name(const char* value, size_t size) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.HoldCardsMessage.account_name)
+}
+inline ::std::string* HoldCardsMessage::mutable_account_name() {
+  
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.HoldCardsMessage.account_name)
+  return account_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* HoldCardsMessage::release_account_name() {
+  
+  return account_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void HoldCardsMessage::set_allocated_account_name(::std::string* account_name) {
+  if (account_name != NULL) {
+    
+  } else {
+    
+  }
+  account_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_name);
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.HoldCardsMessage.account_name)
+}
+
 // -------------------------------------------------------------------
 
 // InquireActionMessage
@@ -2502,6 +2760,217 @@ inline void RiverMessage::set_allocated_river_card(::texas_code::protocol::Card*
 
 // -------------------------------------------------------------------
 
+// InquireShowDownMessage
+
+// optional int64 request_id = 1;
+inline void InquireShowDownMessage::clear_request_id() {
+  request_id_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 InquireShowDownMessage::request_id() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.InquireShowDownMessage.request_id)
+  return request_id_;
+}
+inline void InquireShowDownMessage::set_request_id(::google::protobuf::int64 value) {
+  
+  request_id_ = value;
+  // @@protoc_insertion_point(field_set:texas_code.protocol.InquireShowDownMessage.request_id)
+}
+
+// -------------------------------------------------------------------
+
+// ShowDownRequest
+
+// optional int64 request_id = 1;
+inline void ShowDownRequest::clear_request_id() {
+  request_id_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 ShowDownRequest::request_id() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ShowDownRequest.request_id)
+  return request_id_;
+}
+inline void ShowDownRequest::set_request_id(::google::protobuf::int64 value) {
+  
+  request_id_ = value;
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ShowDownRequest.request_id)
+}
+
+// optional bool is_agree = 2;
+inline void ShowDownRequest::clear_is_agree() {
+  is_agree_ = false;
+}
+inline bool ShowDownRequest::is_agree() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ShowDownRequest.is_agree)
+  return is_agree_;
+}
+inline void ShowDownRequest::set_is_agree(bool value) {
+  
+  is_agree_ = value;
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ShowDownRequest.is_agree)
+}
+
+// optional string account_name = 3;
+inline void ShowDownRequest::clear_account_name() {
+  account_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ShowDownRequest::account_name() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ShowDownRequest.account_name)
+  return account_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ShowDownRequest::set_account_name(const ::std::string& value) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ShowDownRequest.account_name)
+}
+inline void ShowDownRequest::set_account_name(const char* value) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ShowDownRequest.account_name)
+}
+inline void ShowDownRequest::set_account_name(const char* value, size_t size) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ShowDownRequest.account_name)
+}
+inline ::std::string* ShowDownRequest::mutable_account_name() {
+  
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ShowDownRequest.account_name)
+  return account_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ShowDownRequest::release_account_name() {
+  
+  return account_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ShowDownRequest::set_allocated_account_name(::std::string* account_name) {
+  if (account_name != NULL) {
+    
+  } else {
+    
+  }
+  account_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_name);
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ShowDownRequest.account_name)
+}
+
+// -------------------------------------------------------------------
+
+// ShowDownResponse
+
+// optional int64 request_id = 1;
+inline void ShowDownResponse::clear_request_id() {
+  request_id_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 ShowDownResponse::request_id() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ShowDownResponse.request_id)
+  return request_id_;
+}
+inline void ShowDownResponse::set_request_id(::google::protobuf::int64 value) {
+  
+  request_id_ = value;
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ShowDownResponse.request_id)
+}
+
+// optional string account_name = 2;
+inline void ShowDownResponse::clear_account_name() {
+  account_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ShowDownResponse::account_name() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ShowDownResponse.account_name)
+  return account_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ShowDownResponse::set_account_name(const ::std::string& value) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ShowDownResponse.account_name)
+}
+inline void ShowDownResponse::set_account_name(const char* value) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ShowDownResponse.account_name)
+}
+inline void ShowDownResponse::set_account_name(const char* value, size_t size) {
+  
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ShowDownResponse.account_name)
+}
+inline ::std::string* ShowDownResponse::mutable_account_name() {
+  
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ShowDownResponse.account_name)
+  return account_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ShowDownResponse::release_account_name() {
+  
+  return account_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ShowDownResponse::set_allocated_account_name(::std::string* account_name) {
+  if (account_name != NULL) {
+    
+  } else {
+    
+  }
+  account_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_name);
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ShowDownResponse.account_name)
+}
+
+// optional int32 error_code = 3;
+inline void ShowDownResponse::clear_error_code() {
+  error_code_ = 0;
+}
+inline ::google::protobuf::int32 ShowDownResponse::error_code() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ShowDownResponse.error_code)
+  return error_code_;
+}
+inline void ShowDownResponse::set_error_code(::google::protobuf::int32 value) {
+  
+  error_code_ = value;
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ShowDownResponse.error_code)
+}
+
+// optional string error_msg = 4;
+inline void ShowDownResponse::clear_error_msg() {
+  error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ShowDownResponse::error_msg() const {
+  // @@protoc_insertion_point(field_get:texas_code.protocol.ShowDownResponse.error_msg)
+  return error_msg_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ShowDownResponse::set_error_msg(const ::std::string& value) {
+  
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:texas_code.protocol.ShowDownResponse.error_msg)
+}
+inline void ShowDownResponse::set_error_msg(const char* value) {
+  
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:texas_code.protocol.ShowDownResponse.error_msg)
+}
+inline void ShowDownResponse::set_error_msg(const char* value, size_t size) {
+  
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:texas_code.protocol.ShowDownResponse.error_msg)
+}
+inline ::std::string* ShowDownResponse::mutable_error_msg() {
+  
+  // @@protoc_insertion_point(field_mutable:texas_code.protocol.ShowDownResponse.error_msg)
+  return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ShowDownResponse::release_error_msg() {
+  
+  return error_msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ShowDownResponse::set_allocated_error_msg(::std::string* error_msg) {
+  if (error_msg != NULL) {
+    
+  } else {
+    
+  }
+  error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
+  // @@protoc_insertion_point(field_set_allocated:texas_code.protocol.ShowDownResponse.error_msg)
+}
+
+// -------------------------------------------------------------------
+
 // ShowDownMessage
 
 // repeated .texas_code.protocol.Card public_cards = 1;
@@ -2665,6 +3134,8 @@ inline void Heartbeat::set_sequence_num(::google::protobuf::int64 value) {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

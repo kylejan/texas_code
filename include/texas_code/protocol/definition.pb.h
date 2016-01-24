@@ -44,6 +44,27 @@ class Player;
 class PlayerAction;
 class PlayerHandInfo;
 
+enum ErrorCode {
+  OK = 0,
+  FAILED = 1,
+  ErrorCode_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  ErrorCode_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool ErrorCode_IsValid(int value);
+const ErrorCode ErrorCode_MIN = OK;
+const ErrorCode ErrorCode_MAX = FAILED;
+const int ErrorCode_ARRAYSIZE = ErrorCode_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* ErrorCode_descriptor();
+inline const ::std::string& ErrorCode_Name(ErrorCode value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    ErrorCode_descriptor(), value);
+}
+inline bool ErrorCode_Parse(
+    const ::std::string& name, ErrorCode* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ErrorCode>(
+    ErrorCode_descriptor(), name, value);
+}
 enum Color {
   DIAMONDS = 0,
   CLUBS = 1,
@@ -1087,6 +1108,11 @@ PlayerHandInfo::nut_hand() const {
 namespace google {
 namespace protobuf {
 
+template <> struct is_proto_enum< ::texas_code::protocol::ErrorCode> : ::google::protobuf::internal::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::texas_code::protocol::ErrorCode>() {
+  return ::texas_code::protocol::ErrorCode_descriptor();
+}
 template <> struct is_proto_enum< ::texas_code::protocol::Color> : ::google::protobuf::internal::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::texas_code::protocol::Color>() {

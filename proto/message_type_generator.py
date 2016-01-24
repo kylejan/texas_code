@@ -16,7 +16,7 @@ for line in message_file_handler:
         message_types.append(camelcase_to_underscore(line.split(' ')[1]))
 
 message_types.sort()
-message_enums = [(x, message_types.index(x)) for x in message_types]
+message_enums = [(x, message_types.index(x) + 1) for x in message_types]
 
 message_type_file = '../include/texas_code/protocol/message_type.h'
 message_type_file_handler = open(message_type_file, 'w')
@@ -26,6 +26,7 @@ message_type_file_handler.write('#include <cstdint>\n\n')
 message_type_file_handler.write('namespace texas_code { namespace protocol {\n\n')
 message_type_file_handler.write('\tenum class MessageType : std::int32_t {\n\n')
 
+message_type_file_handler.write('\t\t' + 'UNKNOWN_REQUEST' + ' = 0,\n')
 for enum in message_enums:
     message_type_file_handler.write('\t\t' + enum[0] + ' = ' + str(enum[1]) + ',\n')
 
