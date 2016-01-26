@@ -1,4 +1,4 @@
-#include "texas_code/server/messenger"
+#include "texas_code/server/messenger.h"
 
 namespace texas_code {
 
@@ -47,19 +47,19 @@ void Messenger::socket_pub_send(RawMessage* raw_message) {
 void Messenger::handle_recv_message(RawMessage* raw_message) {
     if (raw_message == nullptr) return;
 
-    switch (static_cast<MessageType>raw_message->msg_type) {
-        case MessageType.UNKNOWN_REQUEST:
+    switch (static_cast<MessageType>(raw_message->msg_type)) {
+        case MessageType::UNKNOWN_REQUEST:
             return;
-        case MessageType.HEARTBEAT:
-            dispatch<HeartBeat>(raw_message);
+        case MessageType::HEARTBEAT:
+            dispatch<Heartbeat>(raw_message);
             break;
-        case MessageType.ACTION_REQUEST:
+        case MessageType::ACTION_REQUEST:
             dispatch<ActionRequest>(raw_message);
             break;
-        case MessageType.CONNECT_REQUEST:
+        case MessageType::CONNECT_REQUEST:
             dispatch<ConnectRequest>(raw_message);
             break;
-        case MessageType.SHOW_DOWN_REQUEST:
+        case MessageType::SHOW_DOWN_REQUEST:
             dispatch<ShowDownRequest>(raw_message);
             break;
         default:

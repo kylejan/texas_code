@@ -10,8 +10,6 @@
 #include <condition_variable>
 #include <string>
 
-#include <iostream>
-
 namespace texas_code {
 namespace server {
 
@@ -22,11 +20,11 @@ public:
     Messenger() = delete;
     Messenger(const std::string& rpc_endpoint, const std::string& pub_endpoint);
 
-    inline void run();
     inline void socket_rpc_recv();
     inline void socket_rpc_reply(RawMessage* raw_message);
     inline void socket_pub_send(RawMessage* raw_message);
 
+    virtual void run();
     virtual void dispatch_pb_message(Heartbeat*) = 0;
     virtual void dispatch_pb_message(ConnectRequest*) = 0;
     virtual void dispatch_pb_message(ActionRequest*) = 0;
