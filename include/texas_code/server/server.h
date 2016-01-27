@@ -16,6 +16,7 @@ public:
 
     Server(const std::string&, const std::string&);
 
+    void init();
     void run();
     void dispatch_pb_message(Heartbeat*);
     void dispatch_pb_message(ConnectRequest*);

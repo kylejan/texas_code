@@ -9,39 +9,56 @@ Messenger::Messenger(const std::string& rpc_endpoint, const std::string& pub_end
     , pub_endpoint_{pub_endpoint}
     , context_{1}
     , rpc_socket_{context_, ZMQ_REP}
-    , pub_socket_{context_, ZMQ_PUB} {
+    , pub_socket_{context_, ZMQ_PUB}
+    , work_(io_service_) {
 
     rpc_socket_.bind(rpc_endpoint_);
     pub_socket_.bind(pub_endpoint_);
 }
 
+void Messenger::init() {
+    get_service().post([this] {
+        while (true) {
+            socket_rpc_recv();
+        }
+    });
+}
+
 void Messenger::run() {
-    rpc_thread_ = new std::thread(&Messenger::socket_rpc_recv, this);
-    rpc_thread_->join();
+    get_service().run();
+}
+
+boost::asio::io_service& Messenger::get_service() {
+    return io_service_;
 }
 
 void Messenger::socket_rpc_recv() {
-    while (true) {
-        zmq::message_t request;
-        rpc_socket_.recv(&request);
-        RawMessage raw_message(&request);
+    zmq::message_t request;
+    rpc_socket_.recv(&request);
+    RawMessage raw_message(&request);
+    handle_recv_message(&raw_message);
 
-        std::unique_lock<std::mutex> lock(mutex_);
-        is_wait_ = true;
-        cv_.wait(lock, [this] { return is_wait_.load() == false; });
-    }
+    std::unique_lock<std::mutex> lock(mutex_);
+    is_wait_ = true;
+    cv_.wait(lock, [this] { return is_wait_.load() == false; });
 }
 
 void Messenger::socket_rpc_reply(RawMessage* raw_message) {
-    zmq::message_t message = raw_message->pack_zmq_msg();
-    rpc_socket_.send(message);
-    is_wait_ = false;
-    cv_.notify_one();
+    get_service().post([this, raw_message]{
+        zmq::message_t message = raw_message->pack_zmq_msg();
+        rpc_socket_.send(message);
+        delete raw_message;
+        is_wait_ = false;
+        cv_.notify_one();
+    });
 }
 
 void Messenger::socket_pub_send(RawMessage* raw_message) {
-    zmq::message_t message = raw_message->pack_zmq_msg();
-    pub_socket_.send(message);
+    get_service().post([this, raw_message]{
+        zmq::message_t message = raw_message->pack_zmq_msg();
+        pub_socket_.send(message);
+        delete raw_message;
+    });
 }
 
 void Messenger::handle_recv_message(RawMessage* raw_message) {

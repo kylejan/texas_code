@@ -10,6 +10,10 @@ Server::Server(const std::string& rpc_endpoint, const std::string& pub_endpoint)
 
 }
 
+void Server::init() {
+    Messenger::init();
+}
+
 void Server::run() {
     Messenger::run();
 }
