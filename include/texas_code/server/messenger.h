@@ -34,22 +34,22 @@ public:
 
     virtual void init();
     virtual void run();
-    virtual void dispatch_pb_message(Heartbeat*) = 0;
-    virtual void dispatch_pb_message(ConnectRequest*) = 0;
-    virtual void dispatch_pb_message(ActionRequest*) = 0;
-    virtual void dispatch_pb_message(ShowDownRequest*) = 0;
+    virtual void dispatch_message(std::unique_ptr<Heartbeat>) = 0;
+    virtual void dispatch_message(std::unique_ptr<ConnectRequest>) = 0;
+    virtual void dispatch_message(std::unique_ptr<ActionRequest>) = 0;
+    virtual void dispatch_message(std::unique_ptr<ShowDownRequest>) = 0;
 
     virtual ~Messenger() {}
 
 private:
     template <typename type>
-    void dispatch(RawMessage* raw_message) {
-        auto message = new type();
+    void dispatch(std::unique_ptr<RawMessage> raw_message) {
+        std::unique_ptr<type> message(new type());
         message->ParseFromString(raw_message->msg_body);
-        dispatch_pb_message(message);
+        dispatch_message(std::move(message));
     }
 
-    void handle_recv_message(RawMessage* raw_message);
+    void handle_recv_message(std::unique_ptr<RawMessage> raw_message);
 
     zmq::context_t context_;
     zmq::socket_t rpc_socket_;

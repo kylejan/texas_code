@@ -18,19 +18,19 @@ void Server::run() {
     Messenger::run();
 }
 
-void Server::dispatch_pb_message(Heartbeat* request) {
+void Server::dispatch_message(std::unique_ptr<Heartbeat> request) {
 
 }
 
-void Server::dispatch_pb_message(ConnectRequest* request) {
+void Server::dispatch_message(std::unique_ptr<ConnectRequest> request) {
 
 }
 
-void Server::dispatch_pb_message(ActionRequest* request) {
+void Server::dispatch_message(std::unique_ptr<ActionRequest> request) {
 
 }
 
-void Server::dispatch_pb_message(ShowDownRequest* request) {
+void Server::dispatch_message(std::unique_ptr<ShowDownRequest> request) {
 
 }
 

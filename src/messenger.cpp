@@ -35,8 +35,8 @@ boost::asio::io_service& Messenger::get_service() {
 void Messenger::socket_rpc_recv() {
     zmq::message_t request;
     rpc_socket_.recv(&request);
-    RawMessage raw_message(&request);
-    handle_recv_message(&raw_message);
+    std::unique_ptr<RawMessage> raw_message(new RawMessage(&request));
+    handle_recv_message(std::move(raw_message));
 
     std::unique_lock<std::mutex> lock(mutex_);
     is_wait_ = true;
@@ -61,23 +61,23 @@ void Messenger::socket_pub_send(RawMessage* raw_message) {
     });
 }
 
-void Messenger::handle_recv_message(RawMessage* raw_message) {
+void Messenger::handle_recv_message(std::unique_ptr<RawMessage> raw_message) {
     if (raw_message == nullptr) return;
 
     switch (static_cast<MessageType>(raw_message->msg_type)) {
         case MessageType::UNKNOWN_REQUEST:
             return;
         case MessageType::HEARTBEAT:
-            dispatch<Heartbeat>(raw_message);
+            dispatch<Heartbeat>(std::move(raw_message));
             break;
         case MessageType::ACTION_REQUEST:
-            dispatch<ActionRequest>(raw_message);
+            dispatch<ActionRequest>(std::move(raw_message));
             break;
         case MessageType::CONNECT_REQUEST:
-            dispatch<ConnectRequest>(raw_message);
+            dispatch<ConnectRequest>(std::move(raw_message));
             break;
         case MessageType::SHOW_DOWN_REQUEST:
-            dispatch<ShowDownRequest>(raw_message);
+            dispatch<ShowDownRequest>(std::move(raw_message));
             break;
         default:
             break;

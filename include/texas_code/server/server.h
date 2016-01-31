@@ -18,10 +18,10 @@ public:
 
     void init();
     void run();
-    void dispatch_pb_message(Heartbeat*);
-    void dispatch_pb_message(ConnectRequest*);
-    void dispatch_pb_message(ActionRequest*);
-    void dispatch_pb_message(ShowDownRequest*);
+    void dispatch_message(std::unique_ptr<Heartbeat>);
+    void dispatch_message(std::unique_ptr<ConnectRequest>);
+    void dispatch_message(std::unique_ptr<ActionRequest>);
+    void dispatch_message(std::unique_ptr<ShowDownRequest>);
 
 private:
     std::int64_t request_id_;
