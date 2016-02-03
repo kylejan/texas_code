@@ -17,11 +17,7 @@ Messenger::Messenger(const std::string& rpc_endpoint, const std::string& pub_end
 }
 
 void Messenger::init() {
-    get_service().post([this] {
-        while (true) {
-            socket_rpc_recv();
-        }
-    });
+    socket_rpc_recv();
 }
 
 void Messenger::run() {
@@ -32,15 +28,29 @@ boost::asio::io_service& Messenger::get_service() {
     return io_service_;
 }
 
-void Messenger::socket_rpc_recv() {
-    zmq::message_t request;
-    rpc_socket_.recv(&request);
-    std::unique_ptr<RawMessage> raw_message(new RawMessage(&request));
-    handle_recv_message(std::move(raw_message));
+void Messenger::reply_message(std::int32_t msg_type, const std::string& msg_body) {
+    auto* raw_message = new RawMessage(msg_type, msg_body);
+    socket_rpc_reply(raw_message);
+}
 
-    std::unique_lock<std::mutex> lock(mutex_);
-    is_wait_ = true;
-    cv_.wait(lock, [this] { return is_wait_.load() == false; });
+void Messenger::publish_message(std::int32_t msg_type, const std::string& msg_body) {
+    auto* raw_message = new RawMessage(msg_type, msg_body);
+    socket_pub_send(raw_message);
+}
+
+void Messenger::socket_rpc_recv() {
+    get_service().post([this]{
+        while (true) {
+            zmq::message_t request;
+            rpc_socket_.recv(&request);
+            std::unique_ptr<RawMessage> raw_message(new RawMessage(&request));
+            handle_recv_message(std::move(raw_message));
+
+            std::unique_lock<std::mutex> lock(mutex_);
+            is_wait_ = true;
+            cv_.wait(lock, [this] { return is_wait_.load() == false; });
+        }
+    });
 }
 
 void Messenger::socket_rpc_reply(RawMessage* raw_message) {

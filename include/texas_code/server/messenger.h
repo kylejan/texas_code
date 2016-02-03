@@ -28,9 +28,8 @@ public:
     Messenger(const std::string& rpc_endpoint, const std::string& pub_endpoint);
 
     inline boost::asio::io_service& get_service();
-    inline void socket_rpc_recv();
-    inline void socket_rpc_reply(RawMessage* raw_message);
-    inline void socket_pub_send(RawMessage* raw_message);
+    void reply_message(std::int32_t msg_type, const std::string& msg_body);
+    void publish_message(std::int32_t msg_type, const std::string& msg_body);
 
     virtual void init();
     virtual void run();
@@ -49,6 +48,9 @@ private:
         dispatch_message(std::move(message));
     }
 
+    inline void socket_rpc_recv();
+    inline void socket_rpc_reply(RawMessage* raw_message);
+    inline void socket_pub_send(RawMessage* raw_message);
     void handle_recv_message(std::unique_ptr<RawMessage> raw_message);
 
     zmq::context_t context_;

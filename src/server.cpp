@@ -1,5 +1,7 @@
 #include "texas_code/server/server.h"
 
+#include <spdlog/spdlog.h>
+
 namespace texas_code {
 
 namespace server {
@@ -19,7 +21,7 @@ void Server::run() {
 }
 
 void Server::dispatch_message(std::unique_ptr<Heartbeat> request) {
-
+    spdlog::get("console")->info("receive heartbeat message");
 }
 
 void Server::dispatch_message(std::unique_ptr<ConnectRequest> request) {

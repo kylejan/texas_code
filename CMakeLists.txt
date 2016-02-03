@@ -3,6 +3,10 @@ project(texas_code)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
 
+if(NOT SPDLOG_DIR)
+    message(FATAL_ERROR "you should set the directory of spdlog library")
+endif()
+
 file(GLOB_RECURSE headers ${PROJECT_SOURCE_DIR}/include/*.h ${PROJECT_SOURCE_DIR}/include/*.cc)
 file(GLOB sources ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
@@ -10,6 +14,7 @@ add_executable(${PROJECT_NAME} ${headers} ${sources})
 # add_subdirectory(proto)
 # add_dependencies(${PROJECT_NAME} pb_generator)
 
+include_directories(${PROJECT_NAME} ${SPDLOG_DIR}/include)
 include_directories(${PROJECT_NAME} ${PROJECT_SOURCE_DIR}/include)
 
 find_package(Protobuf REQUIRED)
