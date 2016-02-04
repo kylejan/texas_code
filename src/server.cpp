@@ -22,6 +22,9 @@ void Server::run() {
 
 void Server::dispatch_message(std::unique_ptr<Heartbeat> request) {
     spdlog::get("console")->info("receive heartbeat message");
+    Heartbeat heartbeat;
+    heartbeat.set_sequence_num(time(nullptr));
+    reply_message(MessageType::HEARTBEAT, heartbeat);
 }
 
 void Server::dispatch_message(std::unique_ptr<ConnectRequest> request) {

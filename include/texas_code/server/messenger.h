@@ -28,8 +28,8 @@ public:
     Messenger(const std::string& rpc_endpoint, const std::string& pub_endpoint);
 
     inline boost::asio::io_service& get_service();
-    void reply_message(std::int32_t msg_type, const std::string& msg_body);
-    void publish_message(std::int32_t msg_type, const std::string& msg_body);
+    void reply_message(MessageType msg_type, const ::google::protobuf::Message& msg_body);
+    void publish_message(MessageType msg_type, const ::google::protobuf::Message& msg_body);
 
     virtual void init();
     virtual void run();

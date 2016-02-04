@@ -8,6 +8,7 @@ int main() {
     spdlog::stdout_logger_mt("console");
 
     auto* server = new texas_code::server::Server("tcp://*:5555", "tcp://*:5556");
+    server->init();
     server->run();
     return 0;
 }
