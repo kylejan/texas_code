@@ -1,5 +1,7 @@
 #include "texas_code/server/messenger.h"
 
+#include <spdlog/spdlog.h>
+
 namespace texas_code {
 
 namespace server {
@@ -39,12 +41,15 @@ void Messenger::publish_message(std::int32_t msg_type, const std::string& msg_bo
 }
 
 void Messenger::socket_rpc_recv() {
-    get_service().post([this]{
+    new std::thread([this]{
         while (true) {
-            zmq::message_t request;
-            rpc_socket_.recv(&request);
-            std::unique_ptr<RawMessage> raw_message(new RawMessage(&request));
-            handle_recv_message(std::move(raw_message));
+            get_service().post([this]{
+                zmq::message_t request;
+                rpc_socket_.recv(&request);
+                std::unique_ptr<RawMessage> raw_message(new RawMessage(&request));
+                spdlog::get("console")->info(raw_message->msg_type);
+                handle_recv_message(std::move(raw_message));
+            });
 
             std::unique_lock<std::mutex> lock(mutex_);
             is_wait_ = true;
